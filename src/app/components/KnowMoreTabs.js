@@ -1,0 +1,308 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { BookOpen, Eye, Target, Lightbulb, RefreshCw, Briefcase, ShieldCheck } from "lucide-react";
+
+const sections = [
+  {
+    label: "Our Story",
+    title: "Our Story",
+    icon: BookOpen,
+    paragraphs: [
+      "Aakritii NGO was founded with a simple yet powerful belief: meaningful change happens when individuals come together with a shared purpose. What began as a vision to contribute positively to society has evolved into a platform that connects people, resources, and opportunities to create lasting community impact.",
+      "Driven by compassion and a commitment to social responsibility, Aakritii works across diverse areas including education, health and well-being, environmental sustainability, community empowerment, and volunteer engagement. Through collaborative action and grassroots involvement, we strive to address real challenges while building stronger, more resilient communities."
+    ]
+  },
+  {
+    label: "Vision",
+    title: "Vision",
+    icon: Eye,
+    paragraphs: [
+      "To build an inclusive, empowered, and sustainable society where every individual has access to opportunities, resources, and support needed to lead a dignified and fulfilling life."
+    ]
+  },
+  {
+    label: "Mission",
+    title: "Mission",
+    icon: Target,
+    paragraphs: [
+      "To create positive and sustainable social impact by:"
+    ],
+    bullets: [
+      "Promoting quality education and child development.",
+      "Enhancing health, well-being, and community care.",
+      "Encouraging environmental responsibility and sustainable practices.",
+      "Empowering communities through participation and capacity building.",
+      "Inspiring volunteerism and active citizenship."
+    ],
+    closingParagraphs: [
+      "We aim to foster meaningful partnerships and community-driven solutions that create long-term transformation."
+    ]
+  },
+  {
+    label: "Philosophy of Change",
+    title: "Philosophy of Change",
+    icon: Lightbulb,
+    paragraphs: [
+      "At Aakritii NGO, we believe that sustainable development is achieved when people are empowered rather than merely supported. Our philosophy centers on enabling individuals and communities to become active participants in their own growth and development.",
+      "By combining awareness, education, engagement, and action, we create opportunities for communities to identify challenges, build capabilities, and implement solutions that lead to lasting positive change. We focus not only on immediate needs but also on strengthening the foundations for future progress."
+    ]
+  },
+  {
+    label: "The Lifecycle Approach",
+    title: "The Lifecycle Approach",
+    icon: RefreshCw,
+    paragraphs: [
+      "We recognize that social development is interconnected and spans every stage of life. Our programs are designed to support individuals and communities through a holistic lifecycle approach:"
+    ],
+    subsections: [
+      {
+        title: "Learn",
+        text: "Providing access to education, knowledge, and skills that unlock opportunities and personal growth."
+      },
+      {
+        title: "Thrive",
+        text: "Promoting health, well-being, and supportive environments that enable individuals to lead productive lives."
+      },
+      {
+        title: "Participate",
+        text: "Encouraging civic engagement, volunteerism, and community involvement to strengthen social responsibility."
+      },
+      {
+        title: "Empower",
+        text: "Building confidence, leadership, and self-reliance to create sustainable and community-led progress."
+      },
+      {
+        title: "Sustain",
+        text: "Fostering environmental awareness and sustainable practices that protect resources for future generations."
+      }
+    ]
+  },
+  {
+    label: "How We Work",
+    title: "How We Work",
+    icon: Briefcase,
+    subsections: [
+      {
+        title: "Community-Centric Approach",
+        text: "We engage directly with communities to understand their unique needs, challenges, and aspirations."
+      },
+      {
+        title: "Collaborative Partnerships",
+        text: "We work alongside educational institutions, corporates, government bodies, volunteers, and local stakeholders to maximize impact."
+      },
+      {
+        title: "Volunteer-Driven Action",
+        text: "Our initiatives provide meaningful opportunities for individuals to contribute their time, skills, and expertise toward social causes."
+      },
+      {
+        title: "Sustainable Solutions",
+        text: "We focus on long-term outcomes by promoting awareness, capacity building, and self-sustaining community practices."
+      },
+      {
+        title: "Measurable Impact",
+        text: "We believe in accountability and continuously evaluate our programs to ensure effectiveness, transparency, and meaningful results."
+      }
+    ]
+  },
+  {
+    label: "Why Trust Us?",
+    title: "Why Trust Us?",
+    icon: ShieldCheck,
+    subsections: [
+      {
+        title: "Purpose-Led Organization",
+        text: "Every initiative is guided by a genuine commitment to community welfare and sustainable development."
+      },
+      {
+        title: "Community Impact Focus",
+        text: "Our efforts are designed to create tangible improvements in education, health, environmental responsibility, and social engagement."
+      },
+      {
+        title: "Strong Volunteer Network",
+        text: "We bring together passionate volunteers, professionals, students, and partners who share a common goal of creating positive change."
+      },
+      {
+        title: "Transparency & Accountability",
+        text: "We value integrity, responsible resource utilization, and clear communication with our stakeholders and supporters."
+      },
+      {
+        title: "Collaborative Ecosystem",
+        text: "Through partnerships and community participation, we create solutions that are inclusive, scalable, and sustainable."
+      },
+      {
+        title: "Commitment to Long-Term Change",
+        text: "We look beyond short-term interventions and work toward building empowered communities capable of driving their own future development."
+      }
+    ],
+    quote: "When individuals are empowered, communities flourish. When communities flourish, society progresses.",
+    quoteAuthor: "Aakritii's Core Belief"
+  }
+];
+
+export default function KnowMoreTabs() {
+  const [activeId, setActiveId] = useState("");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-25% 0px -55% 0px", threshold: 0 }
+    );
+
+    sections.forEach((section) => {
+      const sectionId = section.label.toLowerCase().replace(/\s+/g, "-");
+      const element = document.getElementById(sectionId);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleScrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.getBoundingClientRect().top + window.scrollY;
+      // Scroll margin accounting for fixed header + sticky sub-nav
+      const offsetMargin = window.innerWidth < 1024 ? 88 : 142;
+      window.scrollTo({
+        top: offsetTop - offsetMargin + 2,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  return (
+    <section className="know-more-page">
+      <div className="know-more-hero">
+        <img
+          src="/img/know-more-landing.png"
+          alt="Know More Landing Banner"
+          className="know-more-hero-bg"
+        />
+        <div className="know-more-hero-overlay"></div>
+        <div className="know-more-hero-content"></div>
+      </div>
+
+      {/* Desktop Navigation tab bar */}
+      <div className="know-more-tabs-container know-more-tabs-desktop">
+        <nav className="know-more-tabs" aria-label="Know more sections">
+          {sections.map((section) => {
+            const sectionId = section.label.toLowerCase().replace(/\s+/g, "-");
+            const isActive = activeId === sectionId;
+            return (
+              <a
+                key={section.label}
+                href={`#${sectionId}`}
+                className={`know-more-tab${isActive ? " is-active" : ""}`}
+                onClick={(e) => handleScrollToSection(e, sectionId)}
+              >
+                {section.label}
+              </a>
+            );
+          })}
+        </nav>
+      </div>
+
+      {/* Mobile Dropdown Navigation */}
+      <div className="know-more-mobile-nav">
+        {/* Active tab header — clicking toggles the dropdown */}
+        <div className="know-more-mobile-nav-active">
+          <span>{sections.find((s) => s.label.toLowerCase().replace(/\s+/g, "-") === activeId)?.label || sections[0].label}</span>
+        </div>
+
+        {/* Dropdown list */}
+        <div className="know-more-mobile-nav-dropdown">
+          {sections.map((section) => {
+            const sectionId = section.label.toLowerCase().replace(/\s+/g, "-");
+            const isActive = activeId === sectionId || (!activeId && section === sections[0]);
+            if (isActive) return null;
+
+            return (
+              <a
+                key={section.label}
+                href={`#${sectionId}`}
+                className="know-more-mobile-nav-item"
+                onClick={(e) => handleScrollToSection(e, sectionId)}
+              >
+                {section.label}
+              </a>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Sequential Long-Form Sections */}
+      <div className="know-more-sections-container">
+        {sections.map((section) => {
+          const sectionId = section.label.toLowerCase().replace(/\s+/g, "-");
+          const IconComponent = section.icon;
+
+          return (
+            <section key={section.label} id={sectionId} className="know-more-section-block">
+              <div className="know-more-tab-content-inner">
+                
+                {/* Left Column: Circular Graphic Icon */}
+                <div className="know-more-left-visual">
+                  <div className="know-more-circle-graphic">
+                    {IconComponent && <IconComponent className="know-more-circle-icon" size={60} strokeWidth={1.5} />}
+                  </div>
+                </div>
+
+                {/* Right Column: Text Content */}
+                <article className="know-more-right-text">
+                  <h2 className="know-more-content-title">{section.title}</h2>
+                  
+                  {section.paragraphs && section.paragraphs.map((p, idx) => (
+                    <p key={idx} className="know-more-paragraph">{p}</p>
+                  ))}
+                  
+                  {section.bullets && (
+                    <ul className="know-more-bullet-list">
+                      {section.bullets.map((b, idx) => (
+                        <li key={idx} className="know-more-bullet-item">{b}</li>
+                      ))}
+                    </ul>
+                  )}
+                  
+                  {section.closingParagraphs && section.closingParagraphs.map((p, idx) => (
+                    <p key={idx} className="know-more-paragraph">{p}</p>
+                  ))}
+                  
+                  {section.subsections && (
+                    <div className="know-more-subsections">
+                      {section.subsections.map((sub, idx) => (
+                        <div key={idx} className="know-more-subsection">
+                          <h3 className="know-more-subsection-title">{sub.title}</h3>
+                          <p className="know-more-subsection-text">{sub.text}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  
+                  {section.quote && (
+                    <div className="know-more-quote-container">
+                      <blockquote className="know-more-blockquote">
+                        "{section.quote}"
+                      </blockquote>
+                      {section.quoteAuthor && (
+                        <cite className="know-more-quote-author">— {section.quoteAuthor}</cite>
+                      )}
+                    </div>
+                  )}
+                </article>
+
+              </div>
+            </section>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
