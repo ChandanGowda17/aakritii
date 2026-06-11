@@ -50,7 +50,7 @@ export default function OurImpact() {
 
   return (
     <section className="our-impact-section" ref={sectionRef}>
-      <div className="our-impact-inner">
+      <div className="our-impact-inner mb-3">
         <h2 className="our-impact-title">Our Impact</h2>
         <div className="our-impact-grid">
           {stats.map((stat, idx) => (
@@ -66,6 +66,10 @@ export default function OurImpact() {
           ))}
         </div>
       </div>
-    </section>
+
+
+
+
+    </section >
   );
 }
