@@ -13,7 +13,7 @@ export default function Home() {
       <OurImpact />
       
       <ProgrammesSection />
-      <Education />
+      
       <ImpactShowcase />
     </main>
   );

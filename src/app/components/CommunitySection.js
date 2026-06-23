@@ -1,13 +1,13 @@
 export default function CommunitySection() {
   return (
     <section id="about" className="community-section">
-      <div className="community-content">
-        <h2 className="community-title">
+      <div className="community-content px-4 md:px-6">
+        <h2 className="community-title text-center">
           Building Stronger Communities Through <br className="hidden sm:inline" />
           Compassion, Action, and Empowerment
         </h2>
 
-        <div className="community-copy">
+        <div className="community-copy text-center">
           <p>
             At Aakritii NGO, we believe that meaningful change begins with collective action. We are a
             community-driven organization dedicated to creating positive social impact through education, health and

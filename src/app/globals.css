@@ -329,7 +329,7 @@ body {
 .know-more-page {
   min-height: 100svh;
   background: #f6efe6;
-  padding: 86px 0 64px;
+  padding: 0 0 64px;
 }
 
 /* Know More Landing Banner Styles */
@@ -603,7 +603,7 @@ body {
   .know-more-page {
     padding-left: 0;
     padding-right: 0;
-    padding-top: 72px;
+    padding-top: 0;
   }
 
   .know-more-hero {
@@ -783,7 +783,7 @@ body {
   }
 
   .know-more-page {
-    padding: 72px 0 48px;
+    padding: 0 0 48px;
   }
 
   .know-more-hero {
@@ -936,8 +936,10 @@ body {
 
 /* Programmes Section Styling */
 .programmes-section {
-  
-  padding: 200px;
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 100px;
   
   display: grid;
   justify-content:center;

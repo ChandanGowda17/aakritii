@@ -142,6 +142,15 @@ const sections = [
 
 export default function KnowMoreTabs() {
   const [activeId, setActiveId] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -180,15 +189,59 @@ export default function KnowMoreTabs() {
 
   return (
     <section className="know-more-page">
-      <div className="know-more-hero">
-        <img
-          src="/img/know-more-landing.png"
-          alt="Know More Landing Banner"
-          className="know-more-hero-bg"
-        />
-        <div className="know-more-hero-overlay"></div>
-        <div className="know-more-hero-content"></div>
-      </div>
+      <section id="home" className="hero-section relative min-h-screen bg-[#3A2312] overflow-hidden">
+        <div className="hero-shell relative w-full min-h-[85vh] lg:min-h-[90vh] bg-[#4E3629] curved-hero-container flex items-center justify-center py-16 px-6">
+          <img
+            src="/img/know-more-landing.png"
+            alt="Aakritii NGO community education programme"
+            className="hero-bg-video absolute inset-0 z-0 h-full w-full object-cover"
+          />
+
+          <div className="absolute inset-y-0 left-0 z-0 w-[62%] bg-gradient-to-r from-[#401905]/80 via-[#5a2d14]/45 to-transparent max-lg:w-full max-lg:from-[#401905]/75 max-lg:via-[#5a2d14]/40 max-lg:to-transparent"></div>
+
+          <div
+            className="hero-content site-container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10"
+            style={{ paddingTop: isMobile ? "96px" : undefined }}
+          >
+            <div className="hero-copy lg:col-span-8 flex flex-col gap-6 text-left">
+              <div className="flex flex-col gap-2">
+                <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+                Education Changes Everything
+                </h1>
+                <h2 className="hero-subtitle text-2xl sm:text-4xl font-extrabold text-white/90 tracking-wide font-sans">
+                Learn. Grow. Lead.
+                </h2>
+              </div>
+
+              <p className="hero-description text-[0.95rem] sm:text-[1.05rem] text-neutral-300 leading-relaxed max-w-2xl font-light">
+              True change begins with education. It equips children with knowledge, confidence, and the power to break the cycle of poverty.
+
+Aligned with India's vision for inclusive education and Sustainable Development Goal 4, our Mission Education programme supports children living in difficult circumstances—from remote villages and tribal regions to disaster-affected and underserved communities.
+              </p>
+
+              <p className="hero-description hero-description-strong text-[0.95rem] sm:text-[1.05rem] font-bold text-white max-w-2xl leading-relaxed mt-2">
+              By ensuring access to learning, nutrition, and wellness, we help every child discover their potential and create a future filled with possibilities.
+              </p>
+
+              <div className="hero-actions flex flex-wrap gap-4 mt-6">
+                <a
+                  href="#our-story"
+                  className="hero-action-link px-8 py-3.5 rounded-full border-2 border-white/60 bg-white/5 hover:bg-white/10 text-white font-extrabold text-[0.8rem] tracking-widest uppercase transition-all duration-300 hover:scale-105 hover:border-white text-center min-w-[160px]"
+                  onClick={(e) => handleScrollToSection(e, "our-story")}
+                >
+                  KNOW MORE
+                </a>
+                <a
+                  href="/#contact"
+                  className="hero-action-link px-8 py-3.5 rounded-full border-2 border-white/40 bg-white/15 hover:bg-white/25 text-white font-extrabold text-[0.8rem] tracking-widest uppercase transition-all duration-300 hover:scale-105 hover:border-white text-center min-w-[190px]"
+                >
+                  CSR PARTNERSHIPS
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Desktop Navigation tab bar */}
       <div className="know-more-tabs-container know-more-tabs-desktop">

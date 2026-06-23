@@ -35,12 +35,12 @@ export default function Hero() {
 
         {/* Hero Grid Content */}
         <div
-          className="hero-content site-container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10"
+          className="hero-content site-container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full"
           style={{ paddingTop: isMobile ? '96px' : undefined }}
         >
 
           {/* Left Text Block */}
-          <div className="hero-copy lg:col-span-8 flex flex-col gap-6 text-left">
+          <div className="hero-copy lg:col-span-8 flex flex-col gap-6 text-left w-full">
 
             <div className="flex flex-col gap-2">
               <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight">

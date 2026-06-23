@@ -72,7 +72,7 @@ export default function Education() {
                 key={program.id}
                 type="button"
                 onClick={() => setActiveProgramId(program.id)}
-                className={`w-full border-b border-[#d7cfc5] flex-1 text-left transition-all duration-300 ${
+                className={`w-full border-b border-[#d7cfc5] py-6 text-left transition-all duration-300 ${
                   activeProgramId === program.id
                     ? "text-[#401905]"
                     : "text-[#9a9a9a] hover:text-[#401905]"
