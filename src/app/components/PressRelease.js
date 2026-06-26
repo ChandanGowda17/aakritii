@@ -7,7 +7,7 @@ const pressReleases = [
     id: 1,
     title: "Aakritii Launches New Education Initiative in Rural Areas",
     date: "October 15, 2025",
-    excerpt: "In our latest effort to bridge the educational divide, we have launched a comprehensive learning program reaching over 5,000 children across 20 villages.",
+    excerpt: " In our latest effort to bridge the educational divide, we have launched a comprehensive learning program reaching over 5,000 children across 20 villages.",
     image: "/img/news-1.png",
     link: "#"
   },
@@ -81,7 +81,7 @@ export default function PressRelease() {
                   {item.excerpt}
                 </p>
                 <Link href={item.link} className="inline-flex items-center gap-2 text-[#e8372b] font-bold uppercase tracking-widest text-xs sm:text-sm hover:gap-3 transition-all mt-auto w-fit">
-                  Read Article
+                   &nbsp; &nbsp; Read Article
                   <span>→</span>
                   <br/>
                 </Link>
