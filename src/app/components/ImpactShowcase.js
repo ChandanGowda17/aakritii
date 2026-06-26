@@ -10,6 +10,54 @@ const impactStats = [
   { number: "1,500+", label: "girls received scholarship for higher education" },
 ];
 
+const CountUp = ({ value, visible }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const numericString = value.replace(/,/g, "");
+    const match = numericString.match(/^(\d+)(.*)$/);
+    if (!match) {
+      setCount(value);
+      return;
+    }
+
+    const target = parseInt(match[1], 10);
+
+    if (!visible) {
+      setCount(0);
+      return;
+    }
+
+    let startTimestamp = null;
+    const duration = 2000;
+
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const easeOutProgress = progress * (2 - progress);
+      
+      setCount(Math.floor(easeOutProgress * target));
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  }, [value, visible]);
+
+  const formatNumber = (num) => {
+    if (typeof num === "string") return num;
+    return num.toLocaleString('en-IN');
+  };
+
+  const numericString = value.replace(/,/g, "");
+  const match = numericString.match(/^(\d+)(.*)$/);
+  const suffix = match ? match[2] : "";
+
+  return <>{formatNumber(count)}{suffix}</>;
+};
+
 export default function ImpactShowcase() {
   const [visible, setVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -17,10 +65,7 @@ export default function ImpactShowcase() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
+        setVisible(entry.isIntersecting);
       },
       { threshold: 0.15 }
     );
@@ -53,7 +98,9 @@ export default function ImpactShowcase() {
               className={`impact-showcase-stat${visible ? " is-visible" : ""}`}
               style={{ transitionDelay: `${idx * 0.15 + 0.1}s` }}
             >
-              <span className="impact-showcase-number">{stat.number}</span>
+              <span className="impact-showcase-number">
+                <CountUp value={stat.number} visible={visible} />
+              </span>
               <span className="impact-showcase-label">{stat.label}</span>
             </div>
           ))}

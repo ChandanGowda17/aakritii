@@ -1,3 +1,8 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Image from "next/image";
+
 export default function ProgramsSection() {
     const programs = [
         {
@@ -30,8 +35,33 @@ export default function ProgramsSection() {
         },
     ];
 
+    const sdgImages = Array.from({ length: 17 }, (_, i) => ({
+        id: i + 1,
+        src: `/img/sdg-${i + 1}.png`,
+        alt: `SDG ${i + 1}`
+    }));
+
     return (
-        <section id="programmes" className="bg-[#f6efe6] py-16 md:py-28">
+        <>
+            <style>{`
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-25%);
+                    }
+                }
+                .animate-marquee {
+                    animation: marquee 90s linear infinite;
+                }
+                .animate-marquee:hover {
+                    animation-play-state: paused;
+                }
+            `}</style>
+
+
+            <section id="programmes" className="bg-[#f6efe6] py-16 md:py-28">
             <div className="programs-content px-4 md:px-6">
                 <div className="grid lg:grid-cols-[420px_1fr] gap-12 md:gap-20 items-center">
 
@@ -72,31 +102,40 @@ export default function ProgramsSection() {
                 </div>
             </div>
 
-            <div className="bg-[#4b200c] pt-16 md:pt-20 px-4 md:px-20">
-            <div className="mb-16 md:mb-20 gap-12 md:gap-20 items-center text-center">
+            <div className="bg-[#4b200c] pt-24 md:pt-40 px-4 md:px-20">
+            <div className="mb-16 md:mb-20 gap-12 md:gap-20 items-center text-center md:pt-40 "><br/>
                 <h2 className="text-center text-white text-2xl md:text-4xl lg:text-5xl font-bold uppercase leading-tight">
-                    Towards Achieving
-                    <br />
-                    Sustainable Development Goals
+                    
+                 <br/>
+                    Sustainable &nbsp; Development &nbsp; Goals
                 </h2>
-
-           <div className="mt-8 md:mt-10 flex justify-center">
-  <img
-    src="/img/sdg-goals.png"
-    alt="Sustainable Development Goals"
-    className="w-[90%] md:w-[70%] h-auto"
-  />
-</div>
+<br/>   <br /> <br/> <br/>
+         <div className="relative mt-24 md:mt-32 overflow-hidden py-4">
+          <div className="animate-marquee flex w-max gap-18 ">
+            {[...sdgImages, ...sdgImages, ...sdgImages, ...sdgImages].map((sdg, index) => (
+              <div
+                key={`${sdg.id}-${index}`}
+                className="relative flex  h-28 w-28 md:h-40 md:w-40 shrink-0 items-center justify-center rounded-xl bg-white mx-4 md:mx-6 shadow-sm overflow-hidden"
+              >
+                <Image
+                  src={sdg.src}
+                  alt={sdg.alt}
+                  fill
+                  className="object-cover"
+                  sizes="160px" 
+                  
+                />
+              </div>
+            ))}
+          </div>
+        </div>
 <div className="mt-20 md:mt-30 border-t border-none w-full"></div>
             </div>
 
-            <div className="h-16 md:h-24"></div>
+            <div className="h-24 md:h-40"></div>
 
             </div>
         </section>
-        
-
-
-
+        </>
     );
 }

@@ -2,8 +2,8 @@ import Hero from "./components/Hero";
 import CommunitySection from "./components/CommunitySection";
 import ProgrammesSection from "./components/ProgrammeSection";
 import OurImpact from "./components/OurImpact";
-import ImpactShowcase from "./components/ImpactShowcase";
-import Education from "./components/Education";
+import SupportSection from "./components/SupportSection";
+import PressRelease from "./components/PressRelease";
 
 export default function Home() {
   return (
@@ -12,9 +12,12 @@ export default function Home() {
       <CommunitySection />
       <OurImpact />
       
-      <ProgrammesSection />
+      <ProgrammesSection /> 
       
-      <ImpactShowcase />
+      <SupportSection />
+
+      <PressRelease />
+      
     </main>
   );
 }

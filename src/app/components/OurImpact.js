@@ -30,6 +30,44 @@ const stats = [
   }
 ];
 
+const CountUp = ({ value, visible }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const match = value.match(/^(\d+)(.*)$/);
+    if (!match) return;
+
+    const target = parseInt(match[1], 10);
+
+    if (!visible) {
+      setCount(0);
+      return;
+    }
+
+    let startTimestamp = null;
+    const duration = 2000; // 2 seconds
+
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const easeOutProgress = progress * (2 - progress);
+      
+      setCount(Math.floor(easeOutProgress * target));
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  }, [value, visible]);
+
+  const match = value.match(/^(\d+)(.*)$/);
+  const suffix = match ? match[2] : "";
+
+  return <>{count}{suffix}</>;
+};
+
 export default function OurImpact() {
   const [visible, setVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -37,10 +75,7 @@ export default function OurImpact() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
+        setVisible(entry.isIntersecting);
       },
       { threshold: 0.2 }
     );
@@ -59,7 +94,9 @@ export default function OurImpact() {
               className={`our-impact-stat${visible ? " is-visible" : ""}`}
               style={{ transitionDelay: `${idx * 0.12}s` }}
             >
-              <span className="our-impact-number">{stat.number}</span>
+              <span className="our-impact-number">
+                <CountUp value={stat.number} visible={visible} />
+              </span>
               <strong className="our-impact-label">{stat.label}</strong>
               <p className="our-impact-description">{stat.description}</p>
             </div>

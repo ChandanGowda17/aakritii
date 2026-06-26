@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import ImpactShowcase from "../../components/ImpactShowcase";
 
 export default function Education() {
   const programs = [
@@ -50,6 +51,18 @@ export default function Education() {
     },
   ];
 
+  
+  const [showVideoModal, setShowVideoModal] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const [activeProgramId, setActiveProgramId] = useState(1);
 
   const activeProgram =
@@ -58,9 +71,51 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="relative bg-[#f6f2eb]"
+      className="relative bg-[#f6f2eb] min-h-screen"
     >
-      <div className="flex flex-col items-center justify-center w-full">
+          <section id="home" className="hero-section relative pt-24 min-h-screen bg-[#3A2312] overflow-hidden">
+      <div className="hero-shell relative w-full min-h-[85vh] lg:min-h-[90vh] bg-[#4E3629] curved-hero-container flex items-center justify-center py-16 px-6">
+
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hero-bg-video absolute inset-0 z-0 h-full w-full object-cover"
+        >
+          <source src="/img/landing.mp4" type="video/mp4" />
+        </video>
+
+        <div className="absolute inset-y-0 left-0 z-0 w-[62%] bg-gradient-to-r from-[#401905]/80 via-[#5a2d14]/45 to-transparent max-lg:w-full max-lg:from-[#401905]/75 max-lg:via-[#5a2d14]/40 max-lg:to-transparent"></div>
+
+        {/* Hero Grid Content */}
+        <div
+          className="hero-content site-container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full"
+          style={{ paddingTop: isMobile ? '96px' : undefined }}
+        >
+
+          {/* Left Text Block */}
+          <div className="hero-copy lg:col-span-8 flex flex-col gap-6 text-left w-full">
+
+            <div className="flex flex-col gap-2">
+              <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+                Aakritii NGO
+              </h1>
+              <h2 className="hero-subtitle text-2xl sm:text-4xl font-extrabold text-white/90 tracking-wide font-sans">
+                Empower. Transform. Inspire
+              </h2>
+            </div>
+
+            <p className="hero-description text-[0.95rem] sm:text-[1.05rem] text-neutral-300 leading-relaxed max-w-2xl font-light">
+             Education is at the heart of Aakritii NGO’s mission to create lasting social change. We work to ensure that children from underserved and vulnerable communities have access to quality learning opportunities, holistic development, and a supportive environment to thrive. Through educational programs, mentorship, skill-building initiatives, and community engagement, we empower young minds with the knowledge, confidence, and values needed to shape a brighter future.
+
+            </p>
+          </div>
+</div>
+      </div>
+    </section>
+
+      <div className="relative z-10 flex flex-col items-center justify-center w-full">
         <div className="flex justify-center items-center text-[#4b200c] text-2xl md:text-3xl lg:text-6xl font-light h-20 mt-20 px-4 text-center">EDUCATION AND CHILD DEVELOPMENT</div>
         <div className="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-24 w-full">
         <div className="grid lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
@@ -72,7 +127,7 @@ export default function Education() {
                 key={program.id}
                 type="button"
                 onClick={() => setActiveProgramId(program.id)}
-                className={`w-full border-b border-[#d7cfc5] py-6 text-left transition-all duration-300 ${
+                className={`w-full border-b border-[#d7cfc5] flex-1 text-left transition-all duration-300 ${
                   activeProgramId === program.id
                     ? "text-[#401905]"
                     : "text-[#9a9a9a] hover:text-[#401905]"
@@ -94,40 +149,40 @@ export default function Education() {
           {/* RIGHT CONTENT */}
           <div className="overflow-hidden rounded-[32px] bg-white shadow-xl lg:order-2 order-1">
 
-            <div className="grid lg:grid-cols-[1.2fr_1fr_280px] md:grid-cols-1">
+            <div className="grid lg:grid-cols-[1fr_280px] md:grid-cols-1">
 
-              {/* IMAGE */}
-              <div className="overflow-hidden md:col-span-1 lg:col-span-1">
+              {/* IMAGE with CONTENT overlay */}
+              <div className="relative h-[300px] md:h-[500px] lg:h-[650px] w-full md:col-span-1 lg:col-span-1">
                 <img
                   src={activeProgram.image}
                   alt={activeProgram.title}
-                  className="h-[300px] md:h-[500px] lg:h-[650px] w-full object-cover transition-all duration-500"
+                  className="h-full w-full object-cover transition-all duration-500"
                 />
+
+                {/* CONTENT - Overlay on top of image */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#401905]/70 via-[#401905]/40 to-transparent p-6 md:p-8 lg:p-12 flex flex-col justify-center">
+                  <span className="text-xs md:text-sm uppercase tracking-[3px] text-white/90 font-semibold">
+                    Our Program
+                  </span>
+
+                  <h2 className="mt-4 text-2xl md:text-3xl lg:text-5xl font-bold leading-tight text-white">
+                    {activeProgram.title}
+                  </h2>
+
+                  <p className="mt-6 md:mt-8 text-base md:text-lg leading-relaxed text-white/90">
+                    {activeProgram.description}
+                  </p>
+
+                  <button className="mt-6 md:mt-10 text-left text-base md:text-lg font-semibold text-white hover:translate-x-2 transition-all">
+                    Learn More →
+                  </button>
+                </div>
               </div>
 
-              {/* CONTENT */}
-              <div className="bg-[#F4EFE8] p-6 md:p-8 lg:p-12 flex flex-col justify-center md:col-span-1 lg:col-span-1">
-                <span className="text-xs md:text-sm uppercase tracking-[3px] text-[#8a6a4a] font-semibold">
-                  Our Program
-                </span>
-
-                <h2 className="mt-4 text-2xl md:text-3xl lg:text-5xl font-bold leading-tight text-[#401905]">
-                  {activeProgram.title}
-                </h2>
-
-                <p className="mt-6 md:mt-8 text-base md:text-lg leading-relaxed text-[#5b4b42]">
-                  {activeProgram.description}
-                </p>
-
-                <button className="mt-6 md:mt-10 text-left text-base md:text-lg font-semibold text-[#401905] hover:translate-x-2 transition-all">
-                  Learn More →
-                </button>
-              </div>
-
-              {/* STATS */}
-              <div className="bg-[#faf8f5] p-4 md:p-5 flex flex-row md:flex-col gap-3 md:gap-5 md:col-span-1 lg:col-span-1">
-                <div className="rounded-2xl md:rounded-3xl bg-white p-4 md:p-6 lg:p-8 shadow-md flex-1 md:flex-none">
-                  <p className="text-xs md:text-sm uppercase tracking-wide text-[#8a6a4a]">
+              {/* STATS - Right side column */}
+              <div className="bg-[#faf8f5] p-4 md:p-5 pt-2 md:pt-4 mt-4 lg:mt-0 flex flex-row md:flex-col lg:flex-col gap-3 md:gap-5 lg:gap-5 md:col-span-1 lg:col-span-1 items-center justify-center">
+                <div className="bg-white p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
+                  <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
                     Impact
                   </p>
 
@@ -140,8 +195,8 @@ export default function Education() {
                   </p>
                 </div>
 
-                <div className="rounded-2xl md:rounded-3xl bg-white p-4 md:p-6 lg:p-8 shadow-md flex-1 md:flex-none">
-                  <p className="text-xs md:text-sm uppercase tracking-wide text-[#8a6a4a]">
+                <div className="bg-white p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
+                  <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
                     Reach
                   </p>
 
@@ -206,6 +261,9 @@ export default function Education() {
         </div>
         </div>
       </section>
+
+      <ImpactShowcase />
     </section>
   );
 }
+

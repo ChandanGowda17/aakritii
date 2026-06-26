@@ -294,9 +294,7 @@ body {
     border-right: 0;
   }
 
-  .our-impact-stat:nth-child(3n+1):not(:first-child) {
-    border-right: 1px solid rgba(255, 255, 255, 0.15);
-  }
+ 
 }
 
 @media (max-width: 640px) {
@@ -314,7 +312,9 @@ body {
   }
 
   .our-impact-stat,
-  .our-impact-stat:not(:first-child) {
+  .our-impact-stat:not(:first-child),
+  .our-impact-stat:nth-child(3n),
+  .our-impact-stat:nth-child(3n+1):not(:first-child) {
     padding: 0;
     border-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
