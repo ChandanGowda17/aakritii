@@ -5,7 +5,7 @@ import Link from "next/link";
 const pressReleases = [
   {
     id: 1,
-    title: "Aakritii NGO Launches New Education Initiative in Rural Areas",
+    title: "Aakritii Launches New Education Initiative in Rural Areas",
     date: "October 15, 2025",
     excerpt: "In our latest effort to bridge the educational divide, we have launched a comprehensive learning program reaching over 5,000 children across 20 villages.",
     image: "/img/news-1.png",
@@ -31,7 +31,7 @@ const pressReleases = [
 
 export default function PressRelease() {
   return (
-    <section id="press-release" className="bg-white py-20 md:py-32 overflow-hidden">
+    <section id="press-release" className="bg-white min-h-screen py-20 md:py-32 overflow-hidden flex items-center justify-center">
       <div className="max-w-[1120px] mx-auto w-full px-6 sm:px-8 md:px-6">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -39,10 +39,11 @@ export default function PressRelease() {
             <div className="flex items-center gap-4 mb-4">
               <span className="w-3 h-3 rounded-full bg-[#e8372b]"></span>
               <h3 className="text-[#e8372b] uppercase tracking-widest font-bold text-sm md:text-base">In The News</h3>
-            </div>
+            </div><br/>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#4b200c] leading-tight break-words">
               Press Releases
             </h2>
+            <br/>
           </div>
           
           <Link href="#" className="hidden md:flex items-center gap-2 text-[#81503b] font-bold uppercase tracking-wider hover:text-[#e8372b] transition-colors group">
@@ -71,15 +72,18 @@ export default function PressRelease() {
               
               {/* Content Container */}
               <div className="p-6 md:p-8 flex flex-col flex-grow">
-                <h3 className="text-xl sm:text-2xl font-bold text-[#4b200c] mb-4 line-clamp-2 group-hover:text-[#e8372b] transition-colors">
+                <br/>
+                <h3 className="ml-2 text-xl sm:text-2xl font-bold text-[#4b200c] mb-4 line-clamp-2 group-hover:text-[#e8372b] transition-colors">
                   {item.title}
                 </h3>
+                <br/>
                 <p className="text-[#81503b] leading-relaxed mb-8 flex-grow line-clamp-3 text-sm sm:text-base">
                   {item.excerpt}
                 </p>
                 <Link href={item.link} className="inline-flex items-center gap-2 text-[#e8372b] font-bold uppercase tracking-widest text-xs sm:text-sm hover:gap-3 transition-all mt-auto w-fit">
                   Read Article
                   <span>→</span>
+                  <br/>
                 </Link>
               </div>
             </article>
