@@ -107,7 +107,7 @@ export default function GetInvolved() {
           </div>
 
           <div className="flex justify-center w-full">
-            <form className="bg-white border border-[#E8DCCE] rounded-[20px] w-full max-w-2xl" style={{ padding: "2rem 4rem" }}>
+            <form action="mailto:Contact@aakritii.org" method="post" encType="text/plain" className="bg-white border border-[#E8DCCE] rounded-[20px] w-full max-w-2xl" style={{ padding: "2rem 4rem" }}>
 
             {/* Full Name */}
             <div className="mb-14">
@@ -115,6 +115,8 @@ export default function GetInvolved() {
               <br/>
               <input
                 type="text"
+                name="FullName"
+                required
                 className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
               />
             </div>
@@ -125,6 +127,8 @@ export default function GetInvolved() {
                 <label className="block text-lg font-medium text-[#5A2E16] mb-5">Email</label>
                 <input
                   type="email"
+                  name="Email"
+                  required
                   className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
                 />
               </div>
@@ -132,6 +136,8 @@ export default function GetInvolved() {
                 <label className="block text-lg font-medium text-[#5A2E16] mb-5">Phone</label>
                 <input
                   type="tel"
+                  name="Phone"
+                  required
                   className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
                 />
               </div>
@@ -142,6 +148,8 @@ export default function GetInvolved() {
               <label className="block text-lg font-medium text-[#5A2E16] mb-5">City</label>
               <input
                 type="text"
+                name="City"
+                required
                 className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
               />
             </div>
@@ -149,11 +157,12 @@ export default function GetInvolved() {
             {/* Interest */}
             <div className="mb-14">
               <label className="block text-lg font-medium text-[#5A2E16] mb-5">I&apos;m interested in</label>
-              <select className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] outline-none focus:border-[#D46C32] transition-colors appearance-none cursor-pointer">
-                <option>Individual volunteering</option>
-                <option>Student Internship</option>
-                <option>Skill-Based volunteering</option>
-                <option>Corporate / CSR</option>
+              <select name="Interest" required className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] outline-none focus:border-[#D46C32] transition-colors appearance-none cursor-pointer">
+                <option value="">Select an option</option>
+                <option value="Individual volunteering">Individual volunteering</option>
+                <option value="Student Internship">Student Internship</option>
+                <option value="Skill-Based volunteering">Skill-Based volunteering</option>
+                <option value="Corporate / CSR">Corporate / CSR</option>
               </select>
             </div>
 <br/>
@@ -162,6 +171,8 @@ export default function GetInvolved() {
               <label className="block text-lg font-medium text-[#5A2E16] mb-5">Tell us about yourself</label>
               <textarea
                 rows={8}
+                name="Message"
+                required
                 placeholder="Skills, availability, motivation..."
                 className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors resize-none"
               />
