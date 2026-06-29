@@ -4,11 +4,13 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../img/logo.jpeg";
 
+
 const navItems = [
   { label: "Home", href: "/#home", active: true },
   { label: "About Us", href: "/#about" },
   { label: "Programmes", href: "/#programmes" },
-  { label: "Join", href: "/#support" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Join", href: "/join" },
 ];
 
 
@@ -48,21 +50,26 @@ export default function Header() {
             </span>
           </span>
 
-          <span className="text-[23px] font-extrabold uppercase leading-none tracking-[-0.01em] text-white max-sm:text-[18px]">
-            Aakritii NGO
+          <span className="flex flex-col gap-[3px]">
+            <span className="text-[23px] font-extrabold uppercase leading-none tracking-[-0.01em] text-white max-sm:text-[18px]">
+              Aakritii NGO
+            </span>
+            <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#c9a882] max-sm:text-[10px] max-sm:tracking-[0.12em]">
+              Empower · Transform · Inspire
+            </span>
           </span>
         </a>
 
         <div className="hidden items-center gap-[58px] lg:flex max-xl:gap-8">
           <nav className="flex items-center gap-[30px] overflow-visible">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="flex h-[24px] items-center text-[18px] font-extrabold uppercase leading-none text-white transition hover:text-[#b08b6d]"
-              >
-                {item.label}
-              </a>
+             <a
+  key={item.label}
+  href={item.href}
+  className="flex h-[24px] items-center text-[18px] font-extrabold uppercase leading-none text-white transition hover:text-[#b08b6d]"
+>
+  {item.label}
+</a>
             ))}
           </nav>
 
@@ -107,22 +114,22 @@ export default function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="w-full bg-[#401905] px-5 pb-5 lg:hidden">
-          <nav className="flex flex-col gap-4 border-t border-white/10 pt-5">
+        <div className="w-full bg-[#9b7d63] px-6 pb-8 lg:hidden">
+          <nav className="flex flex-col gap-6 border-t border-white/10 pt-7">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-base font-extrabold uppercase text-white"
-                onClick={closeMobileMenu}
-              >
-                {item.label}
-              </a>
+             <a
+  key={item.label}
+  href={item.href}
+  className="text-lg font-extrabold uppercase text-white"
+  onClick={closeMobileMenu}
+>
+  {item.label}
+</a>
             ))}
 
             <a
               href="/#contact"
-              className="mt-1 flex h-12 w-full max-w-[220px] items-center justify-center gap-3 rounded-full bg-[#9b7d63] text-base font-extrabold uppercase text-white"
+              className="mt-3 flex h-14 w-full items-center justify-center gap-3 rounded-full bg-[#401905] text-base font-extrabold uppercase text-white mx-auto"
               onClick={closeMobileMenu}
             >
               <svg

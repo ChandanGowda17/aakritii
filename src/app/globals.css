@@ -52,6 +52,10 @@ body {
   overflow-x: hidden;
 }
 
+.font-playfair {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
 /* Glassmorphism classes */
 .glass {
   background: var(--glass-bg);
@@ -76,6 +80,97 @@ body {
   padding-left: 24px;
   padding-right: 24px;
 }
+
+.press-release-inner {
+  max-width: 1120px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 640px) {
+  .press-release-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .press-release-inner {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.join-inner {
+  max-width: 1120px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.join-page-section {
+  padding-top: 140px;
+  padding-bottom: 60px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 1024px) {
+  .join-page-section {
+    padding-top: 180px;
+    padding-bottom: 80px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+
+.join-form-inner {
+  max-width: 768px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.join-input {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e0d3c6;
+  border-radius: 8px;
+  padding: 12px 16px;
+  outline: none;
+  font-size: 16px;
+  color: #1d1713;
+  transition: border-color 0.2s ease;
+}
+
+.join-input:focus {
+  border-color: #4b200c;
+}
+
+@media (min-width: 640px) {
+  .join-inner,
+  .join-form-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .join-inner,
+  .join-form-inner {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 
 .hero-section {
   padding-top: 86px;

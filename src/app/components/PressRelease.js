@@ -31,21 +31,23 @@ const pressReleases = [
 
 export default function PressRelease() {
   return (
-    <section id="press-release" className="bg-white min-h-screen py-20 md:py-32 overflow-hidden flex items-center justify-center">
-      <div className="max-w-[1120px] mx-auto w-full px-6 sm:px-8 md:px-6">
+    <section id="press-release" className="bg-white py-20 md:py-32 min-h-screen flex items-center">
+      <div className="press-release-inner">
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
             <div className="flex items-center gap-4 mb-4">
               <span className="w-3 h-3 rounded-full bg-[#e8372b]"></span>
               <h3 className="text-[#e8372b] uppercase tracking-widest font-bold text-sm md:text-base">In The News</h3>
-            </div><br/>
+            </div>
+            <br/>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#4b200c] leading-tight break-words">
               Press Releases
             </h2>
             <br/>
           </div>
-          
+
           <Link href="#" className="hidden md:flex items-center gap-2 text-[#81503b] font-bold uppercase tracking-wider hover:text-[#e8372b] transition-colors group">
             View All News
             <span className="transform transition-transform group-hover:translate-x-1">→</span>
@@ -53,15 +55,15 @@ export default function PressRelease() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pressReleases.map((item) => (
-            <article key={item.id} className="bg-[#f6efe6] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col h-full border border-[#81503b]/10 w-full">
+            <article key={item.id} className="bg-[#f6efe6] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col h-full border border-[#81503b]/10">
               {/* Image Container */}
               <div className="relative h-80 md:h-64 w-full overflow-hidden">
-                <Image 
-                  src={item.image} 
-                  alt={item.title} 
-                  fill 
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
@@ -69,7 +71,7 @@ export default function PressRelease() {
                   {item.date}
                 </div>
               </div>
-              
+
               {/* Content Container */}
               <div className="p-6 md:p-8 flex flex-col flex-grow">
                 <br/>
@@ -81,9 +83,8 @@ export default function PressRelease() {
                   {item.excerpt}
                 </p>
                 <Link href={item.link} className="inline-flex items-center gap-2 text-[#e8372b] font-bold uppercase tracking-widest text-xs sm:text-sm hover:gap-3 transition-all mt-auto w-fit">
-                   &nbsp; &nbsp; Read Article
+                  &nbsp;&nbsp;Read Article
                   <span>→</span>
-                  <br/>
                 </Link>
               </div>
             </article>
@@ -92,12 +93,14 @@ export default function PressRelease() {
 
         {/* Mobile View All Button */}
         <div className="mt-12 text-center md:hidden">
+          <br/>
           <Link href="#" className="inline-flex items-center gap-2 text-[#81503b] font-bold uppercase tracking-wider hover:text-[#e8372b] transition-colors">
             View All News
             <span>→</span>
           </Link>
+          <br/>
         </div>
-        
+
       </div>
     </section>
   );
