@@ -23,12 +23,13 @@ export default function GetInvolved() {
   ];
 
   return (
-    <section className="bg-[#F8F1E6] border-t border-[#E6DACB] min-h-screen flex flex-col items-center justify-center">
-      <div className="mx-auto max-w-full px-6 lg:px-10 mb-20 text-left">
+    <section className="bg-[#F8F1E6] border-t border-[#E6DACB] w-full" style={{ paddingTop: '86px' }}>
+      <div className="site-container mb-20 text-left">
 
         {/* Hero */}
      
-        <div className="py-28 lg:py-36 justify-start">
+        <div className="pt-16 pb-10 justify-start">
+          <div className="h-10"></div>
           <p className="text-[#D46C32] uppercase tracking-[0.35em] text-sm font-semibold">
             Get Involved
           </p>
@@ -39,8 +40,8 @@ export default function GetInvolved() {
           </h1>
 
           <p className="mt-10 max-w-3xl text-[#5E5045] text-xl leading-10">
-            Whether you're an individual, a student group or a corporate
-            organisation — there's a place for you here.
+            Whether you&apos;re an individual, a student group or a corporate
+            organisation — there&apos;s a place for you here.
           </p>
       </div>
 
@@ -48,28 +49,16 @@ export default function GetInvolved() {
       </div>
 
       {/* Cards */}
-      <div className="border-t border-[#E6DACB] mt-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-20">
+      <div className="border-t border-[#E6DACB]">
+        <div className="site-container py-20">
 
           <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4 mt-10">
 
             {cards.map((card) => (
               <div
                 key={card.title}
-                className="
-                  bg-white
-                  border border-[#E8DCCE]
-                  rounded-[30px]
-                  p-8
-                  lg:p-10
-                  min-h-[300px]
-                  flex
-                  flex-col
-                  transition-all
-                  duration-300
-                  hover:-translate-y-2
-                  hover:shadow-xl
-                "
+                className="mt-10 bg-white border border-[#E8DCCE] rounded-[30px] w-full aspect-square flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                style={{ padding: "1.75rem" }}
               >
                 {/* Icon */}
                 <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#D46C32]">
@@ -87,14 +76,14 @@ export default function GetInvolved() {
                     />
                   </svg>
                 </div>
-
+<br/>
                 {/* Title */}
-                <h3 className="mt-10 text-[2rem] leading-tight font-light text-[#5A2E16]">
+                <h3 className="mt-5 text-[1.1rem] leading-snug font-semibold text-[#5A2E16]">
                   {card.title}
                 </h3>
 
                 {/* Content */}
-                <p className="mt-7 text-[20px] leading-9 text-[#62564B]">
+                <p className="mt-3 text-[0.85rem] leading-6 text-[#62564B]">
                   {card.description}
                 </p>
               </div>
@@ -102,6 +91,94 @@ export default function GetInvolved() {
 
           </div>
 
+        </div>
+        <div className="h-25"></div>
+      </div>
+
+      {/* Sign Up Form */}
+      <div className="border-t border-[#E6DACB]">
+        <br/>
+        <div className="site-container py-20">
+          <div className="text-center mb-12">
+            <h2 className="text-[#7A4A2B] text-4xl md:text-5xl font-light">Sign up to volunteer</h2>
+            <br/>
+            <p className="mt-3 text-[#5E5045] text-base">We&apos;ll reach out within 2–3 working days.</p>
+            <br/>
+          </div>
+
+          <div className="flex justify-center w-full">
+            <form className="bg-white border border-[#E8DCCE] rounded-[20px] w-full max-w-2xl" style={{ padding: "2rem 4rem" }}>
+
+            {/* Full Name */}
+            <div className="mb-14">
+              <label className="block text-lg font-medium text-[#5A2E16] mb-5">Full name</label>
+              <br/>
+              <input
+                type="text"
+                className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
+              />
+            </div>
+<br/>
+            {/* Email + Phone */}
+            <div className="mb-14 grid grid-cols-1 sm:grid-cols-2 gap-10">
+              <div>
+                <label className="block text-lg font-medium text-[#5A2E16] mb-5">Email</label>
+                <input
+                  type="email"
+                  className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block text-lg font-medium text-[#5A2E16] mb-5">Phone</label>
+                <input
+                  type="tel"
+                  className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
+                />
+              </div>
+            </div>
+<br/>
+            {/* City */}
+            <div className="mb-14">
+              <label className="block text-lg font-medium text-[#5A2E16] mb-5">City</label>
+              <input
+                type="text"
+                className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
+              />
+            </div>
+<br/>
+            {/* Interest */}
+            <div className="mb-14">
+              <label className="block text-lg font-medium text-[#5A2E16] mb-5">I&apos;m interested in</label>
+              <select className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] outline-none focus:border-[#D46C32] transition-colors appearance-none cursor-pointer">
+                <option>Individual volunteering</option>
+                <option>Student Internship</option>
+                <option>Skill-Based volunteering</option>
+                <option>Corporate / CSR</option>
+              </select>
+            </div>
+<br/>
+            {/* Message */}
+            <div className="mb-16">
+              <label className="block text-lg font-medium text-[#5A2E16] mb-5">Tell us about yourself</label>
+              <textarea
+                rows={8}
+                placeholder="Skills, availability, motivation..."
+                className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors resize-none"
+              />
+            </div>
+<br/>
+            {/* Submit */}
+            <div className="flex justify-center">
+            <button
+              type="submit"
+              className="w-2/3 mx-auto  rounded-sm bg-[#D46C32] px-8 py-6 text-lg font-semibold uppercase tracking-widest text-white transition-all hover:bg-[#B85A28] hover:shadow-lg"
+            >
+              Submit 
+            </button>
+            </div>
+
+          </form>
+          </div>
         </div>
       </div>
     </section>
