@@ -134,9 +134,7 @@ const sections = [
         title: "Commitment to Long-Term Change",
         text: "We look beyond short-term interventions and work toward building empowered communities capable of driving their own future development."
       }
-    ],
-    quote: "When individuals are empowered, communities flourish. When communities flourish, society progresses.",
-    quoteAuthor: "Aakritii's Core Belief"
+    ]
   }
 ];
 

@@ -108,10 +108,11 @@ Education and Child Development              </h1>
 
             </p>
           </div>
+          
 </div>
       </div>
     </section>
-
+<br/>
       <div className="relative z-10 flex flex-col items-center justify-center w-full">
         <div className="flex justify-center items-center text-[#4b200c] text-2xl md:text-3xl lg:text-6xl font-light h-20 mt-20 px-4 text-center">EDUCATION AND CHILD DEVELOPMENT</div>
         <div className="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-24 w-full">
