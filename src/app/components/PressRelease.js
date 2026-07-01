@@ -37,9 +37,16 @@ export default function PressRelease() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-4 mb-4">
-              <span className="w-3 h-3 rounded-full bg-[#e8372b]"></span>
-              <h3 className="text-[#e8372b] uppercase tracking-widest font-bold text-sm md:text-base">In The News</h3>
+            <div className="flex items-center justify-between gap-4 mt-4 md:mt-0 mb-4">
+              <div className="flex items-center gap-4">
+                <span className="news-blink-dot w-3 h-3 rounded-full bg-[#e8372b]"></span>
+                <h3 className="text-[#e8372b] uppercase tracking-widest font-bold text-sm md:text-base">In The News</h3>
+              </div>
+
+              <Link href="/press-releases" className="inline-flex md:hidden items-center gap-2 text-[#81503b] font-bold uppercase tracking-wider text-xs hover:text-[#e8372b] transition-colors">
+                View All News
+                <span>→</span>
+              </Link>
             </div>
             <br/>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#4b200c] leading-tight break-words">
@@ -48,7 +55,7 @@ export default function PressRelease() {
             <br/>
           </div>
 
-          <Link href="#" className="hidden md:flex items-center gap-2 text-[#81503b] font-bold uppercase tracking-wider hover:text-[#e8372b] transition-colors group">
+          <Link href="/press-releases" className="hidden md:flex items-center gap-2 text-[#81503b] font-bold uppercase tracking-wider hover:text-[#e8372b] transition-colors group md:-translate-y-4">
             View All News
             <span className="transform transition-transform group-hover:translate-x-1">→</span>
           </Link>
@@ -87,16 +94,6 @@ export default function PressRelease() {
               </div>
             </article>
           ))}
-        </div>
-
-        {/* Mobile View All Button */}
-        <div className="mt-12 text-center md:hidden">
-          <br/>
-          <Link href="#" className="inline-flex items-center gap-2 text-[#81503b] font-bold uppercase tracking-wider hover:text-[#e8372b] transition-colors">
-            View All News
-            <span>→</span>
-          </Link>
-          <br/>
         </div>
 
       </div>

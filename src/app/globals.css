@@ -90,6 +90,23 @@ body {
   padding-right: 16px;
 }
 
+.news-blink-dot {
+  animation: news-dot-blink 1.4s ease-in-out infinite;
+}
+
+@keyframes news-dot-blink {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.35;
+    transform: scale(0.75);
+  }
+}
+
 @media (min-width: 640px) {
   .press-release-inner {
     padding-left: 24px;
@@ -137,6 +154,23 @@ body {
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+/* Keep the volunteer fields comfortably inset from the form card. */
+.volunteer-form {
+  padding: 28px 20px;
+}
+
+@media (min-width: 640px) {
+  .volunteer-form {
+    padding: 40px 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .volunteer-form {
+    padding: 48px 64px;
+  }
 }
 
 .join-input {

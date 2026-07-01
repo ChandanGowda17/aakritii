@@ -50,15 +50,15 @@ export default function GetInvolved() {
 
       {/* Cards */}
       <div className="border-t border-[#E6DACB]">
-        <div className="site-container py-20">
+        <div className="site-container py-12 sm:py-20">
 
-          <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4 mt-10">
+          <div className="grid gap-5 sm:gap-8 sm:grid-cols-2 xl:grid-cols-4 mt-4 sm:mt-10">
 
             {cards.map((card) => (
               <div
                 key={card.title}
-                className="mt-10 bg-white border border-[#E8DCCE] rounded-[30px] w-full aspect-square flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-                style={{ padding: "1.75rem" }}
+                className="bg-white border border-[#E8DCCE] rounded-[24px] sm:rounded-[30px] w-full aspect-auto xl:aspect-square flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                style={{ padding: "clamp(1.25rem, 5vw, 1.75rem)" }}
               >
                 {/* Icon */}
                 <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#D46C32]">
@@ -76,7 +76,6 @@ export default function GetInvolved() {
                     />
                   </svg>
                 </div>
-<br/>
                 {/* Title */}
                 <h3 className="mt-5 text-[1.1rem] leading-snug font-semibold text-[#5A2E16]">
                   {card.title}
@@ -107,7 +106,13 @@ export default function GetInvolved() {
           </div>
 
           <div className="flex justify-center w-full">
-            <form action="mailto:Contact@aakritii.org" method="post" encType="text/plain" className="bg-white border border-[#E8DCCE] rounded-[20px] w-full max-w-2xl" style={{ padding: "2rem 4rem" }}>
+            <form
+              action="mailto:Contact@aakritii.org"
+              method="post"
+              encType="text/plain"
+              className="bg-white border border-[#E8DCCE] rounded-[20px] w-full max-w-2xl"
+              style={{ padding: "clamp(28px, 5vw, 48px) clamp(20px, 6vw, 64px)" }}
+            >
 
             {/* Full Name */}
             <div className="mb-14">
@@ -117,19 +122,19 @@ export default function GetInvolved() {
                 type="text"
                 name="FullName"
                 required
-                className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
+                className="w-full min-h-12 rounded-md border border-[#E8DCCE] bg-[#FBF7F2] px-4 sm:px-6 py-3 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
               />
             </div>
 <br/>
             {/* Email + Phone */}
-            <div className="mb-14 grid grid-cols-1 sm:grid-cols-2 gap-10">
+            <div className="mb-14 grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10">
               <div>
                 <label className="block text-lg font-medium text-[#5A2E16] mb-5">Email</label>
                 <input
                   type="email"
                   name="Email"
                   required
-                  className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
+                  className="w-full min-h-12 rounded-md border border-[#E8DCCE] bg-[#FBF7F2] px-4 sm:px-6 py-3 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
                 />
               </div>
               <div>
@@ -138,7 +143,7 @@ export default function GetInvolved() {
                   type="tel"
                   name="Phone"
                   required
-                  className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
+                  className="w-full min-h-12 rounded-md border border-[#E8DCCE] bg-[#FBF7F2] px-4 sm:px-6 py-3 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
                 />
               </div>
             </div>
@@ -150,14 +155,15 @@ export default function GetInvolved() {
                 type="text"
                 name="City"
                 required
-                className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
+                className="w-full min-h-12 rounded-md border border-[#E8DCCE] bg-[#FBF7F2] px-4 sm:px-6 py-3 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors"
               />
             </div>
 <br/>
             {/* Interest */}
             <div className="mb-14">
               <label className="block text-lg font-medium text-[#5A2E16] mb-5">I&apos;m interested in</label>
-              <select name="Interest" required className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] outline-none focus:border-[#D46C32] transition-colors appearance-none cursor-pointer">
+              <br/>
+              <select name="Interest" required className="w-full min-h-12 rounded-md border border-[#E8DCCE] bg-[#FBF7F2] px-4 sm:px-6 py-3 text-base text-[#3D2B1F] outline-none focus:border-[#D46C32] transition-colors appearance-none cursor-pointer">
                 <option value="">Select an option</option>
                 <option value="Individual volunteering">Individual volunteering</option>
                 <option value="Student Internship">Student Internship</option>
@@ -169,12 +175,13 @@ export default function GetInvolved() {
             {/* Message */}
             <div className="mb-16">
               <label className="block text-lg font-medium text-[#5A2E16] mb-5">Tell us about yourself</label>
+              <br/>
               <textarea
                 rows={8}
                 name="Message"
                 required
                 placeholder="Skills, availability, motivation..."
-                className="w-full rounded-sm border border-[#E8DCCE] bg-[#FBF7F2] px-6 py-5 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors resize-none"
+                className="w-full min-h-40 rounded-md border border-[#E8DCCE] bg-[#FBF7F2] px-4 sm:px-6 py-3 text-base text-[#3D2B1F] placeholder-[#B5A49A] outline-none focus:border-[#D46C32] transition-colors resize-none"
               />
             </div>
 <br/>
@@ -182,7 +189,7 @@ export default function GetInvolved() {
             <div className="flex justify-center">
             <button
               type="submit"
-              className="w-2/3 mx-auto  rounded-sm bg-[#D46C32] px-8 py-6 text-lg font-semibold uppercase tracking-widest text-white transition-all hover:bg-[#B85A28] hover:shadow-lg"
+              className="w-full sm:w-2/3 mx-auto rounded-md bg-[#D46C32] px-6 sm:px-8 py-4 sm:py-6 text-lg font-semibold uppercase tracking-widest text-white transition-all hover:bg-[#B85A28] hover:shadow-lg"
             >
               Submit 
             </button>
