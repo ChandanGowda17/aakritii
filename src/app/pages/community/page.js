@@ -47,6 +47,31 @@ export default function Education() {
   const activeProgram =
     programs.find((p) => p.id === activeProgramId) || programs[0];
 
+
+    const cards = [
+    {
+      title: "Learn ",
+      description:
+        "Access to education, knowledge and skills that unlock opportunities.",
+    },
+    {
+      title: "Thrive",
+      description:
+        "Health, well-being and supportive environments to lead productive lives.",
+    },
+    {
+      title: "Participate",
+      description:
+        "Civic engagement, volunteerism and active community involvement.",
+    },
+    {
+      title: "Empower",
+      description:
+        "Confidence, leadership and self-reliance for community-led progress.",
+    },
+    
+  ];
+
   return (
     <section
       id="education"
@@ -90,154 +115,200 @@ export default function Education() {
       </div>
     </section>
 
-      <div className="relative z-10 flex flex-col items-center justify-center w-full">
-        <div className="flex justify-center items-center text-[#4b200c] text-2xl md:text-3xl lg:text-6xl font-light h-20 mt-20 px-4 text-center">Community Development  </div>
-        <div className="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-24 w-full">
-        <div className="grid lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+<section className="bg-[#F8F1E6] border-t border-[#E6DACB] w-full" style={{ paddingTop: '86px' }}>
+      <div className="site-container mb-20 text-left">
 
-          {/* LEFT TABS */}
-          <div className="border-t border-[#d7cfc5] flex flex-col h-full lg:order-1 order-2">
-            {programs.map((program) => (
-              <button
-                key={program.id}
-                type="button"
-                onClick={() => setActiveProgramId(program.id)}
-                className={`w-full border-b border-[#d7cfc5] flex-1 text-left transition-all duration-300 ${
-                  activeProgramId === program.id
-                    ? "text-[#401905]"
-                    : "text-[#9a9a9a] hover:text-[#401905]"
-                }`}
+        {/* Hero */}
+     
+        <div className="pt-16 pb-10 justify-start">
+          <div className="h-10"></div>
+          <p className="text-[#D46C32] uppercase tracking-[0.35em] text-sm font-semibold">
+            About Us
+          </p>
+          <br/>
+
+          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05]">
+            Building stronger communities 
+            <br />
+            through compassion.
+          </h1>
+<br/>
+          <p className="mt-10 max-w-3xl text-[#5E5045] text-xl leading-10">
+            Aakritii NGO was founded on a simple yet powerful belief: meaningful change happens when individuals come together with a shared purpose.
+          </p>
+      </div>
+
+<div className="h-20"></div>
+      </div>
+
+      <div className="site-container pb-20 md:pb-28">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="overflow-hidden rounded-[20px] bg-[#E8DCCE] shadow-sm">
+            <img
+              src="/img/community-4.png"
+              alt="Women participating in a community development activity"
+              className="h-[320px] w-full object-cover md:h-[370px]"
+            />
+          </div>
+
+          <div className="text-[#5E5045]">
+            <p className="text-lg leading-8 md:text-xl md:leading-9">
+              What began as a vision to contribute positively to society has evolved into a
+              platform that connects people, resources and opportunities to create lasting
+              community impact.
+            </p>
+
+            <p className="mt-8 text-lg leading-8 md:text-xl md:leading-9">
+              Driven by compassion and a commitment to social responsibility, Aakritii
+              works across education, health and well-being, environmental sustainability,
+              community empowerment, and volunteer engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br/><br/><br/><br/><br/><br/>
+      <div className="bg-[#EFE3D3] py-16 md:py-24" style={{ paddingLeft: "clamp(18px, 4vw, 48px)", paddingRight: "clamp(18px, 4vw, 48px)" }}> <br/><br/><br/><br/><br/><br/>
+        <div className="site-container">
+          <div className="grid gap-8 lg:grid-cols-2">
+            <article className="rounded-[20px] border border-[#E2D2C0] bg-[#FFFCF8]" style={{ padding: "clamp(32px, 5vw, 56px)" }}>
+              <p className="text-sm font-semibold uppercase tracking-[0.45em] text-[#D46C32]">
+                Vision
+              </p>
+
+              <h2 className="mt-6 font-serif text-3xl leading-tight text-[#7A3F1E] md:text-4xl">
+                An inclusive, empowered society
+              </h2><br />
+
+              <p className="mt-7 text-lg leading-8 text-[#4F4035] md:text-xl md:leading-9">
+                To build an inclusive, empowered and sustainable society where every
+                individual has access to the opportunities, resources and support needed
+                to lead a dignified and fulfilling life.
+              </p>
+            </article>
+
+            <article className="rounded-[20px] bg-[#7A4724] text-[#F4E6D8]" style={{ padding: "clamp(32px, 5vw, 56px)" }}>
+              <p className="text-sm font-semibold uppercase tracking-[0.45em] text-[#D46C32]">
+                Mission
+              </p>
+
+              <h2 className="mt-6 font-serif text-3xl leading-tight text-white md:text-4xl">
+                Create positive, sustainable impact
+              </h2><br />
+
+              <ul className="mt-8 space-y-4 text-base font-semibold leading-7 md:text-lg">
+                {[
+                  "Promote quality education and child development.",
+                  "Enhance health, well-being and community care.",
+                  "Encourage environmental responsibility.",
+                  "Empower communities through participation.",
+                  "Inspire volunteerism and active citizenship.",
+                ].map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#D46C32] text-xs text-[#D46C32]">
+                      ✓
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </div><br/><br/><br/><br/><br/><br/><br/>
+        </div>
+      </div>
+
+
+      </section>
+      <div className="site-container mb-20 text-left">
+
+        {/* Hero */}
+     
+        <div className="pt-16 pb-10 justify-start">
+          <div className="h-10"></div>
+          <p className="text-[#D46C32] uppercase tracking-[0.35em] text-sm font-semibold">
+            The Lifecycle Approach
+          </p>
+          <br/>
+
+          <h1 className="mt-6 text-[#7A4A2B] text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05]">
+           Holistic support across every <br/>stage of life.
+          </h1>
+
+          
+      </div>
+</div>
+<br /><br/>
+<div >
+        <div className="site-container py-12 sm:py-20">
+
+          <div className="grid gap-5 sm:gap-8 sm:grid-cols-2 xl:grid-cols-4 mt-4 sm:mt-10">
+
+            {cards.map((card) => (
+              <div
+                key={card.title}
+                className="bg-white border border-[#E8DCCE] rounded-[24px] sm:rounded-[30px] w-full aspect-auto xl:aspect-square flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                style={{ padding: "clamp(1.25rem, 5vw, 1.75rem)" }}
               >
-                <span
-                  className={`block leading-tight ${
-                    activeProgramId === program.id
-                      ? "font-bold text-xl md:text-2xl lg:text-4xl"
-                      : "font-light text-lg md:text-xl lg:text-3xl"
-                  }`}
-                >
-                  {program.title}
-                </span>
-              </button>
+                {/* Icon */}
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#D46C32]">
+                  <svg
+                    className="h-5 w-5 text-[#D46C32]"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                  
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  
+                </div>
+                <br/>
+                {/* Title */}
+                <h3 className="mt-5 text-[2rem] leading-snug font-semibold text-[#5A2E16]">
+                  {card.title}
+                </h3>
+
+                {/* Content */}
+                <p className="mt-3 text-[1.1rem] leading-6 text-[#62564B]">
+                  {card.description}
+                </p>
+              </div>
             ))}
-          </div>
 
-          {/* RIGHT CONTENT */}
-          <div className="overflow-hidden rounded-[32px] bg-white shadow-xl lg:order-2 order-1">
-
-            <div className="grid lg:grid-cols-[1fr_280px] md:grid-cols-1">
-
-              {/* IMAGE with CONTENT overlay */}
-              <div className="relative h-[300px] md:h-[500px] lg:h-[650px] w-full md:col-span-1 lg:col-span-1">
-                <img
-                  src={activeProgram.image}
-                  alt={activeProgram.title}
-                  className="h-full w-full object-cover transition-all duration-500"
-                />
-
-                {/* CONTENT - Overlay on top of image */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#401905]/70 via-[#401905]/40 to-transparent p-6 md:p-8 lg:p-12 flex flex-col justify-center">
-                  <span className="text-xs md:text-sm uppercase tracking-[3px] text-white/90 font-semibold">
-                    Our Program
-                  </span>
-
-                  <h2 className="mt-4 text-2xl md:text-3xl lg:text-5xl font-bold leading-tight text-white">
-                    {activeProgram.title}
-                  </h2>
-
-                  <p className="mt-6 md:mt-8 text-base md:text-lg leading-relaxed text-white/90">
-                    {activeProgram.description}
-                  </p>
-
-                  <button className="mt-6 md:mt-10 text-left text-base md:text-lg font-semibold text-white hover:translate-x-2 transition-all">
-                    Learn More →
-                  </button>
-                </div>
-              </div>
-
-              {/* STATS - Right side column */}
-              <div className="bg-[#faf8f5] p-4 md:p-5 pt-2 md:pt-4 mt-4 lg:mt-0 flex flex-row md:flex-col lg:flex-col gap-3 md:gap-5 lg:gap-5 md:col-span-1 lg:col-span-1 items-center justify-center">
-                <div className="bg-white p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
-                  <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
-                    Impact
-                  </p>
-
-                  <h3 className="mt-2 md:mt-4 text-3xl md:text-4xl lg:text-6xl font-bold text-[#401905]">
-                    {activeProgram.stat1}
-                  </h3>
-
-                  <p className="mt-2 md:mt-3 text-sm md:text-base text-[#5b4b42]">
-                    {activeProgram.stat1Label}
-                  </p>
-                </div>
-
-                <div className="bg-white p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
-                  <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
-                    Reach
-                  </p>
-
-                  <h3 className="mt-2 md:mt-4 text-3xl md:text-4xl lg:text-6xl font-bold text-[#401905]">
-                    {activeProgram.stat2}
-                  </h3>
-
-                  <p className="mt-2 md:mt-3 text-sm md:text-base text-[#5b4b42]">
-                    {activeProgram.stat2Label}
-                  </p>
-                </div>
-              </div>
-
-            </div>
           </div>
 
         </div>
+        <div className="h-25"></div>
       </div>
-      </div>
+      
 
-      {/* WHY EDUCATION SECTION */}
-      <section className="h-screen px-6 md:px-12 lg:px-20 bg-[#f6efe6]">
-        <div className="flex flex-col items-center justify-center h-full">
-          <div className="max-w-7xl mx-auto">
 
-          <div className="mb-24">
-            <h2 className="text-[#4b200c] text-5xl md:text-7xl font-light">
-              WHY Education
-            </h2>
-
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
-              If we need to address healthcare, poverty, population control,
-              unemployment and human rights, there's no better way to start than
-              providing education to children in need.
-            </p>
-
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
-              Education empowers children with knowledge, confidence, and the
-              opportunity to build a brighter future while becoming responsible
-              citizens of society.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-[#4b200c] text-5xl md:text-7xl font-light">
-              WHAT WE DO
-            </h2>
-
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
-              Aakritii NGO's flagship programme, Mission Education, focuses on
-              empowering underprivileged children through education, nutrition,
-              and holistic development.
-            </p>
-
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
-              We work with children from vulnerable communities including remote
-              villages, tribal regions, and underserved urban areas, ensuring
-              every child gets an opportunity to learn and succeed.
-            </p>
-          </div>
-
+            <section className="bg-[#F8F1E6] py-20 md:py-28">
+        <div className="site-container text-center">
+          <blockquote className="mx-auto max-w-7xl font-serif text-3xl italic leading-snug text-[#7A4724] md:text-5xl">
+            &quot;When individuals are empowered, communities flourish.
+            <br className="hidden md:block" />
+            When communities flourish, society progresses.&quot;
+          </blockquote>
+ <br/> <br/>
+          <p className="mt-8 text-sm font-semibold uppercase tracking-[0.45em] text-[#D46C32]">
+            Aakritii&apos;s Core Belief
+          </p>
+ <br/> <br/>
+          <a
+            href="/join"
+            className="mt-10 h-10 w-50 inline-flex items-center justify-center rounded-md bg-[#D46C32] px-9 py-4 text-lg font-bold text-white transition hover:bg-[#B85A28]"
+          >
+            Join the movement
+          </a>
         </div>
-        </div>
+        <br/> <br/> <br/> <br/>
       </section>
 
-      <ImpactShowcase />
     </section>
   );
 }

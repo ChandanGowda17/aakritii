@@ -49,7 +49,7 @@ export default function GetInvolved() {
       </div>
 
       {/* Cards */}
-      <div className="border-t border-[#E6DACB]">
+      <div >
         <div className="site-container py-12 sm:py-20">
 
           <div className="grid gap-5 sm:gap-8 sm:grid-cols-2 xl:grid-cols-4 mt-4 sm:mt-10">
@@ -69,13 +69,16 @@ export default function GetInvolved() {
                     strokeWidth="2.5"
                     viewBox="0 0 24 24"
                   >
+                  
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
+                  
                 </div>
+                <br/>
                 {/* Title */}
                 <h3 className="mt-5 text-[1.1rem] leading-snug font-semibold text-[#5A2E16]">
                   {card.title}
@@ -189,7 +192,7 @@ export default function GetInvolved() {
             <div className="flex justify-center">
             <button
               type="submit"
-              className="w-full sm:w-2/3 mx-auto rounded-md bg-[#D46C32] px-6 sm:px-8 py-4 sm:py-6 text-lg font-semibold uppercase tracking-widest text-white transition-all hover:bg-[#B85A28] hover:shadow-lg"
+              className="w-full sm:w-2/3 mx-auto h-10 rounded-md bg-[#D46C32] px-6 sm:px-8 py-4 sm:py-6 text-lg font-semibold uppercase tracking-widest text-white transition-all hover:bg-[#B85A28] hover:shadow-lg"
             >
               Submit 
             </button>

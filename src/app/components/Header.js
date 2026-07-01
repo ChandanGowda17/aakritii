@@ -9,7 +9,7 @@ const navItems = [
   { label: "Home", href: "/#home", active: true },
   { label: "About Us", href: "/#about" },
   { label: "Programmes", href: "/#programmes" },
-  { label: "Gallery", href: "/#gallery" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Join", href: "/join" },
 ];
 
@@ -114,13 +114,14 @@ export default function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="w-full bg-[#9b7d63] px-6 pb-8 lg:hidden">
+        <div className="w-full bg-[#9b7d63] pr-6 pb-8 lg:hidden" style={{ paddingLeft: "10px", paddingTop: "10px" ,paddingRight: "10px" }}>
           <nav className="flex flex-col gap-6 border-t border-white/10 pt-7">
             {navItems.map((item) => (
              <a
   key={item.label}
   href={item.href}
-  className="text-lg font-extrabold uppercase text-white"
+  className="block text-lg font-extrabold uppercase text-white"
+  style={{ paddingLeft: "28px" }}
   onClick={closeMobileMenu}
 >
   {item.label}

@@ -3,12 +3,12 @@ import Link from "next/link";
 import logo from "../../img/logo.jpeg";
 
 const exploreLinks = [
+  { label: "Home", href: "/#home" },
   { label: "About Us", href: "/#about" },
   { label: "Programs", href: "/#programmes" },
-  { label: "Gallery", href: "/#gallery" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Volunteer", href: "/join" },
-  { label: "Donate", href: "/#contact" },
-  { label: "FAQ", href: "/#faq" },
+  
 ];
 
 const socialLinks = [
@@ -116,7 +116,7 @@ export default function Footer() {
                 <a href="tel:+919800000000" className="transition hover:text-white">
                   +91 98000 00000
                 </a>
-              </li>
+              </li><br/>
             </ul>
           </div>
         </div>
