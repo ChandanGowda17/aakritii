@@ -7,52 +7,51 @@ export default function Education() {
   const programs = [
     {
       id: 1,
-      title: "Education & Child Development",
+      title: "Foundational Learning",
       image: "/img/education-1.png",
       description:
-        "Providing quality education, nutrition and holistic development opportunities for children from underserved communities.",
+        "Helping children build strong reading, writing, numeracy, and classroom confidence through consistent learning support.",
       stat1: "5000+",
       stat1Label: "Children Supported",
       stat2: "120+",
-      stat2Label: "Learning Centers",
+      stat2Label: "Learning Sessions",
     },
     {
       id: 2,
-      title: "Health & Wellness",
-      image: "/img/health-1.png",
+      title: "Holistic Development",
+      image: "/img/education-2.png",
       description:
-        "Promoting healthcare access, preventive care and community wellness initiatives.",
-      stat1: "20K+",
-      stat1Label: "Beneficiaries",
-      stat2: "300+",
-      stat2Label: "Health Camps",
+        "Creating space for creativity, values, life skills, and emotional growth so children can thrive beyond textbooks.",
+      stat1: "85+",
+      stat1Label: "Activity Drives",
+      stat2: "40+",
+      stat2Label: "Partner Schools",
     },
     {
       id: 3,
-      title: "Environment",
-      image: "/img/environment-1.png",
+      title: "Mentorship & Guidance",
+      image: "/img/education-3.png",
       description:
-        "Driving sustainability through tree plantations, awareness programs and eco-friendly practices.",
-      stat1: "50K+",
-      stat1Label: "Trees Planted",
-      stat2: "100+",
-      stat2Label: "Green Drives",
+        "Connecting students with mentors who encourage regular attendance, goal setting, career awareness, and personal confidence.",
+      stat1: "300+",
+      stat1Label: "Mentor Hours",
+      stat2: "1500+",
+      stat2Label: "Students Guided",
     },
     {
       id: 4,
-      title: "Community Empowerment",
-      image: "/img/community-1.png",
+      title: "Access & Retention",
+      image: "/img/education-4.png",
       description:
-        "Creating opportunities for communities through skill development and social engagement.",
-      stat1: "10K+",
-      stat1Label: "Lives Impacted",
-      stat2: "250+",
-      stat2Label: "Programs",
+        "Supporting children from vulnerable communities with the encouragement, resources, and family engagement needed to stay in school.",
+      stat1: "92%",
+      stat1Label: "Attendance Focus",
+      stat2: "60+",
+      stat2Label: "Community Visits",
     },
   ];
 
   
-  const [showVideoModal, setShowVideoModal] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -113,29 +112,29 @@ Education and Child Development              </h1>
       </div>
     </section>
 <br/>
-      <div className="relative z-10 flex flex-col items-center justify-center w-full">
-        <div className="flex justify-center items-center text-[#4b200c] text-2xl md:text-3xl lg:text-6xl font-light h-20 mt-20 px-4 text-center">EDUCATION AND CHILD DEVELOPMENT</div>
-        <div className="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-24 w-full">
-        <div className="grid lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+      <div className="education-program-section relative z-10 flex flex-col items-center justify-center w-full">
+        <div className="education-program-title flex justify-center items-center text-[#4b200c] text-2xl md:text-3xl lg:text-6xl font-light h-20 mt-20 px-6 sm:px-8 md:px-4 text-center">EDUCATION AND CHILD DEVELOPMENT</div>
+        <div className="education-program-container mx-auto max-w-7xl px-6 sm:px-8 md:px-6 py-12 md:py-24 w-full">
+        <div className="education-program-grid grid lg:grid-cols-[320px_1fr] gap-6 md:gap-8 lg:gap-12">
 
           {/* LEFT TABS */}
-          <div className="border-t border-[#d7cfc5] flex flex-col h-full lg:order-1 order-2">
+          <div className="education-program-tabs grid grid-cols-2 gap-3 lg:flex lg:flex-col lg:h-full lg:gap-0 lg:border-t lg:border-[#d7cfc5] lg:order-1 order-1">
             {programs.map((program) => (
               <button
                 key={program.id}
                 type="button"
                 onClick={() => setActiveProgramId(program.id)}
-                className={`w-full border-b border-[#d7cfc5] flex-1 text-left transition-all duration-300 ${
+                className={`flex min-h-10 w-full items-center rounded-md border border-[#d7cfc5] bg-white px-3 py-2 text-left transition-all duration-300 sm:px-4 lg:flex-1 lg:rounded-none lg:border-x-0 lg:border-t-0 lg:bg-transparent lg:px-0 lg:py-0 ${
                   activeProgramId === program.id
-                    ? "text-[#401905]"
-                    : "text-[#9a9a9a] hover:text-[#401905]"
+                    ? "border-[#401905] text-[#401905] shadow-sm lg:border-[#d7cfc5] lg:shadow-none"
+                    : "text-[#7b7068] hover:text-[#401905]"
                 }`}
-              >
+              >&nbsp;
                 <span
-                  className={`block leading-tight ${
+                  className={`block whitespace-nowrap leading-tight ${
                     activeProgramId === program.id
-                      ? "font-bold text-xl md:text-2xl lg:text-4xl"
-                      : "font-light text-lg md:text-xl lg:text-3xl"
+                      ? "text-[14px] font-bold sm:text-base md:text-xl lg:text-3xl"
+                      : "text-[14px] font-light sm:text-base md:text-lg lg:text-3xl"
                   }`}
                 >
                   {program.title}
@@ -145,7 +144,7 @@ Education and Child Development              </h1>
           </div>
 
           {/* RIGHT CONTENT */}
-          <div className="overflow-hidden rounded-[32px] bg-white shadow-xl lg:order-2 order-1">
+          <div className="education-program-card overflow-hidden rounded-[32px] bg-white shadow-xl lg:order-2 order-2">
 
             <div className="grid lg:grid-cols-[1fr_280px] md:grid-cols-1">
 
@@ -179,7 +178,7 @@ Education and Child Development              </h1>
 
               {/* STATS - Right side column */}
               <div className="bg-[#faf8f5] p-4 md:p-5 pt-2 md:pt-4 mt-4 lg:mt-0 flex flex-row md:flex-col lg:flex-col gap-3 md:gap-5 lg:gap-5 md:col-span-1 lg:col-span-1 items-center justify-center">
-                <div className="bg-white p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
+                <div className=" p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
                   <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
                     Impact
                   </p>
@@ -193,7 +192,7 @@ Education and Child Development              </h1>
                   </p>
                 </div>
 
-                <div className="bg-white p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
+                <div className=" p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
                   <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
                     Reach
                   </p>
@@ -216,23 +215,23 @@ Education and Child Development              </h1>
       </div>
 
       {/* WHY EDUCATION SECTION */}
-      <section className="h-full px-6 md:px-12 lg:px-20 bg-[#f6efe6] ">
+      <section className="education-info-section h-full px-8 sm:px-10 md:px-12 lg:px-20 bg-[#f6efe6] overflow-hidden">
         <div className="flex flex-col items-center justify-center h-full">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto w-full">
 
-          <div className="mb-24">
+          <div className="mb-16 md:mb-24">
             <br/><br/>
-            <h2 className="text-[#4b200c] text-5xl md:text-7xl font-light">
+            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light leading-tight">
               WHY Education
             </h2>
 <br/>
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
+            <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
               If we need to address healthcare, poverty, population control,
               unemployment and human rights, there's no better way to start than
               providing education to children in need.
             </p>
 <br/>
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
+            <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
               Education empowers children with knowledge, confidence, and the
               opportunity to build a brighter future while becoming responsible
               citizens of society.
@@ -240,17 +239,17 @@ Education and Child Development              </h1>
           </div>
 <br/><br/>
           <div>
-            <h2 className="text-[#4b200c] text-5xl md:text-7xl font-light">
+            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light leading-tight">
               WHAT WE DO
             </h2>
 <br/>
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
+            <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
               Aakritii NGO's flagship programme, Mission Education, focuses on
               empowering underprivileged children through education, nutrition,
               and holistic development.
             </p>
 <br/>
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
+            <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
               We work with children from vulnerable communities including remote
               villages, tribal regions, and underserved urban areas, ensuring
               every child gets an opportunity to learn and succeed.
@@ -265,4 +264,3 @@ Education and Child Development              </h1>
     </section>
   );
 }
-

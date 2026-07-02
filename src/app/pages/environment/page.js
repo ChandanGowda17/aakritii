@@ -3,51 +3,51 @@
 import { useState, useEffect } from "react";
 import ImpactShowcase from "../../components/ImpactShowcase";
 
-export default function Education() {
+export default function Environment() {
   const programs = [
     {
       id: 1,
-      title: "Education & Child Development",
-      image: "/img/education-1.png",
-      description:
-        "Providing quality education, nutrition and holistic development opportunities for children from underserved communities.",
-      stat1: "5000+",
-      stat1Label: "Children Supported",
-      stat2: "120+",
-      stat2Label: "Learning Centers",
-    },
-    {
-      id: 2,
-      title: "Health & Wellness",
-      image: "/img/health-1.png",
-      description:
-        "Promoting healthcare access, preventive care and community wellness initiatives.",
-      stat1: "20K+",
-      stat1Label: "Beneficiaries",
-      stat2: "300+",
-      stat2Label: "Health Camps",
-    },
-    {
-      id: 3,
-      title: "Environment",
+      title: "Tree Plantation",
       image: "/img/environment-1.png",
       description:
-        "Driving sustainability through tree plantations, awareness programs and eco-friendly practices.",
+        "Planting native tree species to restore ecosystems, improve air quality, and combat climate change in rural and urban areas.",
       stat1: "50K+",
       stat1Label: "Trees Planted",
       stat2: "100+",
-      stat2Label: "Green Drives",
+      stat2Label: "Plantation Sites",
+    },
+    {
+      id: 2,
+      title: "Waste Management",
+      image: "/img/environment-2.png",
+      description:
+        "Implementing sustainable waste management practices including recycling, composting, and awareness campaigns for cleaner communities.",
+      stat1: "500+",
+      stat1Label: "Waste Drives",
+      stat2: "25K+",
+      stat2Label: "Kg Waste Managed",
+    },
+    {
+      id: 3,
+      title: "Water Conservation",
+      image: "/img/environment-3.png",
+      description:
+        "Building rainwater harvesting systems, restoring water bodies, and promoting water-saving practices in drought-prone regions.",
+      stat1: "75+",
+      stat1Label: "Water Structures",
+      stat2: "15K+",
+      stat2Label: "Beneficiaries",
     },
     {
       id: 4,
-      title: "Community Empowerment",
-      image: "/img/community-1.png",
+      title: "Awareness Programs",
+      image: "/img/environment-4.png",
       description:
-        "Creating opportunities for communities through skill development and social engagement.",
-      stat1: "10K+",
-      stat1Label: "Lives Impacted",
-      stat2: "250+",
-      stat2Label: "Programs",
+        "Educating communities about environmental protection, sustainable living, and climate action through workshops and campaigns.",
+      stat1: "200+",
+      stat1Label: "Workshops",
+      stat2: "30K+",
+      stat2Label: "People Reached",
     },
   ];
 
@@ -107,7 +107,7 @@ export default function Education() {
             </div>
 
             <p className="hero-description text-[0.95rem] sm:text-[1.05rem] text-neutral-300 leading-relaxed max-w-2xl font-light">
-             Education is at the heart of Aakritii NGO’s mission to create lasting social change. We work to ensure that children from underserved and vulnerable communities have access to quality learning opportunities, holistic development, and a supportive environment to thrive. Through educational programs, mentorship, skill-building initiatives, and community engagement, we empower young minds with the knowledge, confidence, and values needed to shape a brighter future.
+             Environmental sustainability is at the heart of Aakritii NGO's mission to create lasting change. We work to protect and restore our planet through tree plantations, waste management, water conservation, and community awareness programs. By engaging communities in sustainable practices, we aim to build a greener, healthier future for generations to come.
 
             </p>
           </div>
@@ -115,29 +115,30 @@ export default function Education() {
       </div>
     </section>
 
-      <div className="relative z-10 flex flex-col items-center justify-center w-full">
-        <div className="flex justify-center items-center text-[#4b200c] text-2xl md:text-3xl lg:text-6xl font-light h-20 mt-20 px-4 text-center">EDUCATION AND CHILD DEVELOPMENT</div>
-        <div className="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-24 w-full">
-        <div className="grid lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+      <br/>
+      <div className="education-program-section relative z-10 flex flex-col items-center justify-center w-full">
+        <div className="education-program-title flex justify-center items-center text-[#4b200c] text-2xl md:text-3xl lg:text-6xl font-light h-20 mt-20 px-6 sm:px-8 md:px-4 text-center">ENVIRONMENT AND SUSTAINABILITY</div>
+        <div className="education-program-container mx-auto max-w-7xl px-6 sm:px-8 md:px-6 py-12 md:py-24 w-full">
+        <div className="education-program-grid grid lg:grid-cols-[320px_1fr] gap-6 md:gap-8 lg:gap-12">
 
           {/* LEFT TABS */}
-          <div className="border-t border-[#d7cfc5] flex flex-col h-full lg:order-1 order-2">
+          <div className="education-program-tabs grid grid-cols-2 gap-3 lg:flex lg:flex-col lg:h-full lg:gap-0 lg:border-t lg:border-[#d7cfc5] lg:order-1 order-1">
             {programs.map((program) => (
               <button
                 key={program.id}
                 type="button"
                 onClick={() => setActiveProgramId(program.id)}
-                className={`w-full border-b border-[#d7cfc5] flex-1 text-left transition-all duration-300 ${
+                className={`flex min-h-10 w-full items-center rounded-md border border-[#d7cfc5] bg-white px-3 py-2 text-left transition-all duration-300 sm:px-4 lg:flex-1 lg:rounded-none lg:border-x-0 lg:border-t-0 lg:bg-transparent lg:px-0 lg:py-0 ${
                   activeProgramId === program.id
-                    ? "text-[#401905]"
-                    : "text-[#9a9a9a] hover:text-[#401905]"
+                    ? "border-[#401905] text-[#401905] shadow-sm lg:border-[#d7cfc5] lg:shadow-none"
+                    : "text-[#7b7068] hover:text-[#401905]"
                 }`}
-              >
+              >&nbsp;
                 <span
-                  className={`block leading-tight ${
+                  className={`block whitespace-nowrap leading-tight ${
                     activeProgramId === program.id
-                      ? "font-bold text-xl md:text-2xl lg:text-4xl"
-                      : "font-light text-lg md:text-xl lg:text-3xl"
+                      ? "text-[14px] font-bold sm:text-base md:text-xl lg:text-3xl"
+                      : "text-[14px] font-light sm:text-base md:text-lg lg:text-3xl"
                   }`}
                 >
                   {program.title}
@@ -147,7 +148,7 @@ export default function Education() {
           </div>
 
           {/* RIGHT CONTENT */}
-          <div className="overflow-hidden rounded-[32px] bg-white shadow-xl lg:order-2 order-1">
+          <div className="education-program-card overflow-hidden rounded-[32px] bg-white shadow-xl lg:order-2 order-2">
 
             <div className="grid lg:grid-cols-[1fr_280px] md:grid-cols-1">
 
@@ -181,7 +182,7 @@ export default function Education() {
 
               {/* STATS - Right side column */}
               <div className="bg-[#faf8f5] p-4 md:p-5 pt-2 md:pt-4 mt-4 lg:mt-0 flex flex-row md:flex-col lg:flex-col gap-3 md:gap-5 lg:gap-5 md:col-span-1 lg:col-span-1 items-center justify-center">
-                <div className="bg-white p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
+                <div className=" p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
                   <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
                     Impact
                   </p>
@@ -195,7 +196,7 @@ export default function Education() {
                   </p>
                 </div>
 
-                <div className="bg-white p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
+                <div className=" p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
                   <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
                     Reach
                   </p>
@@ -217,53 +218,58 @@ export default function Education() {
       </div>
       </div>
 
-      {/* WHY EDUCATION SECTION */}
-      <section className="h-screen px-6 md:px-12 lg:px-20 bg-[#f6efe6]">
+      {/* WHY Environment SECTION */}
+      <section className="education-info-section h-full px-8 sm:px-10 md:px-12 lg:px-20 bg-[#f6efe6] overflow-hidden">
         <div className="flex flex-col items-center justify-center h-full">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto w-full">
 
-          <div className="mb-24">
-            <h2 className="text-[#4b200c] text-5xl md:text-7xl font-light">
-              WHY Education
+          <div className="mb-16 md:mb-24">
+            <br/><br/>
+            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light leading-tight">
+              WHY Environment
             </h2>
-
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
+<br/>
+            <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
               If we need to address healthcare, poverty, population control,
               unemployment and human rights, there's no better way to start than
               providing education to children in need.
             </p>
-
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
+<br/>
+            <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
               Education empowers children with knowledge, confidence, and the
               opportunity to build a brighter future while becoming responsible
               citizens of society.
             </p>
           </div>
-
+<br/><br/>
           <div>
-            <h2 className="text-[#4b200c] text-5xl md:text-7xl font-light">
+            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light leading-tight">
               WHAT WE DO
             </h2>
-
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
+<br/>
+            <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
               Aakritii NGO's flagship programme, Mission Education, focuses on
               empowering underprivileged children through education, nutrition,
               and holistic development.
             </p>
-
-            <p className="mt-8 text-[#4b200c] text-xl md:text-2xl leading-relaxed">
+<br/>
+            <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
               We work with children from vulnerable communities including remote
               villages, tribal regions, and underserved urban areas, ensuring
               every child gets an opportunity to learn and succeed.
             </p>
           </div>
-
+<br/><br/>
         </div>
         </div>
       </section>
 
-      <ImpactShowcase />
     </section>
   );
 }
+
+
+
+
+
 

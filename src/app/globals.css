@@ -81,6 +81,35 @@ body {
   padding-right: 24px;
 }
 
+@media (max-width: 767px) {
+  .education-program-title,
+  .education-program-container,
+  .education-info-section {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .education-program-grid {
+    width: 100%;
+  }
+
+  .education-program-tabs,
+  .education-program-card {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .education-program-title,
+  .education-program-container,
+  .education-info-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
 .press-release-inner {
   max-width: 1120px;
   width: 100%;
