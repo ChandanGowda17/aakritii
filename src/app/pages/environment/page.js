@@ -174,9 +174,7 @@ export default function Environment() {
                     {activeProgram.description}
                   </p>
 
-                  <button className="mt-6 md:mt-10 text-left text-base md:text-lg font-semibold text-white hover:translate-x-2 transition-all">
-                    Learn More →
-                  </button>
+                 
                 </div>
               </div>
 
@@ -230,9 +228,7 @@ export default function Environment() {
             </h2>
 <br/>
             <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
-              If we need to address healthcare, poverty, population control,
-              unemployment and human rights, there's no better way to start than
-              providing education to children in need.
+              Protecting the environment is essential for building healthy, sustainable, and resilient communities. Rapid urbanization, deforestation, pollution, and climate change continue to threaten natural ecosystems and the well-being of future generations. By encouraging environmental awareness and responsible practices, we can preserve biodiversity, improve public health, and create greener spaces for everyone.
             </p>
 <br/>
             <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
@@ -248,9 +244,7 @@ export default function Environment() {
             </h2>
 <br/>
             <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
-              Aakritii NGO's flagship programme, Mission Education, focuses on
-              empowering underprivileged children through education, nutrition,
-              and holistic development.
+             At Aakritii NGO, we work to inspire environmental responsibility through community-driven initiatives that promote conservation, sustainability, and climate awareness. Our programmes focus on tree plantation drives, waste management awareness, water conservation, clean-up campaigns, and environmental education that encourage individuals to become active stewards of nature.
             </p>
 <br/>
             <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">

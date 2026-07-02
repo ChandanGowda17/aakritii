@@ -170,9 +170,7 @@ Education and Child Development              </h1>
                     {activeProgram.description}
                   </p>
 
-                  <button className="mt-6 md:mt-10 text-left text-base md:text-lg font-semibold text-white hover:translate-x-2 transition-all">
-                    Learn More →
-                  </button>
+                  
                 </div>
               </div>
 
