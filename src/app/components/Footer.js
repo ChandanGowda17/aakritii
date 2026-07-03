@@ -107,14 +107,20 @@ export default function Footer() {
               </li><br/>
               <li className="flex gap-4">
                 <span aria-hidden="true">✉</span>
-                <a href="mailto:hello@aakritiingo.org" className="transition hover:text-white">
-                  hello@aakritiingo.org
+                <a href="mailto:contact@aakritii.org" className="transition hover:text-white">
+                  contact@aakritii.org
+                </a>
+              </li><br/>
+              <li className="flex gap-4">
+                <span aria-hidden="true">✉</span>
+                <a href="mailto:manasa@aakritii.org" className="transition hover:text-white">
+                  manasa@aakritii.org
                 </a>
               </li><br/>
               <li className="flex gap-4">
                 <span aria-hidden="true">☎</span>
                 <a href="tel:+919800000000" className="transition hover:text-white">
-                  +91 98000 00000
+                  +91 90195-42024
                 </a>
               </li><br/>
             </ul>

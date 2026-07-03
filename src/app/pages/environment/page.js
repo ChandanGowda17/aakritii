@@ -70,7 +70,7 @@ export default function Environment() {
 
   return (
     <section
-      id="education"
+      id="environment"
       className="relative bg-[#f6f2eb] min-h-screen"
     >
           <section id="home" className="hero-section relative pt-24 min-h-screen bg-[#3A2312] overflow-hidden">

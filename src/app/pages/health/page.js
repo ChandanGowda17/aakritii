@@ -73,13 +73,13 @@ export default function Education() {
 
   return (
     <section
-      id="education"
+      id="health"
       className="relative bg-[#f6f2eb] min-h-screen"
     >
           <section id="home" className="hero-section relative pt-12 min-h-screen bg-[#3A2312] overflow-hidden">
       <div className="hero-shell relative w-full min-h-[85vh] lg:min-h-[90vh] bg-[#4E3629] curved-hero-container flex items-start justify-center py-8 px-6 pt-4">
 
-      <img src="/img/community-2.jpg" alt="Community" className="absolute inset-0 w-full h-full object-cover" />
+      <img src="/img/health-3.jpg" alt="Health" className="absolute inset-0 w-full h-full object-cover" />
 
         <div className="absolute inset-y-0 left-0 z-0 w-[62%] bg-gradient-to-r from-[#401905]/80 via-[#5a2d14]/45 to-transparent max-lg:w-full max-lg:from-[#401905]/75 max-lg:via-[#5a2d14]/40 max-lg:to-transparent"></div>
 
@@ -141,7 +141,7 @@ export default function Education() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="overflow-hidden rounded-[20px] bg-[#E8DCCE] shadow-sm">
             <img
-              src="/img/community-4.png"
+              src="/img/health-4.jpg"
               alt="Women participating in a community development activity"
               className="h-[320px] w-full object-cover md:h-[370px]"
             />

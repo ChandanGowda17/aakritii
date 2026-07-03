@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import ImpactShowcase from "../../components/ImpactShowcase";
 
 export default function Education() {
   const programs = [
@@ -31,7 +30,6 @@ export default function Education() {
   ];
 
   
-  const [showVideoModal, setShowVideoModal] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -74,7 +72,7 @@ export default function Education() {
 
   return (
     <section
-      id="education"
+      id="community"
       className="relative bg-[#f6f2eb] min-h-screen"
     >
           <section id="home" className="hero-section relative pt-12 min-h-screen bg-[#3A2312] overflow-hidden">

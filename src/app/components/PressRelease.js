@@ -87,10 +87,7 @@ export default function PressRelease() {
                 <p className="text-[#81503b] leading-relaxed mb-6 flex-grow line-clamp-3 text-sm sm:text-base">
                   {item.excerpt}
                 </p>
-                <Link href={item.link} className="inline-flex items-center gap-2 text-[#e8372b] font-bold uppercase tracking-widest text-xs sm:text-sm hover:gap-3 transition-all mt-auto w-fit">
-                  Read Article
-                  <span>→</span>
-                </Link>
+               
               </div>
             </article>
           ))}

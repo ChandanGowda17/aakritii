@@ -28,7 +28,7 @@ const carouselItems = [
   },
   {
     id: 4,
-    image: "/img/education-2.png",
+    image: "/img/health-5.png",
     title: "Health and Well Being",
     description: "Providing quality education and holistic development opportunities for all the children in need.",
    link: "pages/health"
