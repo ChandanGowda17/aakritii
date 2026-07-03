@@ -294,12 +294,8 @@ body {
   padding: 12px 32px;
 }
 
-/* Hero layout curves matching the screenshot */
-.curved-hero-container {
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  overflow: hidden;
-}
+
+
 
 .community-section {
   min-height: 780px;

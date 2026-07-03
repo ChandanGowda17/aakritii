@@ -57,10 +57,8 @@ export default function SupportSection() {
             </p>
             <br/>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-              <Link href="/donate" className="flex justify-center items-center h-12 w-40 bg-[#e8372b] text-white px-8 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-[#d12f24] transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(232,55,43,0.3)]">
-                Donate Now
-              </Link>
-              <Link href="/join" className=" flex justify-center items-center h-12 w-40 bg-transparent border-2 border-white text-#81503b px-8 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-white hover:text-[#4b200c] transition-all hover:-translate-y-1">
+              
+              <Link href="/join" className="flex justify-center items-center h-12 w-40 bg-[#e8372b] text-white px-8 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-[#d12f24] transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(232,55,43,0.3)]">
                 Join Us
               </Link>
             </div>

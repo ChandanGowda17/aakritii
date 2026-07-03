@@ -22,8 +22,17 @@ const galleryCategories = [
   },
   {
     title: "Environment",
-    image: "/img/environment-1.png",
-    images: ["/img/environment-1.png"],
+    image: "/img/environment/env-1.png",
+    images: [
+      "/img/environment/env-1.png",
+      "/img/environment/env-2.png",
+      "/img/environment/env-3.png",
+      "/img/environment/env-4.png",
+      "/img/environment/env-5.png",
+      "/img/environment/env-6.png",
+      "/img/environment/env-7.png",
+      "/img/environment/env-8.png",
+    ],
   },
   {
     title: "Community",
