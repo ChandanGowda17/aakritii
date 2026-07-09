@@ -8,7 +8,7 @@ const pressReleases = [
     title: "Aakritii Launches New Education Initiative in Rural Areas",
     date: "October 15, 2025",
     excerpt: " In our latest effort to bridge the educational divide, we have launched a comprehensive learning program reaching over 5,000 children across 20 villages.",
-    image: "/img/news-1.png",
+    image: "/img/news-3.png",
     link: "#"
   },
   {
@@ -16,7 +16,7 @@ const pressReleases = [
     title: "Annual Health & Wellness Camp Reaches Record Numbers",
     date: "August 22, 2025",
     excerpt: "Our dedicated team of medical volunteers successfully organized a massive health camp, providing free checkups and medication to underserved communities.",
-    image: "/img/health-2.png",
+    image: "/img/news-5.png",
     link: "#"
   },
   {

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ArrowDown, ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 
 const galleryCategories = [
   {
@@ -43,6 +43,73 @@ const galleryCategories = [
       "/img/community-3.png",
       "/img/community-4.png",
     ],
+  },
+];
+
+const storyTiles = [
+  {
+    src: "/img/community-1.png",
+    alt: "Community visit with a child outdoors",
+    className: "md:col-span-1 md:row-span-2",
+  },
+  {
+    src: "/img/environment/env-10.jpg",
+    alt: "Aakritii team during an environment drive",
+    className: "md:col-span-3 md:row-span-2",
+  },
+  {
+    src: "/img/1.mp4",
+    alt: "Students taking part in an activity",
+    type: "video",
+    className: "md:col-span-2 md:row-span-4",
+  },
+  {
+    src: "/img/2.mp4",
+    alt: "Health program in progress",
+    type: "video",
+    className: "md:col-span-2 md:row-span-4",
+  },
+  {
+    src: "/img/environment/env-9.png",
+    alt: "Woman walking through a green space",
+    className: "md:col-span-1 md:row-span-2",
+  },
+  {
+    src: "/img/environment/env-8.png",
+    alt: "Women's group in pink saris during a community initiative",
+    className: "md:col-span-3 md:row-span-2",
+  },
+  {
+    src: "/img/environment/env-2.png",
+    alt: "Volunteers collecting waste outdoors",
+    className: "md:col-span-2 md:row-span-4",
+  },
+  {
+    src: "/img/4.mp4",
+    alt: "Community members seated during a program",
+    type: "video",
+    className: "md:col-span-2 md:row-span-4",
+  },
+  {
+    src: "/img/health-3.jpg",
+    alt: "Health support interaction with community members",
+    className: "md:col-span-2 md:row-span-4",
+  },
+  {
+    src: "/img/health-5.png",
+    alt: "Aakritii team celebrating together outdoors",
+    className: "md:col-span-2 md:row-span-4",
+  },
+  {
+    src: "/img/community-3.png",
+    alt: "Community members standing together",
+    className: "md:col-span-3 md:row-span-2",
+  },
+  {
+    src: "/img/6.mp4",
+    alt: "Indoor community support program",
+    type: "video",
+    className: "md:col-span-1 md:row-span-2",
   },
 ];
 
@@ -103,7 +170,62 @@ export default function GalleryPage() {
   }, [activeCategory]);
 
   return (
-    <main className="bg-[#F8F1E6] text-[#4b200c]">
+    <main className="bg-[#F8F1E6] text-[#4b200c] pt-24">
+
+      <section id="galery" className="bg-[#875139] min-h-screen pb-16 pt-36 text-white md:mt-32 md:pb-20 md:pt-48" style={{ paddingTop: '86px', paddingBottom: '68px' }}>
+        <div className="site-container flex min-h-[calc(100vh-16rem)] flex-col items-center justify-start gap-10">
+          <div className="flex w-full items-start justify-between gap-8 pt-24 md:pt-28">
+            <h1 className="max-w-[430px] text-5xl font-light leading-[0.98] text-white sm:text-6xl md:text-7xl">
+              Stories in motion
+            </h1>
+
+            <div className="hidden pt-2 text-[#1d1713] md:block" aria-hidden="true">
+              <ArrowDown size={150} strokeWidth={1.4} />
+            </div>
+          </div>
+
+        <div className="flex w-full items-center justify-center">
+          <div className="grid w-full grid-flow-dense auto-rows-[104px] grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-12 md:auto-rows-[68px] md:gap-4 lg:auto-rows-[78px] xl:auto-rows-[84px]">
+            {storyTiles.map((tile) => (
+              <div
+                key={tile.src}
+                className={`group relative overflow-hidden rounded-[2px] bg-[#6f3f2d] shadow-sm ${tile.className}`}
+              >
+                {tile.type === "video" ? (
+                  <>
+                    <video
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                      muted
+                      loop
+                      playsInline
+                      autoPlay
+                      aria-label={tile.alt}
+                    >
+                      <source src={tile.src} type="video/mp4" />
+                    </video>
+                  
+                  </>
+                ) : (
+                  <Image
+                    src={tile.src}
+                    alt={tile.alt}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 18vw"
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+        </div>
+      </section>
+
+
+
+
+
+
       <section className="bg-[#F8F1E6] border-t border-[#E6DACB] w-full" style={{ paddingTop: '86px' }}>
       <div className="site-container mb-20 text-left">
 
