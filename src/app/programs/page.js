@@ -43,7 +43,7 @@ export default function ProgramPage() {
 
             <img
               src="/img/community-4.png"
-              alt="Women participating in a community development activity"
+              alt="Polio Drive"
               className="h-[320px] w-full object-cover md:h-[370px]"
             />
           </div>
@@ -84,8 +84,8 @@ That's the quiet, unglamorous work behind polio eradication. Not one big campaig
           </h1>
 
             <img
-              src="/img/community-4.png"
-              alt="Women participating in a community development activity"
+              src="/img/eye-camp-1.jpg"
+              alt="Eye Camp"
               className="h-[320px] w-full object-cover md:h-[370px]"
             />
           </div>
@@ -126,8 +126,8 @@ So we ran a free eye checkup camp for elderly residents at the Government Primar
           </h1>
 
             <img
-              src="/img/community-4.png"
-              alt="Women participating in a community development activity"
+              src="/img/environment/env-8.png"
+              alt="Clean and Drive Trek"
               className="h-[320px] w-full object-cover md:h-[370px]"
             />
           </div>
