@@ -74,7 +74,7 @@ export default function Header() {
           </nav>
 
           <a
-            href="/#contact"
+            href="/contact"
             className="flex h-[52px] min-w-[210px] items-center justify-center gap-[10px] rounded-full bg-[#9b7d63] px-7 text-[18px] font-extrabold uppercase leading-none text-white transition hover:bg-[#ad8e73]"
           >
             <svg
@@ -129,7 +129,7 @@ export default function Header() {
             ))}
 
             <a
-              href="/#contact"
+              href="/contact"
               className="mt-3 flex h-14 w-full items-center justify-center gap-3 rounded-full bg-[#401905] text-base font-extrabold uppercase text-white mx-auto"
               onClick={closeMobileMenu}
             >
