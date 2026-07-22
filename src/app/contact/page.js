@@ -19,7 +19,7 @@ export default function ContactPage() {
           </div>
 <br/><br/>
           {/* Contact Details and Image */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center ">
             {/* Contact Details - Left Side */}
             <div className="space-y-8">
               <div className="flex items-start gap-4">
@@ -75,13 +75,14 @@ export default function ContactPage() {
             </div>
 
             {/* Image - Right Side */}
-            <div className="overflow-hidden rounded-lg bg-[#E8DCCE] shadow-sm">
+            <div className="overflow-hidden rounded-lg">
               <img
-                src="/img/community-4.png"
+                src="/img/contact-us.jpg"
                 alt="Aakritii community work"
-                className="h-[400px] w-full object-cover"
+                className="h-[400px] object-cover rounded-lg"
               />
             </div>
+            <br/><br/>
           </div>
         </div>
       </section>

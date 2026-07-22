@@ -2,7 +2,7 @@ export default function CommunitySection() {
   return (
     <section id="about" className="community-section">
       <div className="community-content px-4 md:px-6">
-        <h2 className="community-title text-center">
+        <h2 className="community-title text-center ">
           Building Stronger Communities Through <br className="hidden sm:inline" />
           Compassion, Action, and Empowerment
         </h2>

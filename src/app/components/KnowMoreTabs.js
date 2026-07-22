@@ -221,21 +221,7 @@ Aligned with India's vision for inclusive education and Sustainable Development 
               By ensuring access to learning, nutrition, and wellness, we help every child discover their potential and create a future filled with possibilities.
               </p>
 
-              <div className="hero-actions flex flex-wrap gap-4 mt-6">
-                <a
-                  href="#our-story"
-                  className="hero-action-link px-8 py-3.5 rounded-full border-2 border-white/60 bg-white/5 hover:bg-white/10 text-white font-extrabold text-[0.8rem] tracking-widest uppercase transition-all duration-300 hover:scale-105 hover:border-white text-center min-w-[160px]"
-                  onClick={(e) => handleScrollToSection(e, "our-story")}
-                >
-                  KNOW MORE
-                </a>
-                <a
-                  href="/#contact"
-                  className="hero-action-link px-8 py-3.5 rounded-full border-2 border-white/40 bg-white/15 hover:bg-white/25 text-white font-extrabold text-[0.8rem] tracking-widest uppercase transition-all duration-300 hover:scale-105 hover:border-white text-center min-w-[190px]"
-                >
-                  CSR PARTNERSHIPS
-                </a>
-              </div>
+          
             </div>
           </div>
         </div>
