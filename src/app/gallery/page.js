@@ -1,10 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function GalleryPage() {
   const [activeCampaign, setActiveCampaign] = useState(0);
+  const reelsScrollRef = useRef(null);
+
+  const scrollReelsLeft = () => {
+    if (reelsScrollRef.current) {
+      reelsScrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const scrollReelsRight = () => {
+    if (reelsScrollRef.current) {
+      reelsScrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
 
   const campaigns = [
     {
@@ -57,13 +71,17 @@ export default function GalleryPage() {
 
       <section className="bg-[#7A4A2B] text-white w-full py-20">
         <br /><br />
-        <div className="site-container text-left">
-          <div className="mt-10 grid grid-cols-5 gap-6">
-            {[1, 2, 3, 4, 5].map((item) => (
-              <div key={item} className="w-full h-100 bg-white rounded-lg border-2 border-[#D46C32] flex items-center justify-center text-[#4b200c] text-2xl font-semibold">
-                Reel {item}
-              </div>
-            ))}
+        <div className="site-container">
+          <div className="flex items-center gap-4">
+            <ChevronLeft onClick={scrollReelsLeft} className="h-10 w-10 cursor-pointer text-white hidden md:block" />
+            <div ref={reelsScrollRef} className="flex md:grid md:grid-cols-5 gap-6 overflow-x-auto scrollbar-hide w-full snap-x snap-mandatory">
+              {[1, 2, 3, 4, 5].map((item) => (
+                <div key={item} className="flex-shrink-0 w-full md:w-auto h-[400px] bg-white rounded-lg border-2 border-[#D46C32] flex items-center justify-center text-[#4b200c] text-2xl font-semibold snap-center">
+                  Reel {item}
+                </div>
+              ))}
+            </div>
+            <ChevronRight onClick={scrollReelsRight} className="h-10 w-10 cursor-pointer text-white hidden md:block" />
           </div>
         </div><br /><br />
       </section>
@@ -77,12 +95,12 @@ export default function GalleryPage() {
           <p className="mt-10 w-full mx-auto text-[#5E5045] text-xl leading-10">
             Check out behind the scenes and the process of our events categorized by campaign
           </p> <br />
-          <div className="mt-10 grid grid-cols-5 gap-6">
+          <div className="mt-10 grid grid-cols-3 gap-6 md:grid-cols-5 w-full mx-auto">
             {campaigns.map((campaign, index) => (
               <button
                 key={index}
                 onClick={() => setActiveCampaign(index)}
-                className={`w-full h-16 px-4 py-3 rounded-full border-2 ${activeCampaign === index ? "border-[#D46C32] text-[#D46C32] bg-white" : "border-[#7A4A2B] bg-[#7A4A2B] text-white"} text-base font-semibold transition-colors`}
+                className={`w-full md:w-auto h-14 md:h-16 px-4 py-2 md:px-6 md:py-3 rounded-lg md:rounded-full border-2 ${activeCampaign === index ? "border-[#D46C32] text-[#D46C32] bg-white" : "border-[#7A4A2B] bg-[#7A4A2B] text-white"} text-sm md:text-base font-semibold transition-colors `}
               >
                 {campaign.name}
               </button>
@@ -94,7 +112,7 @@ export default function GalleryPage() {
       <section className="bg-[#F8F1E6] w-full py-20">
         <br /><br />
         <div className="site-container">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full mx-auto">
             {campaigns[activeCampaign].images.map((img, index) => (
               <div key={index} className="aspect-square bg-white rounded-lg border-2 border-[#D46C32] flex items-center justify-center text-[#4b200c] text-2xl font-semibold">
                 Image {img}
