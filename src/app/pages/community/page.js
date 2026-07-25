@@ -92,7 +92,7 @@ export default function Education() {
 <div className="hero-copy lg:col-span-8 flex flex-col gap-6 text-left w-full pt-20 lg:pt-28">
 
   <div className="flex flex-col gap-4">
-    <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+    <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight font-serif">
       Community Development
     </h1>
   </div>
@@ -125,7 +125,7 @@ export default function Education() {
           </p>
           <br/>
 
-          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05]">
+          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
             Building stronger communities 
             <br />
             through compassion.
@@ -227,7 +227,7 @@ export default function Education() {
           </p>
           <br/>
 
-          <h1 className="mt-6 text-[#7A4A2B] text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05]">
+          <h1 className="mt-6 text-[#7A4A2B] text-4xl md:text-5xl lg:text-6xl font-light font-serif leading-[1.05]">
            Holistic support across every <br/>stage of life.
           </h1>
 

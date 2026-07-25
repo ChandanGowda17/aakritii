@@ -97,7 +97,7 @@ export default function Education() {
           <div className="hero-copy lg:col-span-8 flex flex-col gap-6 text-left w-full">
 
             <div className="flex flex-col gap-2">
-              <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+              <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight font-serif">
 Education and Child Development              </h1>
               
             </div>
@@ -219,7 +219,7 @@ Education and Child Development              </h1>
 
           <div className="mb-16 md:mb-24">
             <br/><br/>
-            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light leading-tight">
+            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light font-serif leading-tight">
               WHY Education
             </h2>
 <br/>
@@ -237,7 +237,7 @@ Education and Child Development              </h1>
           </div>
 <br/><br/>
           <div>
-            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light leading-tight">
+            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light font-serif leading-tight">
               WHAT WE DO
             </h2>
 <br/>

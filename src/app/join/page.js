@@ -35,7 +35,7 @@ export default function GetInvolved() {
           </p>
           <br/>
 
-          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05]">
+          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
             Volunteer with Aakritii.
           </h1>
 
@@ -102,7 +102,7 @@ export default function GetInvolved() {
         <br/>
         <div className="site-container py-20">
           <div className="text-center mb-12">
-            <h2 className="text-[#7A4A2B] text-4xl md:text-5xl font-light">Sign up to volunteer</h2>
+            <h2 className="text-[#7A4A2B] text-4xl md:text-5xl font-light font-serif">Sign up to volunteer</h2>
             <br/>
             <p className="mt-3 text-[#5E5045] text-base">We&apos;ll reach out within 2–3 working days.</p>
             <br/>

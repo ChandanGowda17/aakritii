@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function GalleryPage() {
   const [activeCampaign, setActiveCampaign] = useState(0);
+  const [viewAll, setViewAll] = useState(false);
   const reelsScrollRef = useRef(null);
 
   const scrollReelsLeft = () => {
@@ -58,7 +59,7 @@ export default function GalleryPage() {
           </p>
           <br/>
 
-          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05]">
+          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
             Moments that move us forward.
           </h1>
 <br/>
@@ -76,7 +77,7 @@ export default function GalleryPage() {
             <ChevronLeft onClick={scrollReelsLeft} className="h-10 w-10 cursor-pointer text-white hidden md:block" />
             <div ref={reelsScrollRef} className="flex md:grid md:grid-cols-5 gap-6 overflow-x-auto scrollbar-hide w-full snap-x snap-mandatory">
               {[1, 2, 3, 4, 5].map((item) => (
-                <div key={item} className="flex-shrink-0 w-full md:w-auto h-[400px] bg-white rounded-lg border-2 border-[#D46C32] flex items-center justify-center text-[#4b200c] text-2xl font-semibold snap-center">
+                <div key={item} className="flex-shrink-0 w-full md:w-auto h-[300px] bg-white rounded-lg border-2 border-[#D46C32] flex items-center justify-center text-[#4b200c] text-2xl font-semibold snap-center">
                   Reel {item}
                 </div>
               ))}
@@ -87,8 +88,8 @@ export default function GalleryPage() {
       </section>
 
       <section className="bg-white w-full py-20">
-        <div className="site-container text-center">
-          <h2 className="text-[#4b200c] text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05]">
+        <div className="site-container text-center"><br /><br />
+          <h2 className="text-[#4b200c] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
             By Campaign
           </h2>
           <br />
@@ -113,11 +114,25 @@ export default function GalleryPage() {
         <br /><br />
         <div className="site-container">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full mx-auto">
-            {campaigns[activeCampaign].images.map((img, index) => (
-              <div key={index} className="aspect-square bg-white rounded-lg border-2 border-[#D46C32] flex items-center justify-center text-[#4b200c] text-2xl font-semibold">
-                Image {img}
-              </div>
-            ))}
+            {viewAll
+              ? campaigns.flatMap(campaign => campaign.images).map((img, index) => (
+                  <div key={index} className="aspect-square md:aspect-[4/3] bg-white rounded-lg border-2 border-[#D46C32] flex items-center justify-center text-[#4b200c] text-2xl font-semibold">
+                    Image {img}
+                  </div>
+                ))
+              : campaigns[activeCampaign].images.map((img, index) => (
+                  <div key={index} className="aspect-square md:aspect-[4/3] bg-white rounded-lg border-2 border-[#D46C32] flex items-center justify-center text-[#4b200c] text-2xl font-semibold">
+                    Image {img}
+                  </div>
+                ))}
+          </div><br />
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setViewAll(!viewAll)}
+              className="mt-10 h-10 w-50 inline-flex items-center justify-center rounded-md bg-[#D46C32] px-9 py-4 text-lg font-bold text-white transition hover:bg-[#B85A28]"
+            >
+              {viewAll ? 'View by Campaign' : 'View All Images'}
+            </button>
           </div>
         </div>   <br /><br />   <br /><br />
       </section>

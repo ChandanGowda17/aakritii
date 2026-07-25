@@ -9,7 +9,7 @@ export default function ContactPage() {
               Get in Touch
             </p>
            
-            <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05]">
+            <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
               Contact Us
             </h1>
             <br/>
@@ -29,7 +29,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2">Phone</h3>
+                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2 font-serif">Phone</h3>
                   <p className="text-[#5E5045] text-lg">+91 90195-42024</p>
                 </div>
               </div>
@@ -42,7 +42,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2">Email</h3>
+                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2 font-serif">Email</h3>
                   <p className="text-[#5E5045] text-lg">contact@aakritii.org</p>
                   <p className="text-[#5E5045] text-lg">manasa@aakritii.org</p>
                 </div>
@@ -55,7 +55,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2">Location</h3>
+                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2 font-serif">Location</h3>
                   <p className="text-[#5E5045] text-lg">India</p>
                 </div>
               </div>

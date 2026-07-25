@@ -14,7 +14,7 @@ export default function PressReleases() {
           </p>
           <br/>
 
-          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05]">
+          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
             Press Releases.
           </h1>
 

@@ -20,7 +20,7 @@ export default function ProgramPage() {
           </p>
           <br/>
 
-          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05]">
+          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
             Why Aakritii.
           </h1>
 
@@ -37,7 +37,7 @@ export default function ProgramPage() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="overflow-hidden rounded-md bg-[#E8DCCE] shadow-sm">
 
-            <h1 className="mt-6 text-[#7A4A2B] text-3xl md:text-6xl lg:text-5xl font-light leading-[1.05]">
+            <h1 className="mt-6 text-[#7A4A2B] text-3xl md:text-6xl lg:text-5xl font-light font-serif leading-[1.05]">
             Polio Drive.
           </h1>
 
@@ -79,7 +79,7 @@ That's the quiet, unglamorous work behind polio eradication. Not one big campaig
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="overflow-hidden rounded-md bg-[#E8DCCE] shadow-sm">
 
-            <h1 className="mt-6 text-[#7A4A2B] text-3xl md:text-6xl lg:text-5xl font-light leading-[1.05]">
+            <h1 className="mt-6 text-[#7A4A2B] text-3xl md:text-6xl lg:text-5xl font-light font-serif leading-[1.05]">
             Eye Camps.
           </h1>
 
@@ -121,7 +121,7 @@ So we ran a free eye checkup camp for elderly residents at the Government Primar
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="overflow-hidden rounded-md bg-[#E8DCCE] shadow-sm">
 
-            <h1 className="mt-6 text-[#7A4A2B] text-3xl md:text-6xl lg:text-5xl font-light leading-[1.05]">
+            <h1 className="mt-6 text-[#7A4A2B] text-3xl md:text-6xl lg:text-5xl font-light font-serif leading-[1.05]">
             Clean and Drive Trek.
           </h1>
 
