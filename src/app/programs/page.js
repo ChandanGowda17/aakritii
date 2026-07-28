@@ -82,14 +82,14 @@ export default function ProgramPage() {
             Explore our various programs and initiatives
           </p>
           <br />
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 w-full mx-auto">
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-8 w-full mx-auto">
             {programs.map((program, index) => (
               <Link key={index} href={`/programs/${program.slug}`} className="cursor-pointer">
                 <div className={`overflow-hidden rounded-lg border-2 transition-all duration-300 border-[#E8DCCE] hover:border-[#D46C32]`}>
                   <img
                     src={program.image}
                     alt={program.name}
-                    className="w-full h-[200px] object-cover"
+                    className="w-full md:w-full h-[140px] md:h-[200px] object-cover"
                   />
                 </div><br />
                 <button
