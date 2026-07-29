@@ -25,24 +25,6 @@ export default function ProgramPage() {
       name: "Clean and Drive Trek",
       image: "/img/environment/env-8.png",
       slug: "clean-and-drive-trek"
-    },
-    {
-      id: 1,
-      name: "Polio Drive",
-      image: "/img/community-4.png",
-      slug: "polio-drive"
-    },
-    {
-      id: 2,
-      name: "Eye Camps",
-      image: "/img/eye-camp-1.jpg",
-      slug: "eye-camps"
-    },
-    {
-      id: 3,
-      name: "Clean and Drive Trek",
-      image: "/img/environment/env-8.png",
-      slug: "clean-and-drive-trek"
     }
   ];
 
@@ -75,11 +57,11 @@ export default function ProgramPage() {
       <section className="bg-white w-full py-20">
         <div className="site-container text-center"><br /><br />
           <h2 className="text-[#4b200c] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
-            By Program
+            By Campaigns
           </h2>
           <br />
           <p className="mt-10 w-full mx-auto text-[#5E5045] text-xl leading-10">
-            Explore our various programs and initiatives
+            Explore our various campaigns and initiatives
           </p>
           <br />
           <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-8 w-full mx-auto">

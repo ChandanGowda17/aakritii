@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export default function GalleryPage() {
   const [activeCampaign, setActiveCampaign] = useState(0);
   const [viewAll, setViewAll] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState(null);
   const reelsScrollRef = useRef(null);
 
   const scrollReelsLeft = () => {
@@ -43,6 +44,17 @@ export default function GalleryPage() {
       images: [25, 26, 27, 28, 29, 30]
     }
   ];
+
+  const reels = [
+    { id: 1, video: "/img/reel-1.mp4", thumbnail: "/img/reel-thumb-1.jpg" },
+    { id: 2, video: "/img/reel-2.mp4", thumbnail: "/img/reel-thumb-2.jpg" },
+    { id: 3, video: "/img/reel-3.mp4", thumbnail: "/img/reel-thumb-3.jpg" },
+    { id: 4, video: "/img/reel-4.mp4", thumbnail: "/img/reel-thumb-4.jpg" },
+    { id: 5, video: "/img/reel-5.mp4", thumbnail: "/img/reel-thumb-5.jpg" },
+    { id: 6, video: "/img/reel-6.mp4", thumbnail: "/img/reel-thumb-6.jpg" },
+    { id: 7, video: "/img/reel-7.mp4", thumbnail: "/img/reel-thumb-7.jpg" },
+    { id: 8, video: "/img/reel-8.mp4", thumbnail: "/img/reel-thumb-8.jpg" }
+  ];
   return (
     <main className="bg-[#F8F1E6] text-[#4b200c] pt-24">
 
@@ -75,10 +87,21 @@ export default function GalleryPage() {
         <div className="site-container">
           <div className="flex items-center gap-4">
             <ChevronLeft onClick={scrollReelsLeft} className="h-10 w-10 cursor-pointer text-white hidden md:block" />
-            <div ref={reelsScrollRef} className="flex md:grid md:grid-cols-5 gap-6 overflow-x-auto scrollbar-hide w-full snap-x snap-mandatory">
-              {[1, 2, 3, 4, 5].map((item) => (
-                <div key={item} className="flex-shrink-0 w-full md:w-auto h-[300px] bg-white rounded-lg border-2 border-[#D46C32] flex items-center justify-center text-[#4b200c] text-2xl font-semibold snap-center">
-                  Reel {item}
+            <div ref={reelsScrollRef} className="flex gap-6 overflow-x-auto scrollbar-hide w-full snap-x snap-mandatory">
+              {reels.map((reel) => (
+                <div
+                  key={reel.id}
+                  onClick={() => setSelectedVideo(reel)}
+                  className="flex-shrink-0 w-full md:w-[205px] h-[300px] bg-white rounded-lg border-2 border-[#D46C32] overflow-hidden cursor-pointer snap-center"
+                >
+                  <video
+                    src={reel.video}
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               ))}
             </div>
@@ -136,6 +159,32 @@ export default function GalleryPage() {
           </div>
         </div>   <br /><br />   <br /><br />
       </section>
+
+      {/* Video Modal */}
+      {selectedVideo && (
+        <div
+          className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div className="relative max-w-4xl max-h-[90vh] w-full">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedVideo(null);
+              }}
+              className="absolute -top-12 right-0 text-white text-5xl hover:text-gray-300 transition-colors z-10"
+            >
+              ×
+            </button>
+            <video
+              src={selectedVideo.video}
+              autoPlay
+              controls
+              className="w-full h-full max-h-[90vh] object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      )}
 
     </main>
   );
