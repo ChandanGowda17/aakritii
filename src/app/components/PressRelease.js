@@ -49,7 +49,7 @@ export default function PressRelease() {
               </Link>
             </div>
             <br/>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#4b200c] leading-tight break-words">
+            <h2 className="font-light font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#4b200c] leading-tight break-words">
               Press Releases
             </h2>
             <br/>

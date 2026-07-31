@@ -48,7 +48,7 @@ export default function SupportSection() {
           
           {/* Left Side */}
           <div className="w-full lg:w-[45%] z-10 text-center lg:text-left flex flex-col items-center lg:items-start">
-            <br/> <br/><h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-#81503b leading-tight mb-8">
+            <br/> <br/><h2 className="text-4xl md:text-5xl font-light font-serif lg:text-7xl font-bold text-#81503b leading-tight mb-8">
               Your Chance To <br className="hidden lg:block"/> Transform Lives
             </h2>
             
@@ -78,11 +78,7 @@ export default function SupportSection() {
                      <Image src={card.src} alt={card.alt} fill className="object-cover" sizes="500px" />
                   </div>
                   
-                  {/* Yellow Badge */}
-                  <div className={`absolute -bottom-6 -right-6 bg-[#ffe300] text-[#4b200c] w-24 h-24 sm:w-28 sm:h-28 rounded-full flex flex-col items-center justify-center shadow-xl font-bold text-center p-2 border-4 border-[#4b200c] transition-all duration-500 ${pos === 2 ? 'opacity-100 rotate-12 scale-100 hover:rotate-0 hover:scale-110' : 'opacity-0 rotate-0 scale-50 pointer-events-none'}`}>
-                    <span className="text-sm sm:text-base leading-tight uppercase">Support</span>
-                    <span className="text-xl sm:text-2xl font-black uppercase">Us</span>
-                  </div>
+                 
                 </div>
               );
             })}

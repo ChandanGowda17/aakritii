@@ -71,7 +71,7 @@ export default function ProgramsSection() {
             <section id="programmes" className="bg-[#f6efe6] py-16 md:py-28">
             <div className="programs-content px-4 md:px-6">
                 <div className="text-center mb-12 md:mb-16">
-                    <h1 className="text-#81503b text-5xl md:text-5xl sm:text-4xl lg:text-6xl font-light leading-none">
+                    <h1 className="font-light font-serif text-#81503b text-5xl md:text-5xl sm:text-4xl lg:text-6xl font-light leading-none">
                         Our Programmes
                     </h1>
 <br />
@@ -111,7 +111,7 @@ export default function ProgramsSection() {
 
             <div className="bg-[#4b200c] pt-24 md:pt-40 px-4 md:px-20">
             <div className="mb-16 md:mb-20 gap-12 md:gap-20 items-center text-center md:pt-40 "><br/>
-                <h2 className="text-center text-white text-2xl md:text-4xl lg:text-5xl font-bold uppercase leading-tight">
+                <h2 className="font-light font-serif text-center text-white text-2xl md:text-4xl lg:text-5xl font-bold uppercase leading-tight">
                     
                  <br/>
                     Sustainable &nbsp; Development &nbsp; Goals

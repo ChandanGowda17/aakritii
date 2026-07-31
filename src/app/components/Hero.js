@@ -101,10 +101,10 @@ export default function Hero() {
           <div className="hero-copy lg:col-span-8 flex flex-col gap-6 text-left w-full">
 
             <div className="flex flex-col gap-2">
-              <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+              <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight font-light font-serif">
                 Aakritii NGO
               </h1>
-              <h2 className="hero-subtitle text-2xl sm:text-4xl font-extrabold text-white/90 tracking-wide font-sans">
+              <h2 className="hero-subtitle text-2xl sm:text-4xl font-light font-serif font-extrabold text-white/90 tracking-wide font-sans">
                 Empower. Transform. Inspire
               </h2>
             </div>
@@ -115,16 +115,16 @@ export default function Hero() {
                 key={currentIndex}
                 className="transition-all duration-500 ease-in-out"
               >
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 font-light font-serif">
                   {carouselItems[currentIndex].title}
                 </h3>
-                <p className="hero-description text-[0.95rem] sm:text-[1.05rem] text-neutral-300 leading-relaxed max-w-2xl font-light">
+                <p className="font-light font-serif hero-description text-[0.95rem] sm:text-[1.05rem] text-neutral-300 leading-relaxed max-w-2xl font-light">
                   {carouselItems[currentIndex].description}
                 </p>
               </div>
             </div>
 
-            <p className="hero-description hero-description-strong text-[0.95rem] sm:text-[1.05rem] font-bold text-white max-w-2xl leading-relaxed mt-2">
+            <p className="hero-description hero-description-strong font-light font-serif text-[0.95rem] sm:text-[1.05rem] font-bold text-white max-w-2xl leading-relaxed mt-2">
               Whether you are an individual volunteer, a student group, or a corporate organisation, there is a place for you at Aakritii NGO.
             </p>
 

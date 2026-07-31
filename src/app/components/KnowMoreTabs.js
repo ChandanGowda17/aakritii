@@ -203,15 +203,15 @@ export default function KnowMoreTabs() {
           >
             <div className="hero-copy lg:col-span-8 flex flex-col gap-6 text-left">
               <div className="flex flex-col gap-2">
-                <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+                <h1 className="font-light font-serif hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
                 Education Changes Everything
                 </h1>
-                <h2 className="hero-subtitle text-2xl sm:text-4xl font-extrabold text-white/90 tracking-wide font-sans">
+                <h2 className="font-light font-serif hero-subtitle text-2xl sm:text-4xl font-extrabold text-white/90 tracking-wide font-sans">
                 Learn. Grow. Lead.
                 </h2>
               </div>
 
-              <p className="hero-description text-[0.95rem] sm:text-[1.05rem] text-neutral-300 leading-relaxed max-w-2xl font-light">
+              <p className="font-light font-serif hero-description text-[0.95rem] sm:text-[1.05rem] text-neutral-300 leading-relaxed max-w-2xl font-light">
               True change begins with education. It equips children with knowledge, confidence, and the power to break the cycle of poverty.
 
 Aligned with India's vision for inclusive education and Sustainable Development Goal 4, our Mission Education programme supports children living in difficult circumstances—from remote villages and tribal regions to disaster-affected and underserved communities.
@@ -294,7 +294,7 @@ Aligned with India's vision for inclusive education and Sustainable Development 
 
                 {/* Right Column: Text Content */}
                 <article className="know-more-right-text">
-                  <h2 className="know-more-content-title">{section.title}</h2>
+                  <h2 className="know-more-content-title font-light font-serif">{section.title}</h2>
                   
                   {section.paragraphs && section.paragraphs.map((p, idx) => (
                     <p key={idx} className="know-more-paragraph">{p}</p>

@@ -75,7 +75,7 @@ export default function ImpactShowcase() {
 
   return (
     <section className="impact-showcase-section" ref={sectionRef}>
-      <div className="impact-showcase-inner">
+      <div className="impact-showcase-inner font-light font-serif">
         {/* Left: Title + Photo */}
         <div className="impact-showcase-left">
           <h2 className={`impact-showcase-title${visible ? " is-visible" : ""}`}>Impact</h2>

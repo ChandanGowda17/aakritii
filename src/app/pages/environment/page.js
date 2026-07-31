@@ -8,7 +8,7 @@ export default function Environment() {
     {
       id: 1,
       title: "Tree Plantation",
-      image: "/img/environment-1.png",
+      image: "/img/environment-2.png",
       description:
         "Planting native tree species to restore ecosystems, improve air quality, and combat climate change in rural and urban areas.",
       stat1: "50K+",
@@ -19,7 +19,7 @@ export default function Environment() {
     {
       id: 2,
       title: "Waste Management",
-      image: "/img/environment-2.png",
+      image: "/img/environment-1.png",
       description:
         "Implementing sustainable waste management practices including recycling, composting, and awareness campaigns for cleaner communities.",
       stat1: "500+",
@@ -29,19 +29,8 @@ export default function Environment() {
     },
     {
       id: 3,
-      title: "Water Conservation",
-      image: "/img/environment-3.png",
-      description:
-        "Building rainwater harvesting systems, restoring water bodies, and promoting water-saving practices in drought-prone regions.",
-      stat1: "75+",
-      stat1Label: "Water Structures",
-      stat2: "15K+",
-      stat2Label: "Beneficiaries",
-    },
-    {
-      id: 4,
       title: "Awareness Programs",
-      image: "/img/environment-4.png",
+      image: "/img/environment-3.png",
       description:
         "Educating communities about environmental protection, sustainable living, and climate action through workshops and campaigns.",
       stat1: "200+",

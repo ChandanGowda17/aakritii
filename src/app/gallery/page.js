@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { BrickWall, ChevronLeft, ChevronRight, Sprout, Wind } from "lucide-react";
 
 export default function GalleryPage() {
   const [activeCampaign, setActiveCampaign] = useState(0);
@@ -25,23 +25,56 @@ export default function GalleryPage() {
   const campaigns = [
     {
       name: "Bricks & Brilliance",
+      Icon: BrickWall,
       images: [1, 2, 3, 4, 5, 6]
     },
     {
       name: "Soul & Soil",
-      images: [7, 8, 9, 10, 11, 12]
+      Icon: Sprout,
+      images: [
+        "/img/soul-and-soil-1.jpg",
+        "/img/soul-and-soil-2.jpg",
+        "/img/soul-and-soil-3.jpg",
+        "/img/soul-and-soil-4.jpg",
+        "/img/soul-and-soil-5.jpg",
+        "/img/soul-and-soil-6.jpg"
+      ]
     },
     {
-      name: "Flow Forward",
-      images: [13, 14, 15, 16, 17, 18]
+      name: "Home for Wings",
+      Icon: Wind,
+      images: [
+        "/img/house-for-wings-1.jpg",
+        "/img/house-for-wings-2.jpg",
+        "/img/house-for-wings-3.jpg",
+        "/img/house-for-wings-4.jpg",
+        "/img/house-for-wings-5.jpg",
+        "/img/house-for-wings-6.jpg"
+      ]
     },
     {
-      name: "Flow Forward",
-      images: [19, 20, 21, 22, 23, 24]
+      name: "Clean and Drive",
+      Icon: Wind,
+      images: [
+        "/img/clean-and-drive-1.png",
+        "/img/clean-and-drive-2.png",
+        "/img/clean-and-drive-3.png",
+        "/img/clean-and-drive-4.png",
+        "/img/clean-and-drive-5.png",
+        "/img/clean-and-drive-6.png"
+      ]
     },
     {
-      name: "Flow Forward",
-      images: [25, 26, 27, 28, 29, 30]
+      name: "Women's Day",
+      Icon: Wind,
+      images: [
+        "/img/womens-day-1.jpg",
+        "/img/womens-day-2.jpg",
+        "/img/womens-day-3.jpg",
+        "/img/womens-day-4.jpg",
+        "/img/womens-day-5.jpg",
+        "/img/womens-day-6.jpg"
+      ]
     }
   ];
 
@@ -86,13 +119,13 @@ export default function GalleryPage() {
         <br /><br />
         <div className="site-container">
           <div className="flex items-center gap-4">
-            <ChevronLeft onClick={scrollReelsLeft} className="h-10 w-10 cursor-pointer text-white hidden md:block" />
+            <ChevronLeft onClick={scrollReelsLeft} className="h-8 w-8 cursor-pointer text-white md:h-10 md:w-10" />
             <div ref={reelsScrollRef} className="flex gap-6 overflow-x-auto scrollbar-hide w-full snap-x snap-mandatory">
               {reels.map((reel) => (
                 <div
                   key={reel.id}
                   onClick={() => setSelectedVideo(reel)}
-                  className="flex-shrink-0 w-full md:w-[205px] h-[300px] bg-white rounded-lg border-2 border-[#D46C32] overflow-hidden cursor-pointer snap-center"
+                  className="flex-shrink-0 w-[150px] md:w-[205px] h-[300px] bg-white rounded-lg border-2 border-[#D46C32] overflow-hidden cursor-pointer snap-center"
                 >
                   <video
                     src={reel.video}
@@ -105,7 +138,7 @@ export default function GalleryPage() {
                 </div>
               ))}
             </div>
-            <ChevronRight onClick={scrollReelsRight} className="h-10 w-10 cursor-pointer text-white hidden md:block" />
+            <ChevronRight onClick={scrollReelsRight} className="h-8 w-8 cursor-pointer text-white md:h-10 md:w-10" />
           </div>
         </div><br /><br />
       </section>
@@ -119,16 +152,27 @@ export default function GalleryPage() {
           <p className="mt-10 w-full mx-auto text-[#5E5045] text-xl leading-10">
             Check out behind the scenes and the process of our events categorized by campaign
           </p> <br />
-          <div className="mt-10 grid grid-cols-3 gap-6 md:grid-cols-5 w-full mx-auto">
-            {campaigns.map((campaign, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveCampaign(index)}
-                className={`w-full md:w-auto h-14 md:h-16 px-4 py-2 md:px-6 md:py-3 rounded-lg md:rounded-full border-2 ${activeCampaign === index ? "border-[#D46C32] text-[#D46C32] bg-white" : "border-[#7A4A2B] bg-[#7A4A2B] text-white"} text-sm md:text-base font-semibold transition-colors `}
-              >
-                {campaign.name}
-              </button>
-            ))}
+          <div className="mt-10 flex w-[calc(100vw-24px)] max-w-[420px] flex-wrap justify-center gap-2 mx-auto sm:gap-4 md:grid md:w-full md:max-w-none md:grid-cols-5 md:gap-6">
+            {campaigns.map((campaign, index) => {
+              const Icon = campaign.Icon;
+              const isActive = activeCampaign === index;
+
+              return (
+                <button
+                  key={index}
+                  onClick={() => setActiveCampaign(index)}
+                  className={`group flex h-[108px] w-[calc((100vw_-_40px)/3)] min-w-0 flex-col items-center justify-center gap-2 rounded-[20px] border-2 px-1.5 text-center shadow-[0_10px_18px_rgba(75,32,12,0.18)] transition-all duration-200 hover:-translate-y-1 sm:w-[calc((100%_-_32px)/3)] sm:rounded-[28px] md:h-16 md:w-auto md:max-w-none md:flex-row md:justify-center md:gap-0 md:rounded-full md:px-6 md:py-3 md:text-center md:shadow-none md:hover:translate-y-0 ${isActive ? "border-[#F45B0B] bg-white text-[#F45B0B] md:border-[#D46C32] md:text-[#D46C32]" : "border-[#7A4A2B] bg-[#7A4A2B] text-white hover:bg-[#693d20]"}`}
+                  aria-pressed={isActive}
+                >
+                  <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full sm:h-12 sm:w-12 md:hidden ${isActive ? "border-2 border-[#F45B0B] bg-white text-[#F45B0B]" : "bg-white text-[#7A4A2B]"}`}>
+                    <Icon className="h-5 w-5 sm:h-7 sm:w-7" strokeWidth={1.8} />
+                  </span>
+                  <span className="min-w-0 max-w-full whitespace-normal break-words text-[11px] font-semibold leading-tight tracking-normal sm:text-[14px] md:text-base md:font-semibold">
+                    {campaign.name}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div> <br />   <br /><br />
       </section>
@@ -137,17 +181,21 @@ export default function GalleryPage() {
         <br /><br />
         <div className="site-container">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full mx-auto">
-            {viewAll
-              ? campaigns.flatMap(campaign => campaign.images).map((img, index) => (
-                  <div key={index} className="aspect-square md:aspect-[4/3] bg-white rounded-lg border-2 border-[#D46C32] flex items-center justify-center text-[#4b200c] text-2xl font-semibold">
-                    Image {img}
-                  </div>
-                ))
-              : campaigns[activeCampaign].images.map((img, index) => (
-                  <div key={index} className="aspect-square md:aspect-[4/3] bg-white rounded-lg border-2 border-[#D46C32] flex items-center justify-center text-[#4b200c] text-2xl font-semibold">
-                    Image {img}
-                  </div>
-                ))}
+            {(viewAll ? campaigns.flatMap(campaign => campaign.images) : campaigns[activeCampaign].images).map((img, index) => (
+              <div key={index} className="relative aspect-square md:aspect-[4/3] bg-white rounded-lg border-2 border-[#D46C32] overflow-hidden flex items-center justify-center text-[#4b200c] text-2xl font-semibold">
+                {typeof img === "string" ? (
+                  <Image
+                    src={img}
+                    alt={`Gallery image ${index + 1}`}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 50vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <>Image {img}</>
+                )}
+              </div>
+            ))}
           </div><br />
           <div className="flex justify-center mt-8">
             <button
