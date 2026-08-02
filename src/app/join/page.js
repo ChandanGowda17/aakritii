@@ -1,3 +1,8 @@
+"use client";
+
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 export default function GetInvolved() {
   const cards = [
     {
@@ -21,6 +26,30 @@ export default function GetInvolved() {
         "Engage your organisation through CSR partnerships, employee volunteering and community development programmes.",
     },
   ];
+
+const formRef = useRef(null);
+const [status, setStatus] = useState("");
+
+const sendEmail = async (event) => {
+  event.preventDefault();
+  setStatus("Sending...");
+
+  try {
+    await emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      {
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      }
+    );
+
+    setStatus("Thanks! Your message has been sent.");
+    formRef.current.reset();
+  } catch (error) {
+    setStatus("Sorry, something went wrong. Please try again.");
+  }
+};
 
   return (
     <section className="bg-[#F8F1E6] border-t border-[#E6DACB] w-full" style={{ paddingTop: '86px' }}>
@@ -109,13 +138,12 @@ export default function GetInvolved() {
           </div>
 
           <div className="flex justify-center w-full">
-            <form
-              action="mailto:Contact@aakritii.org"
-              method="post"
-              encType="text/plain"
-              className="bg-white border border-[#E8DCCE] rounded-[20px] w-full max-w-2xl"
-              style={{ padding: "clamp(28px, 5vw, 48px) clamp(20px, 6vw, 64px)" }}
-            >
+           <form
+  ref={formRef}
+  onSubmit={sendEmail}
+  className="bg-white border border-[#E8DCCE] rounded-[20px] w-full max-w-2xl"
+  style={{ padding: "clamp(28px, 5vw, 48px) clamp(20px, 6vw, 64px)" }}
+>
 
             {/* Full Name */}
             <div className="mb-14">
@@ -189,13 +217,18 @@ export default function GetInvolved() {
             </div>
 <br/>
             {/* Submit */}
-            <div className="flex justify-center">
-            <button
-              type="submit"
-              className="w-full sm:w-2/3 mx-auto h-10 rounded-md bg-[#D46C32] px-6 sm:px-8 py-4 sm:py-6 text-lg font-semibold uppercase tracking-widest text-white transition-all hover:bg-[#B85A28] hover:shadow-lg"
-            >
-              Submit 
-            </button>
+            <div className="text-center">
+              <button
+                type="submit"
+                className="w-full sm:w-2/3 mx-auto h-10 rounded-md bg-[#D46C32] px-6 sm:px-8 py-4 sm:py-6 text-lg font-semibold uppercase tracking-widest text-white transition-all hover:bg-[#B85A28] hover:shadow-lg"
+              >
+                Submit
+              </button>
+              {status && (
+                <p className="mt-5 text-[#5E5045] text-sm">
+                  {status}
+                </p>
+              )}
             </div>
 
           </form>
