@@ -16,9 +16,16 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Aakritii Foundation | Shaping Futures, Empowering Communities",
-  description: "Aakruthi Foundation is a registered non-profit organization dedicated to holistic primary education, community-based environmental afforestation, and rural livelihood programs.",
-  keywords: ["NGO", "Education NGO", "Environment non-profit", "Livelihood skills", "India NGO", "Aakruthi"],
+  title: "Aakritii NGO | Empower, Transform, Inspire",
+  description: "Aakritii NGO is a Bengaluru-based registered non-profit empowering communities through education, healthcare, environmental action, and volunteer-led social impact.",
+  keywords: ["Aakritii NGO", "NGO Bengaluru", "Education NGO", "Healthcare NGO", "Environment NGO", "Volunteer NGO India"],
+  openGraph: {
+    title: "Aakritii NGO | Empower, Transform, Inspire",
+    description: "A Bengaluru-based registered non-profit empowering communities through education, healthcare, environmental action, and volunteer-led social impact.",
+    url: "https://aakritii.org",
+    siteName: "Aakritii NGO",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
