@@ -2,6 +2,7 @@ import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { defaultMetadata, siteUrl } from "./seo";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -16,15 +17,24 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Aakritii NGO | Empower, Transform, Inspire",
-  description: "Aakritii NGO is a Bengaluru-based registered non-profit empowering communities through education, healthcare, environmental action, and volunteer-led social impact.",
+  metadataBase: new URL(siteUrl),
+  ...defaultMetadata,
   keywords: ["Aakritii NGO", "NGO Bengaluru", "Education NGO", "Healthcare NGO", "Environment NGO", "Volunteer NGO India"],
-  openGraph: {
-    title: "Aakritii NGO | Empower, Transform, Inspire",
-    description: "A Bengaluru-based registered non-profit empowering communities through education, healthcare, environmental action, and volunteer-led social impact.",
-    url: "https://aakritii.org",
-    siteName: "Aakritii NGO",
-    type: "website",
+  applicationName: "Aakritii NGO",
+  authors: [{ name: "Aakritii NGO" }],
+  creator: "Aakritii NGO",
+  publisher: "Aakritii NGO",
+  category: "Non-profit organization",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
