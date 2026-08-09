@@ -51,7 +51,7 @@ export default function Header() {
           </span>
 
           <span className="flex flex-col gap-[3px]">
-            <span className="text-[23px] font-extrabold uppercase leading-none tracking-[-0.01em] text-white max-sm:text-[18px]">
+            <span className="block font-serif text-3xl leading-none text-white">
               Aakritii NGO
             </span>
             <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#c9a882] max-sm:text-[10px] max-sm:tracking-[0.12em]">
@@ -66,7 +66,7 @@ export default function Header() {
              <a
   key={item.label}
   href={item.href}
-  className="flex h-[24px] items-center text-[18px] font-extrabold uppercase leading-none text-white transition hover:text-[#b08b6d]"
+  className="flex h-[24px] items-center text-[18px] font-serif  font-extrabold uppercase leading-none text-white transition hover:text-[#b08b6d]"
 >
   {item.label}
 </a>
