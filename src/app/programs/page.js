@@ -11,7 +11,7 @@ export default function ProgramPage() {
     {
       id: 1,
       name: "Polio Drive",
-      image: "/img/community-4.png",
+      image: "/img/polio.jpeg",
       slug: "polio-drive"
     },
     {
@@ -25,6 +25,24 @@ export default function ProgramPage() {
       name: "Clean and Drive Trek",
       image: "/img/environment/env-8.png",
       slug: "clean-and-drive-trek"
+    },
+    {
+      id: 2,
+      name: "Seed Ball Making",
+      image: "/img/eye-camp-1.jpg",
+      slug: "eye-camps"
+    },
+    {
+      id: 2,
+      name: "PopCorn and Purpose",
+      image: "/img/eye-camp-1.jpg",
+      slug: "eye-camps"
+    },
+    {
+      id: 2,
+      name: "School Beautification",
+      image: "/img/eye-camp-1.jpg",
+      slug: "eye-camps"
     }
   ];
 
