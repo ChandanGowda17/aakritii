@@ -47,6 +47,24 @@ export const seoPages = [
       "Explore Aakritii NGO's clean and drive trek activities that promote environmental responsibility, clean-up action, and community participation.",
   },
   {
+    path: "/programs/seed-ball-making",
+    title: "Seed Ball Making Programme | Aakritii NGO Environment Initiative",
+    description:
+      "Learn about Aakritii NGO's seed ball making activities that promote reforestation, environmental awareness, and community participation in greening initiatives.",
+  },
+  {
+    path: "/programs/popcorn-and-purpose",
+    title: "Popcorn and Purpose | Aakritii NGO Community Programme",
+    description:
+      "Discover Aakritii NGO's Popcorn and Purpose initiative that brings joy and community bonding through movie outings and recreational activities for children.",
+  },
+  {
+    path: "/programs/school-beautification",
+    title: "School Beautification Programme | Aakritii NGO Education Initiative",
+    description:
+      "See how Aakritii NGO's school beautification projects improve learning environments, foster pride, and create welcoming spaces for students and communities.",
+  },
+  {
     path: "/pages/education",
     title: "Education and Child Development | Aakritii NGO",
     description:

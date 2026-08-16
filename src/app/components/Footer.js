@@ -14,7 +14,7 @@ const exploreLinks = [
 const socialLinks = [
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/aakritii_org?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <rect x="3" y="3" width="18" height="18" rx="5" />
@@ -32,15 +32,7 @@ const socialLinks = [
       </svg>
     ),
   },
-  {
-    label: "LinkedIn",
-    href: "#",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M6.7 8.8H3.4V21h3.3V8.8ZM5.1 3C4 3 3.2 3.8 3.2 4.9s.8 1.9 1.9 1.9S7 6 7 4.9 6.2 3 5.1 3Zm7.3 5.8H9.2V21h3.3v-6.4c0-1.7.8-2.7 2.2-2.7 1.3 0 1.9.9 1.9 2.7V21h3.3v-7.1c0-3.5-1.9-5.4-4.5-5.4-1.6 0-2.5.8-3 1.6V8.8Z" />
-      </svg>
-    ),
-  },
+  
 ];
 
 export default function Footer() {
@@ -87,10 +79,10 @@ export default function Footer() {
           <nav className="hidden md:block" aria-label="Footer explore links">
             <h2 className="font-serif text-2xl text-white">Explore</h2>
             <br/>
-            <ul className="mt-7 space-y-4">
+            <ul className="mt-9 space-y-4">
               {exploreLinks.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-lg font-semibold text-[#E8D3C1] transition hover:text-white">
+                  <Link href={link.href} className="text-lg font-semibold text-[#E8D3C1] transition hover:text-white pt-2">
                     {link.label}
                   </Link><br/>
                 </li>
@@ -103,7 +95,7 @@ export default function Footer() {
             <ul className="mt-7 space-y-5 text-lg font-semibold text-[#E8D3C1]">
               <li className="flex gap-4">
                 <span aria-hidden="true">⌖</span>
-                <span>Bengaluru, Karnataka, India</span>
+                <span>31, 2nd Main Rd, Venkategowda Layout, Venkatagowda Layout, Hebbal Kempapura, Bengaluru, Karnataka 560024</span>
               </li><br/>
               <li className="flex gap-4">
                 <span aria-hidden="true">✉</span>

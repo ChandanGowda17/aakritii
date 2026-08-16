@@ -29,20 +29,20 @@ export default function ProgramPage() {
     {
       id: 2,
       name: "Seed Ball Making",
-      image: "/img/eye-camp-1.jpg",
-      slug: "eye-camps"
+      image: "/img/seedball.jpeg",
+      slug: "seed-ball-making"
     },
     {
       id: 2,
       name: "PopCorn and Purpose",
-      image: "/img/eye-camp-1.jpg",
-      slug: "eye-camps"
+      image: "/img/popcorn.jpeg",
+      slug: "popcorn-and-purpose"
     },
     {
       id: 2,
       name: "School Beautification",
-      image: "/img/eye-camp-1.jpg",
-      slug: "eye-camps"
+      image: "/img/beautification.jpeg",
+      slug: "school-beautification"
     }
   ];
 

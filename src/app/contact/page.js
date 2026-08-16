@@ -56,7 +56,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2 font-serif">Location</h3>
-                  <p className="text-[#5E5045] text-lg">India</p>
+                  <p className="text-[#5E5045] text-lg"> 31, 2nd Main Rd, Venkategowda Layout, <br /> Venkatagowda Layout, Hebbal Kempapura,<br /> Bengaluru, Karnataka 560024
+</p>
                 </div>
               </div>
 <br/>

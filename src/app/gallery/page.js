@@ -83,7 +83,6 @@ export default function GalleryPage() {
     { id: 2, video: "/img/reel-2.mp4", thumbnail: "/img/reel-thumb-2.jpg" },
     { id: 3, video: "/img/reel-3.mp4", thumbnail: "/img/reel-thumb-3.jpg" },
     { id: 4, video: "/img/reel-4.mp4", thumbnail: "/img/reel-thumb-4.jpg" },
-    { id: 5, video: "/img/reel-5.mp4", thumbnail: "/img/reel-thumb-5.jpg" },
     { id: 6, video: "/img/reel-6.mp4", thumbnail: "/img/reel-thumb-6.jpg" },
     { id: 7, video: "/img/reel-7.mp4", thumbnail: "/img/reel-thumb-7.jpg" },
     { id: 8, video: "/img/reel-8.mp4", thumbnail: "/img/reel-thumb-8.jpg" }
