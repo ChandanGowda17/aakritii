@@ -41,7 +41,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${outfit.variable} ${playfair.variable} h-full antialiased`}>
-      <head>
+      <head> 
+        <title> Aakritii NGO - Empower . Transform . Inspire </title>
       </head>
       <body className="min-h-full flex flex-col">
   <Header />
