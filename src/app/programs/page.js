@@ -16,15 +16,15 @@ export default function ProgramPage() {
     },
     {
       id: 2,
-      name: "Eye Camps",
+      name: "Light and Sight",
       image: "/img/eye-camp-1.jpg",
-      slug: "eye-camps"
+      slug: "light-and-sight"
     },
     {
       id: 3,
-      name: "Clean and Drive Trek",
+      name: "Plastic to Purpose",
       image: "/img/environment/env-8.png",
-      slug: "clean-and-drive-trek"
+      slug: "plastic-to-purpose"
     },
     {
       id: 2,

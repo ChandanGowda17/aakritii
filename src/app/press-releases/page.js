@@ -27,15 +27,12 @@ export default function PressReleases() {
           <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
             Press Releases.
           </h1>
+<div className="h-10"></div>
 
           <p className="mt-10 max-w-3xl text-[#5E5045] text-xl leading-10">
-        Every story reflects a step towards building stronger, more inclusive communities.
-Read about our latest initiatives, achievements, collaborations, and the lives transformed through collective action.
-Follow Aakritii NGO's journey as we continue creating sustainable impact, one community at a time.
-          </p>
+From local media features to newspaper clippings, these articles capture our ongoing work across different communities. Take a look at how our efforts are being reported in the press.          </p>
       </div>
 
-<div className="h-20"></div>
       </div>
 
       

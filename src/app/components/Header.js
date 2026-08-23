@@ -37,8 +37,8 @@ export default function Header() {
         className="site-header-inner flex h-[86px] items-center justify-between overflow-visible bg-[#401905] shadow-md max-lg:h-[72px]"
       >
         <a href="/#home" className="flex h-full items-center gap-[10px]" aria-label="Aakritii NGO Home">
-          <span className="flex h-[62px] w-[62px]  items-center justify-center bg-[#8d6544] max-lg:h-[54px] max-lg:w-[54px]">
-            <span className="relative flex h-[50px] w-[50px] items-center justify-center overflow-hidden bg-[#b99c7a] text-[10px] font-extrabold uppercase text-[#4b1f05] max-lg:h-[44px] max-lg:w-[44px]">
+          <span className="flex   items-center justify-center bg-[#8d6544] max-lg:h-[54px] max-lg:w-[54px]">
+            <span className="relative flex h-[60px] w-[55px] items-center justify-center overflow-hidden bg-[#b99c7a] text-[10px] font-extrabold uppercase text-[#4b1f05] max-lg:h-[44px] max-lg:w-[44px]">
               <Image
                 src={logo}
                 alt="Aakritii NGO logo"
@@ -54,7 +54,7 @@ export default function Header() {
             <span className="block font-serif text-3xl leading-none text-white">
               Aakritii NGO
             </span>
-            <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#c9a882] max-sm:text-[10px] max-sm:tracking-[0.12em]">
+            <span className="text-[8px] font-semibold uppercase tracking-[0.18em] text-[#c9a882] max-sm:text-[10px] max-sm:tracking-[0.12em]">
               Empower · Transform · Inspire
             </span>
           </span>
@@ -66,7 +66,7 @@ export default function Header() {
              <a
   key={item.label}
   href={item.href}
-  className="flex h-[24px] items-center text-[18px] font-serif  font-extrabold uppercase leading-none text-white transition hover:text-[#b08b6d]"
+  className="flex h-[24px] items-center text-[18px] font-serif  font-extrabold  leading-none text-white transition hover:text-[#b08b6d]"
 >
   {item.label}
 </a>
@@ -75,7 +75,7 @@ export default function Header() {
 
           <a
             href="/contact"
-            className="flex h-[52px] min-w-[210px] items-center justify-center gap-[10px] rounded-full bg-[#9b7d63] px-7 text-[18px] font-extrabold uppercase leading-none text-white transition hover:bg-[#ad8e73]"
+            className="flex font-serif h-[52px] min-w-[210px] items-center justify-center gap-[10px] rounded-full bg-[#9b7d63] px-7 text-[18px] font-extrabold  leading-none text-white transition hover:bg-[#ad8e73]"
           >
             <svg
               className="h-[22px] w-[22px]"

@@ -43,9 +43,18 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_0.6fr_1fr] md:gap-16">
           <div>
             <Link href="/#home" className="inline-flex items-center gap-4" aria-label="Aakritii NGO Home">
-              <span className="relative h-[70px] w-[70px] overflow-hidden rounded-sm bg-[#9A6A45]">
-                <Image src={logo} alt="Aakritii NGO logo" fill sizes="70px" className="object-cover" />
-              </span>
+              <span className="flex   items-center justify-center bg-[#8d6544] max-lg:h-[54px] max-lg:w-[54px]">
+                          <span className="relative flex h-[60px] w-[55px] items-center justify-center overflow-hidden bg-[#b99c7a] text-[10px] font-extrabold uppercase text-[#4b1f05] max-lg:h-[44px] max-lg:w-[44px]">
+                            <Image
+                              src={logo}
+                              alt="Aakritii NGO logo"
+                              fill
+                              sizes="(max-width: 1023px) 44px, 50px"
+                              className="object-cover"
+                              priority
+                            />
+                          </span>
+                        </span>
 
               <span>
                 <span className="block font-serif text-3xl leading-none text-white">Aakritii NGO</span>

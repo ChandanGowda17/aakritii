@@ -86,7 +86,7 @@ export default function OurImpact() {
   return (
     <section className="our-impact-section px-4 md:px-6" ref={sectionRef}>
       <div className="our-impact-inner mb-3">
-        <h2 className="our-impact-title font-light font-serif">Our Impact</h2>
+        <h2 className="our-impact-title font-light font-serif">Our Impact </h2>
         <div className="our-impact-grid">
           {stats.map((stat, idx) => (
             <div

@@ -39,8 +39,6 @@ export default function PressRelease() {
           <div className="max-w-2xl">
             <div className="flex items-center justify-between gap-4 mt-4 md:mt-0 mb-4">
               <div className="flex items-center gap-4">
-                <span className="news-blink-dot w-3 h-3 rounded-full bg-[#e8372b]"></span>
-                <h3 className="text-[#e8372b] uppercase tracking-widest font-bold text-sm md:text-base">In The News</h3>
               </div>
 
               <Link href="/press-releases" className="inline-flex md:hidden items-center gap-2 text-[#81503b] font-bold uppercase tracking-wider text-xs hover:text-[#e8372b] transition-colors">
@@ -74,21 +72,10 @@ export default function PressRelease() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute top-4 left-4 bg-[#ffe300] text-[#4b200c] py-2 h-6 w-fit px-4 flex items-center justify-center rounded-sm text-xs font-bold uppercase tracking-wide shadow-md">
-                  {item.date}
-                </div>
-              </div>
-
-              {/* Content Container */}
-              <div style={{ padding: "2rem" }} className="flex flex-col flex-grow">
-                <h3 className="text-xl sm:text-2xl font-bold text-[#4b200c] mb-3 line-clamp-2 group-hover:text-[#e8372b] transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-[#81503b] leading-relaxed mb-6 flex-grow line-clamp-3 text-sm sm:text-base">
-                  {item.excerpt}
-                </p>
                
               </div>
+
+          
             </article>
           ))}
         </div>

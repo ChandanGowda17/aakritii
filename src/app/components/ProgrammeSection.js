@@ -111,7 +111,7 @@ export default function ProgramsSection() {
 
             <div className="bg-[#4b200c] pt-24 md:pt-40 px-4 md:px-20">
             <div className="mb-16 md:mb-20 gap-12 md:gap-20 items-center text-center md:pt-40 "><br/>
-                <h2 className="font-light font-serif text-center text-white text-2xl md:text-4xl lg:text-5xl font-bold uppercase leading-tight">
+                <h2 className="font-light font-serif text-center text-white text-2xl md:text-4xl lg:text-5xl font-bold  leading-tight">
                     
                  <br/>
                     Sustainable &nbsp; Development &nbsp; Goals

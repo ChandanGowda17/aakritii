@@ -104,7 +104,7 @@ export default function Hero() {
               <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight font-light font-serif">
                 Aakritii NGO
               </h1>
-              <h2 className="hero-subtitle text-2xl sm:text-4xl font-light font-serif font-extrabold text-white/90 tracking-wide font-sans">
+              <h2 className="hero-subtitle text-sm sm:text-xl font-light font-serif font-extrabold text-white/90 tracking-wide font-sans">
                 Empower. Transform. Inspire
               </h2>
             </div>
