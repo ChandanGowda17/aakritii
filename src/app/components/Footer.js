@@ -58,7 +58,7 @@ export default function Footer() {
 
               <span>
                 <span className="block font-serif text-3xl leading-none text-white">Aakritii NGO</span>
-                <span className="mt-2 block text-sm font-semibold uppercase tracking-[0.35em] text-[#E8D3C1]">
+                <span className="mt-2 block text-[0.7rem] uppercase text-[#E8D3C1]">
                   Empower · Transform · Inspire
                 </span>
               </span>

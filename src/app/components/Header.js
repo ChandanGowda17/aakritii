@@ -54,8 +54,7 @@ export default function Header() {
             <span className="block font-serif text-3xl leading-none text-white">
               Aakritii NGO
             </span>
-            <span className="text-[8px] font-semibold uppercase tracking-[0.18em] text-[#c9a882] max-sm:text-[10px] max-sm:tracking-[0.12em]">
-              Empower · Transform · Inspire
+<span className="mt-2 block text-[0.7rem] uppercase text-[#E8D3C1] ">              Empower · Transform · Inspire
             </span>
           </span>
         </a>

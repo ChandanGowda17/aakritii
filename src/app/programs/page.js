@@ -16,34 +16,52 @@ export default function ProgramPage() {
     },
     {
       id: 2,
-      name: "Light and Sight",
+      name: "Eye Camps",
       image: "/img/eye-camp-1.jpg",
-      slug: "light-and-sight"
+      slug: "eye-camps"
     },
     {
       id: 3,
-      name: "Plastic to Purpose",
+      name: "Clean and Drive Trek",
       image: "/img/environment/env-8.png",
-      slug: "plastic-to-purpose"
+      slug: "clean-and-drive-trek"
     },
     {
-      id: 2,
+      id: 4,
       name: "Seed Ball Making",
       image: "/img/seedball.jpeg",
       slug: "seed-ball-making"
     },
     {
-      id: 2,
+      id: 5,
       name: "PopCorn and Purpose",
       image: "/img/popcorn.jpeg",
       slug: "popcorn-and-purpose"
     },
     {
-      id: 2,
+      id: 6,
       name: "School Beautification",
       image: "/img/beautification.jpeg",
       slug: "school-beautification"
-    }
+    } ,
+    {
+      id: 7,
+      name: "Stitch and Sustain",
+      image: "/img/stitch-and-sustain.jpeg",
+      slug: "stitch-and-sustain"
+    },
+     {
+      id: 8,
+      name: "Soul and Soil",
+      image: "/img/soul-and-soil.jpeg",
+      slug: "soul-and-soil"
+    },
+     {
+      id: 9,
+      name: "Women's Day",
+      image: "/img/womens-day.jpeg",
+      slug: "womens-day"
+    },
   ];
 
  return (

@@ -53,7 +53,7 @@ export default function GalleryPage() {
       ]
     },
     {
-      name: "Clean and Drive",
+      name: "Clean up Drive",
       Icon: Wind,
       images: [
         "/img/clean-and-drive-1.png",

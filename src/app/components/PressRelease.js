@@ -24,7 +24,7 @@ const pressReleases = [
     title: "Community Driven Tree Plantation Drive Hits Milestone",
     date: "June 05, 2025",
     excerpt: "On World Environment Day, Aakritii NGO along with hundreds of volunteers successfully planted over 10,000 saplings to promote environmental sustainability.",
-    image: "/img/environment-1.png",
+    image: "/img/news-4.png",
     link: "#"
   }
 ];

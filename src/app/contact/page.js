@@ -19,9 +19,7 @@ export default function ContactPage() {
           </div>
 <br/>
           {/* Contact Details and Image */}
-          <div className="grid lg:grid-cols-2 gap-8 items-center text-center lg:text-left">
-            {/* Contact Details - Left Side */}
-            <div className="space-y-6">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center justify-items-center max-w-5xl mx-auto lg:translate-x-20">            <div className="space-y-2">
               <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start">
                 <div className="flex-shrink-0">
                   <svg className="h-8 w-8 text-[#D46C32]" fill="currentColor" viewBox="0 0 20 20">

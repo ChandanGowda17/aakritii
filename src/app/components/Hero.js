@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 const carouselItems = [
   {
     id: 1,
-    image: "/img/know-more-landing.png",
+    image: "/img/home-landing-1.png",
     title: "Education and Child Development",
     description: "Building stronger communities through education, healthcare, and sustainable development initiatives.",
     link: "pages/education"
@@ -21,14 +21,14 @@ const carouselItems = [
   },
   {
     id: 3,
-    image: "/img/environment-1.png",
+    image: "/img/home-landing-3.jpg",
     title: "Environmental Sustainability",
     description: "Driving positive change through tree plantations, awareness programs, and eco-friendly practices.",
     link: "pages/environment"
   },
   {
     id: 4,
-    image: "/img/health-5.png",
+    image: "/img/home-landing-4.jpg",
     title: "Health and Well Being",
     description: "Providing quality education and holistic development opportunities for all the children in need.",
    link: "pages/health"

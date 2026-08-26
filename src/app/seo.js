@@ -65,6 +65,24 @@ export const seoPages = [
       "See how Aakritii NGO's school beautification projects improve learning environments, foster pride, and create welcoming spaces for students and communities.",
   },
   {
+    path: "/programs/soul-and-soil",
+    title: "Soul and Soil Programme | Aakritii NGO Environment Initiative",
+    description:
+      "Discover Aakritii NGO's Soul and Soil programme that connects people with nature through gardening, farming, and environmental stewardship activities.",
+  },
+  {
+    path: "/programs/stitch-and-sustain",
+    title: "Stitch and Sustain Programme | Aakritii NGO Skill Development Initiative",
+    description:
+      "Learn about Aakritii NGO's Stitch and Sustain programme that empowers women through sewing skills, entrepreneurship, and sustainable livelihood opportunities.",
+  },
+  {
+    path: "/programs/womens-day",
+    title: "Women's Day Celebration | Aakritii NGO Empowerment Initiative",
+    description:
+      "See how Aakritii NGO celebrates Women's Day with events that honor, empower, and support women in communities through recognition and skill-building activities.",
+  },
+  {
     path: "/pages/education",
     title: "Education and Child Development | Aakritii NGO",
     description:
