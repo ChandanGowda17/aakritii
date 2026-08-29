@@ -53,13 +53,13 @@ export default function ProgramPage() {
      {
       id: 8,
       name: "Soul and Soil",
-      image: "/img/soul-and-soil.jpeg",
+      image: "/img/soul-and-soil-4.jpg",
       slug: "soul-and-soil"
     },
      {
       id: 9,
       name: "Women's Day",
-      image: "/img/womens-day.jpeg",
+      image: "/img/womens-day-2.jpg",
       slug: "womens-day"
     },
   ];

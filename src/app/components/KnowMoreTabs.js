@@ -190,7 +190,7 @@ export default function KnowMoreTabs() {
       <section id="home" className="hero-section relative min-h-screen bg-[#3A2312] overflow-hidden">
         <div className="hero-shell relative w-full min-h-[85vh] lg:min-h-[90vh] bg-[#4E3629] curved-hero-container flex items-center justify-center py-16 px-6">
           <img
-            src="/img/know-more-landing.png"
+            src="/img/know-more-landing.jpg"
             alt="Aakritii NGO community education programme"
             className="hero-bg-video absolute inset-0 z-0 h-full w-full object-cover"
           />

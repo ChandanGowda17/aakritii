@@ -85,7 +85,9 @@ export default function GalleryPage() {
     { id: 4, video: "/img/reel-4.mp4", thumbnail: "/img/reel-thumb-4.jpg" },
     { id: 6, video: "/img/reel-6.mp4", thumbnail: "/img/reel-thumb-6.jpg" },
     { id: 7, video: "/img/reel-7.mp4", thumbnail: "/img/reel-thumb-7.jpg" },
-    { id: 8, video: "/img/reel-8.mp4", thumbnail: "/img/reel-thumb-8.jpg" }
+    { id: 8, video: "/img/reel-8.mp4", thumbnail: "/img/reel-thumb-8.jpg" },
+    { id: 9, video: "/img/reel-9.mp4", thumbnail: "/img/reel-thumb-9.jpg" },
+
   ];
   return (
     <main className="bg-[#F8F1E6] text-[#4b200c] pt-24">

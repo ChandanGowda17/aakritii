@@ -26,7 +26,7 @@ export default function SeedBallMakingPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="overflow-hidden rounded-md bg-[#E8DCCE] shadow-sm">
               <img
-                src="/img/womens-day.jpeg"
+                src="/img/womens-day-1.jpg"
                 alt="Women's Day"
                 className="h-[320px] w-full object-cover md:h-[370px]"
               />
