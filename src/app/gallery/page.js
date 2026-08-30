@@ -24,9 +24,16 @@ export default function GalleryPage() {
 
   const campaigns = [
     {
-      name: "Bricks & Brilliance",
+      name: "Polio Drive",
       Icon: BrickWall,
-      images: [1, 2, 3, 4, 5, 6]
+        images: [
+        "/img/polio-1.jpeg",
+        "/img/polio-2.jpeg",
+        "/img/polio-3.jpeg",
+        "/img/polio-4.jpeg",
+        "/img/polio-5.jpeg",
+        "/img/polio-6.jpeg"
+      ]
     },
     {
       name: "Soul & Soil",

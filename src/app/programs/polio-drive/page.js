@@ -26,7 +26,7 @@ export default function PolioDrivePage() {
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="overflow-hidden rounded-md bg-[#E8DCCE] shadow-sm">
               <img
-                src="/img/polio/polio-1.jpeg"
+                src="/img/polio-3.jpeg"
                 alt="Polio Drive"
                 className="h-[320px] w-full object-cover md:h-[370px]"
               />
