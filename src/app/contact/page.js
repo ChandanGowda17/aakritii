@@ -13,8 +13,8 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <br/>
-            <p className="mt-6 max-w-6xl mx-auto text-[#5E5045] text-xl leading-9">
-              Have questions, want to volunteer, or interested in partnering with us? We'd love to hear from you. Reach out and let's make a difference together.
+            <p className="mx-auto mt-6 w-full text-[#5E5045] text-xl flex flex-wrap justify-center" >
+              <span>Have questions, want to volunteer, or interested in partnering with us? </span><span>We'd love to hear from you. Reach out and let's make a difference together.</span>
             </p>
           </div>
 <br/>

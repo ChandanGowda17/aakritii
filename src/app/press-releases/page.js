@@ -15,7 +15,7 @@ export default function PressReleases() {
 
   return (
     <section className="bg-[#F8F1E6] border-t border-[#E6DACB] w-full" style={{ paddingTop: '86px' }}>
-      <div className="site-container mb-20 text-left">
+      <div className="site-container  mb-20 text-left">
 
         {/* Hero */}
      
@@ -36,58 +36,63 @@ From local media features to newspaper clippings, these articles capture our ong
       </div>
 
       </div>
-
       
-<section className="bg-[#F8F1E6] border-t border-[#E6DACB] w-full" style={{ paddingTop: '86px' }}>
-  
+<section
+  className="bg-[#F8F1E6] border-t border-[#E6DACB] w-full"
+  style={{ paddingTop: "86px" }}
+>
+  <div className="site-container w-full pb-20 md:pb-28">
 
-      <div className="site-container  grid grid-cols-1 pb-20 md:pb-28">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="overflow-hidden rounded-[20px] bg-[#E8DCCE] shadow-sm order-1 lg:order-1 transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer" onClick={() => setSelectedImage(images[0])}>
-            <img
-              src="/img/news-2.png"
-              alt="Women participating in a community development activity"
-              className="h-[320px] w-full object-cover md:h-[370px]"
-            />
-          </div> </div> </div>
-
-      <div className="site-container pb-20 md:pb-28">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          
-
-          <div className="text-[#5E5045] order-2 lg:order-1">
-      
-          </div>
-
-<div className="overflow-hidden rounded-[20px] bg-[#E8DCCE] shadow-sm order-1 lg:order-2 transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer" onClick={() => setSelectedImage(images[1])}>
-            <img
-              src="/img/news-3.png"
-              alt="Women participating in a community development activity"
-              className="h-[320px] w-full object-cover md:h-[370px]"
-            />
-          </div>
-
-        </div>
+    {/* Image 1 */}
+    <div className="grid w-full place-items-center">
+      <div
+        className="w-full max-w-3xl overflow-hidden rounded-[20px] bg-[#E8DCCE] shadow-sm
+        transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+        onClick={() => setSelectedImage(images[0])}
+      >
+        <img
+          src="/img/news-2.png"
+          alt="news 1"
+          className="h-[320px] w-full object-cover md:h-[370px]"
+        />
       </div>
+    </div>
 
-  
+    <div className="h-20 md:h-28" />
 
-      <div className="site-container pb-20 md:pb-28">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="overflow-hidden rounded-[20px] bg-[#E8DCCE] shadow-sm order-1 lg:order-1 transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer" onClick={() => setSelectedImage(images[2])}>
-            <img
-              src="/img/news-4.png"
-              alt="Women participating in a community development activity"
-              className="h-[320px] w-full object-cover md:h-[370px]"
-            />
-          </div>
-
-          <div className="text-[#5E5045] order-2 lg:order-2">
-          
-          </div>
-        </div>
+    {/* Image 2 */}
+    <div className="grid w-full place-items-center">
+      <div
+        className="w-full max-w-3xl overflow-hidden rounded-[20px] bg-[#E8DCCE] shadow-sm
+        transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+        onClick={() => setSelectedImage(images[1])}
+      >
+        <img
+          src="/img/news-3.png"
+          alt="news 2"
+          className="h-[320px] w-full object-cover md:h-[370px]"
+        />
       </div>
-      <br/> <br/> <br/>
+    </div>
+
+    <div className="h-20 md:h-28" />
+
+    {/* Image 3 */}
+    <div className="grid w-full place-items-center">
+      <div
+        className="w-full max-w-3xl overflow-hidden rounded-[20px] bg-[#E8DCCE] shadow-sm
+        transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+        onClick={() => setSelectedImage(images[2])}
+      >
+        <img
+          src="/img/news-4.png"
+          alt="news 3"
+          className="h-[320px] w-full object-cover md:h-[370px]"
+        />
+      </div>
+    </div>
+ <br /> <br /> <br />
+  </div>
 </section>
       {/* Image Modal */}
       {selectedImage && (
@@ -107,7 +112,7 @@ From local media features to newspaper clippings, these articles capture our ong
             </button>
             <img
               src={selectedImage}
-              alt="Enlarged view"
+              alt="news 3"
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
             />
           </div>
