@@ -8,8 +8,8 @@ export default function SupportSection() {
   const [startIndex, setStartIndex] = useState(0);
 
   const cards = [
-    { id: 1, src: "/img/community-4.png", alt: "Environment" },
-    { id: 2, src: "/img/health-2.png", alt: "Health" },
+    { id: 1, src: "/img/beautification.jpeg", alt: "Environment" },
+    { id: 2, src: "/img/womens-day-5.jpg", alt: "Health" },
     { id: 3, src: "/img/education-4.png", alt: "Education" },
     { id: 4, src: "/img/house-for-wings-1.jpg", alt: "House for Wings" },
     { id: 5, src: "/img/soul-and-soil-1.jpg", alt: "sould and soil" },

@@ -103,7 +103,7 @@ Education and Child Development              </h1>
             </div>
 
             <p className="hero-description text-[0.95rem] sm:text-[1.05rem] text-neutral-300 leading-relaxed max-w-2xl font-light">
-             Education is at the heart of Aakritii NGO’s mission to create lasting social change. We work to ensure that children from underserved and vulnerable communities have access to quality learning opportunities, holistic development, and a supportive environment to thrive. Through educational programs, mentorship, skill-building initiatives, and community engagement, we empower young minds with the knowledge, confidence, and values needed to shape a brighter future.
+             Education is at the heart of Aakritii NGO’s mission to create lasting social change. We work to ensure that children from underserved and vulnerable communities have access to quality learning opportunities, holistic development, and a supportive environment to thrive. 
 
             </p>
           </div>
@@ -112,105 +112,65 @@ Education and Child Development              </h1>
       </div>
     </section>
 <br/>
-      <div className="education-program-section relative z-10 flex flex-col items-center justify-center w-full">
-        <div className="education-program-title flex justify-center items-center text-[#4b200c] text-2xl md:text-3xl lg:text-6xl font-light h-20 mt-20 px-6 sm:px-8 md:px-4 text-center">EDUCATION AND CHILD DEVELOPMENT</div>
-        <div className="education-program-container mx-auto max-w-7xl px-6 sm:px-8 md:px-6 py-12 md:py-24 w-full">
-        <div className="education-program-grid grid lg:grid-cols-[320px_1fr] gap-6 md:gap-8 lg:gap-12">
+      
 
-          {/* LEFT TABS */}
-          <div className="education-program-tabs grid grid-cols-2 gap-3 lg:flex lg:flex-col lg:h-full lg:gap-0 lg:border-t lg:border-[#d7cfc5] lg:order-1 order-1">
-            {programs.map((program) => (
-              <button
-                key={program.id}
-                type="button"
-                onClick={() => setActiveProgramId(program.id)}
-                className={`flex min-h-10 w-full items-center rounded-md border border-[#d7cfc5] bg-white px-3 py-2 text-left transition-all duration-300 sm:px-4 lg:flex-1 lg:rounded-none lg:border-x-0 lg:border-t-0 lg:bg-transparent lg:px-0 lg:py-0 ${
-                  activeProgramId === program.id
-                    ? "border-[#401905] text-[#401905] shadow-sm lg:border-[#d7cfc5] lg:shadow-none"
-                    : "text-[#7b7068] hover:text-[#401905]"
-                }`}
-              >&nbsp;
-                <span
-                  className={`block whitespace-nowrap leading-tight ${
-                    activeProgramId === program.id
-                      ? "text-[14px] font-bold sm:text-base md:text-xl lg:text-3xl"
-                      : "text-[14px] font-light sm:text-base md:text-lg lg:text-3xl"
-                  }`}
-                >
-                  {program.title}
-                </span>
-              </button>
-            ))}
+
+<section className="bg-[#F8F1E6] border-t border-[#E6DACB] w-full" style={{ paddingTop: '86px' }}>
+      <div className="site-container mb-20 text-left">
+
+        {/* Hero */}
+     
+        <div className="pt-16 pb-10 justify-start">
+          <div className="h-10"></div>
+          <p className="text-[#D46C32] uppercase tracking-[0.35em] text-sm font-semibold">
+            About Us
+          </p>
+          <br/>
+
+          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
+            Education and Child Devlopment
+          </h1>
+<br/>
+          <p className="mt-10 max-w-3xl text-[#5E5045] text-xl leading-10">
+            <span className="font-bold">Foundational Learning</span><br/>
+            Helping children build strong reading, writing, numeracy, and classroom confidence through consistent learning support.              Through educational programs, mentorship, skill-building initiatives, and community engagement, we empower young minds with the knowledge, confidence, and values needed to shape a brighter future.
+         </p>
+      </div>
+      </div>
+<div className="h-10"></div>
+      
+
+      <div className="site-container pb-20 md:pb-28">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="overflow-hidden rounded-[20px] bg-[#E8DCCE] shadow-sm">
+            <img
+              src="/img/communnity.jpg"
+              alt="Women participating in a community development activity"
+              className="h-[320px] w-full object-cover md:h-[370px]"
+            />
           </div>
 
-          {/* RIGHT CONTENT */}
-          <div className="education-program-card overflow-hidden rounded-[32px] bg-white shadow-xl lg:order-2 order-2">
+          <div className="text-[#5E5045]">
+            <p className="text-lg leading-8 md:text-xl md:leading-9">
+             <span className="font-bold">Holistic Development</span><br/>
+Creating space for creativity, values, life skills, and emotional growth so children can thrive beyond textbooks.
+            </p>
 
-            <div className="grid lg:grid-cols-[1fr_280px] md:grid-cols-1">
-
-              {/* IMAGE with CONTENT overlay */}
-              <div className="relative h-[300px] md:h-[500px] lg:h-[650px] w-full md:col-span-1 lg:col-span-1">
-                <img
-                  src={activeProgram.image}
-                  alt={activeProgram.title}
-                  className="h-full w-full object-cover transition-all duration-500"
-                />
-
-                {/* CONTENT - Overlay on top of image */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#401905]/70 via-[#401905]/40 to-transparent p-6 md:p-8 lg:p-12 flex flex-col justify-center">
-                  <span className="text-xs md:text-sm uppercase tracking-[3px] text-white/90 font-semibold">
-                    Our Program
-                  </span>
-
-                  <h2 className="mt-4 text-2xl md:text-3xl lg:text-5xl font-bold leading-tight text-white">
-                    {activeProgram.title}
-                  </h2>
-
-                  <p className="mt-6 md:mt-8 text-base md:text-lg leading-relaxed text-white/90">
-                    {activeProgram.description}
-                  </p>
-
-                  
-                </div>
-              </div>
-
-              {/* STATS - Right side column */}
-              <div className="bg-[#faf8f5] p-4 md:p-5 pt-2 md:pt-4 mt-4 lg:mt-0 flex flex-row md:flex-col lg:flex-col gap-3 md:gap-5 lg:gap-5 md:col-span-1 lg:col-span-1 items-center justify-center">
-                <div className=" p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
-                  <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
-                    Impact
-                  </p>
-
-                  <h3 className="mt-2 md:mt-4 text-3xl md:text-4xl lg:text-6xl font-bold text-[#401905]">
-                    {activeProgram.stat1}
-                  </h3>
-
-                  <p className="mt-2 md:mt-3 text-sm md:text-base text-[#5b4b42]">
-                    {activeProgram.stat1Label}
-                  </p>
-                </div>
-
-                <div className=" p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
-                  <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
-                    Reach
-                  </p>
-
-                  <h3 className="mt-2 md:mt-4 text-3xl md:text-4xl lg:text-6xl font-bold text-[#401905]">
-                    {activeProgram.stat2}
-                  </h3>
-
-                  <p className="mt-2 md:mt-3 text-sm md:text-base text-[#5b4b42]">
-                    {activeProgram.stat2Label}
-                  </p>
-                </div>
-              </div>
-
-            </div>
+            <p className="mt-8 text-lg leading-8 md:text-xl md:leading-9">
+              <span className="font-bold">Mentorship & Guidance</span><br/>
+Connecting students with mentors who encourage regular attendance, goal setting, career awareness, and personal confidence.
+<br/>
+              <span className="font-bold">Access & Retention</span><br/>
+Supporting children from vulnerable communities with the encouragement, resources, and family engagement needed to stay in school.
+            </p>
           </div>
-
         </div>
       </div>
-      </div>
+
+      </section>
+
+
+
 
       {/* WHY EDUCATION SECTION */}
       <section className="education-info-section h-full px-8 sm:px-10 md:px-12 lg:px-20 bg-[#f6efe6] overflow-hidden">
