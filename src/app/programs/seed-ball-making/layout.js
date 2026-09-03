@@ -1,6 +1,7 @@
 import { createPageMetadata, seoPages } from "../../seo";
 
-export const metadata = createPageMetadata(seoPages.find((page) => page.path === "/programs/seed-ball-making"));
+const seoPage = seoPages.find((page) => page.path === "/programs/seed-ball-making");
+export const metadata = seoPage ? createPageMetadata(seoPage) : {};
 
 export default function SeedBallMakingLayout({ children }) {
   return children;

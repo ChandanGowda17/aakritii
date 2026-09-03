@@ -144,8 +144,8 @@ Education and Child Development              </h1>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="overflow-hidden rounded-[20px] bg-[#E8DCCE] shadow-sm">
             <img
-              src="/img/communnity.jpg"
-              alt="Women participating in a community development activity"
+              src="/img/education-1.png"
+              alt="Children engaged in educational activities"
               className="h-[320px] w-full object-cover md:h-[370px]"
             />
           </div>
@@ -179,7 +179,7 @@ Supporting children from vulnerable communities with the encouragement, resource
 
           <div className="mb-16 md:mb-24">
             <br/><br/>
-            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light font-serif leading-tight">
+            <h2 className="text-[#4b200c] text-3xl sm:text-5xl md:text-6xl font-light font-serif leading-tight">
               WHY Education
             </h2>
 <br/>
@@ -197,7 +197,7 @@ Supporting children from vulnerable communities with the encouragement, resource
           </div>
 <br/><br/>
           <div>
-            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light font-serif leading-tight">
+            <h2 className="text-[#4b200c] text-3xl sm:text-5xl md:text-6xl font-light font-serif leading-tight">
               WHAT WE DO
             </h2>
 <br/>

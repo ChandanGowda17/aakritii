@@ -40,6 +40,13 @@ export default function CleanAndDriveTrekPage() {
           </div>
           <br />
 
+          {/* Text below - hidden on mobile by default, shown when expanded */}
+          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
+            <p className="max-w-full text-[#5E5045] text-xl leading-10">
+              The numbers back this up. In one clean-up drive in Uttarakhand, a group collected 274 kg of waste from a single hotspot in just an hour. Elsewhere in Himachal Pradesh, six people picked up around 50 kg of trash covering barely 500 metres of trail. Most of it was food packaging, and much of that kind of plastic can't even be recycled because it's made of multiple layers stuck together. This isn't a one-off problem either. One Himalayan cleanup group has collected over 800,000 kg of waste since 2016, running 40 to 50 cleanup treks every year. Closer home, groups clearing trails near Bengaluru have been hauling away tonnes of waste from popular hiking spots. The scale tells you this isn't a few careless people. It's a habit that's built up over years, trek after trek.
+            </p>
+          </div>
+
           {/* Mobile-only read more button */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -47,13 +54,6 @@ export default function CleanAndDriveTrekPage() {
           >
             {isExpanded ? 'Read Less' : 'Read More'}
           </button>
-
-          {/* Text below - hidden on mobile by default, shown when expanded */}
-          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
-            <p className="max-w-full text-[#5E5045] text-xl leading-10">
-              The numbers back this up. In one clean-up drive in Uttarakhand, a group collected 274 kg of waste from a single hotspot in just an hour. Elsewhere in Himachal Pradesh, six people picked up around 50 kg of trash covering barely 500 metres of trail. Most of it was food packaging, and much of that kind of plastic can't even be recycled because it's made of multiple layers stuck together. This isn't a one-off problem either. One Himalayan cleanup group has collected over 800,000 kg of waste since 2016, running 40 to 50 cleanup treks every year. Closer home, groups clearing trails near Bengaluru have been hauling away tonnes of waste from popular hiking spots. The scale tells you this isn't a few careless people. It's a habit that's built up over years, trek after trek.
-            </p>
-          </div>
         </div>
         <br /><br /><br /><br /><br /><br />
       </section>

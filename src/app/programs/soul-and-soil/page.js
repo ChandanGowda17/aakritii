@@ -40,6 +40,13 @@ export default function SeedBallMakingPage() {
           </div>
           <br />
 
+          {/* Text below - hidden on mobile by default, shown when expanded */}
+          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
+            <p className="max-w-full text-[#5E5045] text-xl leading-10">
+              That was kind of the point. It's easy to talk about farmers and food security in the abstract. It's harder to plant one row and realize how much labor sits behind something as ordinary as a plate of rice. The farmers didn't need the help. They were faster and better at it than any of us. But they were patient, showed people how to hold the seedlings, corrected a lot of bad form. By the end, a few volunteers could actually keep pace. Nobody left with sore muscles and a changed life. But most left with a different sense of what farming actually costs, and a little more respect for the people who do it without anyone watching.
+            </p>
+          </div>
+
           {/* Mobile-only read more button */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -47,13 +54,6 @@ export default function SeedBallMakingPage() {
           >
             {isExpanded ? 'Read Less' : 'Read More'}
           </button>
-
-          {/* Text below - hidden on mobile by default, shown when expanded */}
-          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
-            <p className="max-w-full text-[#5E5045] text-xl leading-10">
-              That was kind of the point. It's easy to talk about farmers and food security in the abstract. It's harder to plant one row and realize how much labor sits behind something as ordinary as a plate of rice. The farmers didn't need the help. They were faster and better at it than any of us. But they were patient, showed people how to hold the seedlings, corrected a lot of bad form. By the end, a few volunteers could actually keep pace. Nobody left with sore muscles and a changed life. But most left with a different sense of what farming actually costs, and a little more respect for the people who do it without anyone watching.
-            </p>
-          </div>
         </div>
         <br /><br /><br /><br /><br /><br />
       </section>

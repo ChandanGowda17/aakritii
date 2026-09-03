@@ -2,12 +2,14 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-import { BrickWall, ChevronLeft, ChevronRight, Sprout, Wind } from "lucide-react";
+import { BrickWall, ChevronLeft, ChevronRight, Heart, Sprout, Trash2, Wind } from "lucide-react";
 
 export default function GalleryPage() {
   const [activeCampaign, setActiveCampaign] = useState(0);
   const [viewAll, setViewAll] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const reelsScrollRef = useRef(null);
 
   const scrollReelsLeft = () => {
@@ -19,6 +21,35 @@ export default function GalleryPage() {
   const scrollReelsRight = () => {
     if (reelsScrollRef.current) {
       reelsScrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
+
+  const handleImageClick = (img, index) => {
+    setSelectedImage(img);
+    setSelectedImageIndex(index);
+  };
+
+  const getCurrentImages = () => {
+    return viewAll ? campaigns.flatMap(campaign => campaign.images) : campaigns[activeCampaign].images;
+  };
+
+  const handleNextImage = () => {
+    const currentImages = getCurrentImages();
+    const currentIndex = currentImages.indexOf(selectedImage);
+    if (currentIndex !== -1) {
+      const nextIndex = (currentIndex + 1) % currentImages.length;
+      setSelectedImage(currentImages[nextIndex]);
+      setSelectedImageIndex(nextIndex);
+    }
+  };
+
+  const handlePrevImage = () => {
+    const currentImages = getCurrentImages();
+    const currentIndex = currentImages.indexOf(selectedImage);
+    if (currentIndex !== -1) {
+      const prevIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+      setSelectedImage(currentImages[prevIndex]);
+      setSelectedImageIndex(prevIndex);
     }
   };
 
@@ -61,7 +92,7 @@ export default function GalleryPage() {
     },
     {
       name: "Clean up Drive",
-      Icon: Wind,
+      Icon: Trash2,
       images: [
         "/img/clean-and-drive-1.png",
         "/img/clean-and-drive-2.png",
@@ -73,7 +104,7 @@ export default function GalleryPage() {
     },
     {
       name: "Women's Day",
-      Icon: Wind,
+      Icon: Heart,
       images: [
         "/img/womens-day-1.jpg",
         "/img/womens-day-2.jpg",
@@ -190,7 +221,11 @@ export default function GalleryPage() {
         <div className="site-container">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full mx-auto">
             {(viewAll ? campaigns.flatMap(campaign => campaign.images) : campaigns[activeCampaign].images).map((img, index) => (
-              <div key={index} className="relative aspect-square md:aspect-[4/3] bg-white rounded-lg border-2 border-[#D46C32] overflow-hidden flex items-center justify-center text-[#4b200c] text-2xl font-semibold">
+              <div 
+                key={`${viewAll ? 'all' : activeCampaign}-${index}`} 
+                onClick={() => handleImageClick(img, index)}
+                className="relative aspect-square md:aspect-[4/3] bg-white rounded-lg border-2 border-[#D46C32] overflow-hidden flex items-center justify-center text-[#4b200c] text-2xl font-semibold cursor-pointer hover:scale-105 transition-transform duration-200"
+              >
                 {typeof img === "string" ? (
                   <Image
                     src={img}
@@ -238,6 +273,46 @@ export default function GalleryPage() {
               controls
               className="w-full h-full max-h-[90vh] object-contain rounded-lg"
             />
+          </div>
+        </div>
+      )}
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-5xl max-h-[90vh] w-full" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 text-white text-5xl hover:text-gray-300 transition-colors z-10"
+            >
+              ×
+            </button>
+            <button
+              onClick={handlePrevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-2"
+            >
+              ‹
+            </button>
+            <button
+              onClick={handleNextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-2"
+            >
+              ›
+            </button>
+            {typeof selectedImage === "string" ? (
+              <img
+                src={selectedImage}
+                alt="Gallery image"
+                className="w-full h-full max-h-[85vh] object-contain rounded-lg"
+              />
+            ) : (
+              <div className="flex items-center justify-center h-full text-white text-2xl font-semibold">
+                Image {selectedImage}
+              </div>
+            )}
           </div>
         </div>
       )}

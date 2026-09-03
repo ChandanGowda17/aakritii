@@ -1,6 +1,7 @@
 import { createPageMetadata, seoPages } from "../../seo";
 
-export const metadata = createPageMetadata(seoPages.find((page) => page.path === "/programs/popcorn-and-purpose"));
+const seoPage = seoPages.find((page) => page.path === "/programs/popcorn-and-purpose");
+export const metadata = seoPage ? createPageMetadata(seoPage) : {};
 
 export default function PopcornAndPurposeLayout({ children }) {
   return children;

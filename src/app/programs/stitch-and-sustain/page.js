@@ -40,6 +40,13 @@ export default function SeedBallMakingPage() {
           </div>
           <br />
 
+          {/* Text below - hidden on mobile by default, shown when expanded */}
+          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
+            <p className="max-w-full text-[#5E5045] text-xl leading-10">
+              A few weeks in, some were already altering clothes for neighbors and charging for it. Small amounts, but their own. It's not a fix for everything. One set of classes doesn't change a household overnight. But it gives someone a way to earn that didn't exist before, and that tends to stick around longer than the program does.
+            </p>
+          </div>
+
           {/* Mobile-only read more button */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -47,13 +54,6 @@ export default function SeedBallMakingPage() {
           >
             {isExpanded ? 'Read Less' : 'Read More'}
           </button>
-
-          {/* Text below - hidden on mobile by default, shown when expanded */}
-          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
-            <p className="max-w-full text-[#5E5045] text-xl leading-10">
-              A few weeks in, some were already altering clothes for neighbors and charging for it. Small amounts, but their own. It's not a fix for everything. One set of classes doesn't change a household overnight. But it gives someone a way to earn that didn't exist before, and that tends to stick around longer than the program does.
-            </p>
-          </div>
         </div>
         <br /><br /><br /><br /><br /><br />
       </section>

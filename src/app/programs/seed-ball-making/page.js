@@ -39,6 +39,12 @@ Hand a kid under ten a lump of wet mud and tell them to make something out of it
           </div>
           <br />
 
+          {/* Text below - hidden on mobile by default, shown when expanded */}
+          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
+            <p className="max-w-full text-[#5E5045] text-xl leading-10">
+Five of our interns spent close to 48 hours across the project, from prepping the material to running the actual session with the kids. Around 40 children took part, rolling mud between their palms, packing seeds inside, and lining up their little balls to dry, some neat, some barely holding together, all of them proud of what they'd made. We also handed out books while we were there, because a good day shouldn't end when the mud dries. It's a small activity on paper. A few kids, some seed balls, an afternoon. But somewhere out there, a patch of open land is going to have a few more trees than it would have otherwise, because a handful of eight year olds spent an afternoon getting their hands dirty for it. If you've got a free morning and don't mind mud under your nails, this is about as easy as volunteering gets.             </p>
+          </div>
+
           {/* Mobile-only read more button */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -46,12 +52,6 @@ Hand a kid under ten a lump of wet mud and tell them to make something out of it
           >
             {isExpanded ? 'Read Less' : 'Read More'}
           </button>
-
-          {/* Text below - hidden on mobile by default, shown when expanded */}
-          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
-            <p className="max-w-full text-[#5E5045] text-xl leading-10">
-Five of our interns spent close to 48 hours across the project, from prepping the material to running the actual session with the kids. Around 40 children took part, rolling mud between their palms, packing seeds inside, and lining up their little balls to dry, some neat, some barely holding together, all of them proud of what they'd made. We also handed out books while we were there, because a good day shouldn't end when the mud dries. It's a small activity on paper. A few kids, some seed balls, an afternoon. But somewhere out there, a patch of open land is going to have a few more trees than it would have otherwise, because a handful of eight year olds spent an afternoon getting their hands dirty for it. If you've got a free morning and don't mind mud under your nails, this is about as easy as volunteering gets.             </p>
-          </div>
         </div>
         <br /><br /><br /><br /><br /><br />
       </section>

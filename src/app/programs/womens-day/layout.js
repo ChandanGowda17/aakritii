@@ -1,6 +1,7 @@
 import { createPageMetadata, seoPages } from "../../seo";
 
-export const metadata = createPageMetadata(seoPages.find((page) => page.path === "/programs/womens-day"));
+const seoPage = seoPages.find((page) => page.path === "/programs/womens-day");
+export const metadata = seoPage ? createPageMetadata(seoPage) : {};
 
 export default function WomensDayLayout({ children }) {
   return children;

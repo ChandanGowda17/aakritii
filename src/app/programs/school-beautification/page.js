@@ -40,6 +40,13 @@ export default function SchoolBeautificationPage() {
           </div>
           <br />
 
+          {/* Text below - hidden on mobile by default, shown when expanded */}
+          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
+            <p className="max-w-full text-[#5E5045] text-xl leading-10">
+              So we picked up brushes for a day and did something about it. 20 of us, students and working professionals, spent a day painting walls, brightening corridors, turning bare corners into something a kid might actually enjoy looking at on the way to class. 72 volunteer hours later, close to 400 children had a school that looked like somewhere worth showing up to. Paint doesn't fix a leaking roof or stretch a tight budget. But it does something else, it makes a kid walk in one morning and notice that someone spent a day making the place look better, just for them. A repainted wall isn't going to end up in any newspaper. But if you ask a child which classroom they'd rather sit in though, the dull one or the one that just got some color, they’d pick the colourful one, every single time. And that's the whole reason we spent a day with paint on our hands.
+            </p>
+          </div>
+
           {/* Mobile-only read more button */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -47,13 +54,6 @@ export default function SchoolBeautificationPage() {
           >
             {isExpanded ? 'Read Less' : 'Read More'}
           </button>
-
-          {/* Text below - hidden on mobile by default, shown when expanded */}
-          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
-            <p className="max-w-full text-[#5E5045] text-xl leading-10">
-              So we picked up brushes for a day and did something about it. 20 of us, students and working professionals, spent a day painting walls, brightening corridors, turning bare corners into something a kid might actually enjoy looking at on the way to class. 72 volunteer hours later, close to 400 children had a school that looked like somewhere worth showing up to. Paint doesn't fix a leaking roof or stretch a tight budget. But it does something else, it makes a kid walk in one morning and notice that someone spent a day making the place look better, just for them. A repainted wall isn't going to end up in any newspaper. But if you ask a child which classroom they'd rather sit in though, the dull one or the one that just got some color, they’d pick the colourful one, every single time. And that's the whole reason we spent a day with paint on our hands.
-            </p>
-          </div>
         </div>
         <br /><br /><br /><br /><br /><br />
       </section>

@@ -40,6 +40,13 @@ export default function SeedBallMakingPage() {
           </div>
           <br />
 
+          {/* Text below - hidden on mobile by default, shown when expanded */}
+          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
+            <p className="max-w-full text-[#5E5045] text-xl leading-10">
+              Periods are still something a lot of girls learn to be quiet about. Not because anyone tells them to be, but because nobody tells them otherwise. A pad in hand and a straightforward conversation about it does more to chip away at that silence than any poster ever could. Neither part of the day was complicated. Food doesn't need an explanation, and pads don't either. But the reactions told us it mattered. Some girls asked questions they'd clearly been sitting on for a while. Some women just said thank you and meant it. None of it fixes things overnight. But a straightforward conversation, held often enough, does more than silence ever did. Because a period shouldn't be something anyone has to whisper about.
+            </p>
+          </div>
+
           {/* Mobile-only read more button */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -47,13 +54,6 @@ export default function SeedBallMakingPage() {
           >
             {isExpanded ? 'Read Less' : 'Read More'}
           </button>
-
-          {/* Text below - hidden on mobile by default, shown when expanded */}
-          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
-            <p className="max-w-full text-[#5E5045] text-xl leading-10">
-              Periods are still something a lot of girls learn to be quiet about. Not because anyone tells them to be, but because nobody tells them otherwise. A pad in hand and a straightforward conversation about it does more to chip away at that silence than any poster ever could. Neither part of the day was complicated. Food doesn't need an explanation, and pads don't either. But the reactions told us it mattered. Some girls asked questions they'd clearly been sitting on for a while. Some women just said thank you and meant it. None of it fixes things overnight. But a straightforward conversation, held often enough, does more than silence ever did. Because a period shouldn't be something anyone has to whisper about.
-            </p>
-          </div>
         </div>
         <br /><br /><br /><br /><br /><br />
       </section>

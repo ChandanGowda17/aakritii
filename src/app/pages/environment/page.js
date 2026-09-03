@@ -3,45 +3,55 @@
 import { useState, useEffect } from "react";
 import ImpactShowcase from "../../components/ImpactShowcase";
 
-export default function Environment() {
+export default function Education() {
   const programs = [
     {
       id: 1,
-      title: "Tree Plantation",
-      image: "/img/environment-2.png",
+      title: "Foundational Learning",
+      image: "/img/education-1.png",
       description:
-        "Planting native tree species to restore ecosystems, improve air quality, and combat climate change in rural and urban areas.",
-      stat1: "50K+",
-      stat1Label: "Trees Planted",
-      stat2: "100+",
-      stat2Label: "Plantation Sites",
+        "Helping children build strong reading, writing, numeracy, and classroom confidence through consistent learning support.",
+      stat1: "5000+",
+      stat1Label: "Children Supported",
+      stat2: "120+",
+      stat2Label: "Learning Sessions",
     },
     {
       id: 2,
-      title: "Waste Management",
-      image: "/img/environment-1.png",
+      title: "Holistic Development",
+      image: "/img/education-2.png",
       description:
-        "Implementing sustainable waste management practices including recycling, composting, and awareness campaigns for cleaner communities.",
-      stat1: "500+",
-      stat1Label: "Waste Drives",
-      stat2: "25K+",
-      stat2Label: "Kg Waste Managed",
+        "Creating space for creativity, values, life skills, and emotional growth so children can thrive beyond textbooks.",
+      stat1: "85+",
+      stat1Label: "Activity Drives",
+      stat2: "40+",
+      stat2Label: "Partner Schools",
     },
     {
       id: 3,
-      title: "Awareness Programs",
-      image: "/img/environment-3.png",
+      title: "Mentorship & Guidance",
+      image: "/img/education-3.png",
       description:
-        "Educating communities about environmental protection, sustainable living, and climate action through workshops and campaigns.",
-      stat1: "200+",
-      stat1Label: "Workshops",
-      stat2: "30K+",
-      stat2Label: "People Reached",
+        "Connecting students with mentors who encourage regular attendance, goal setting, career awareness, and personal confidence.",
+      stat1: "300+",
+      stat1Label: "Mentor Hours",
+      stat2: "1500+",
+      stat2Label: "Students Guided",
+    },
+    {
+      id: 4,
+      title: "Access & Retention",
+      image: "/img/education-4.png",
+      description:
+        "Supporting children from vulnerable communities with the encouragement, resources, and family engagement needed to stay in school.",
+      stat1: "92%",
+      stat1Label: "Attendance Focus",
+      stat2: "60+",
+      stat2Label: "Community Visits",
     },
   ];
 
   
-  const [showVideoModal, setShowVideoModal] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -59,7 +69,7 @@ export default function Environment() {
 
   return (
     <section
-      id="environment"
+      id="education"
       className="relative bg-[#f6f2eb] min-h-screen"
     >
           <section id="home" className="hero-section relative pt-24 min-h-screen bg-[#3A2312] overflow-hidden">
@@ -88,171 +98,112 @@ export default function Environment() {
 
             <div className="flex flex-col gap-2">
               <h1 className="hero-title text-4xl sm:text-6xl font-extrabold text-white tracking-tight font-serif">
-                Aakritii NGO
-              </h1>
-              <h2 className="hero-subtitle text-2xl sm:text-4xl font-extrabold text-white/90 tracking-wide font-sans">
-                Empower. Transform. Inspire
-              </h2>
+Environmental sustainability             </h1>
+              
             </div>
 
             <p className="hero-description text-[0.95rem] sm:text-[1.05rem] text-neutral-300 leading-relaxed max-w-2xl font-light">
-             Environmental sustainability is at the heart of Aakritii NGO's mission to create lasting change. We work to protect and restore our planet through tree plantations, waste management, water conservation, and community awareness programs. By engaging communities in sustainable practices, we aim to build a greener, healthier future for generations to come.
-
+Environmental sustainability is at the heart of Aakritii NGO's mission to create lasting change. We work to protect and restore our planet through tree plantations, waste management, water conservation, and community awareness programs. By engaging communities in sustainable practices, we aim to build a greener, healthier future for generations to come.
             </p>
           </div>
+          
 </div>
       </div>
     </section>
+<br/>
+      
 
-      <br/>
-      <div className="education-program-section relative z-10 flex flex-col items-center justify-center w-full">
-        <div className="education-program-title flex justify-center items-center text-[#4b200c] text-2xl md:text-3xl lg:text-6xl font-light h-20 mt-20 px-6 sm:px-8 md:px-4 text-center">ENVIRONMENT AND SUSTAINABILITY</div>
-        <div className="education-program-container mx-auto max-w-7xl px-6 sm:px-8 md:px-6 py-12 md:py-24 w-full">
-        <div className="education-program-grid grid lg:grid-cols-[320px_1fr] gap-6 md:gap-8 lg:gap-12">
 
-          {/* LEFT TABS */}
-          <div className="education-program-tabs grid grid-cols-2 gap-3 lg:flex lg:flex-col lg:h-full lg:gap-0 lg:border-t lg:border-[#d7cfc5] lg:order-1 order-1">
-            {programs.map((program) => (
-              <button
-                key={program.id}
-                type="button"
-                onClick={() => setActiveProgramId(program.id)}
-                className={`flex min-h-10 w-full items-center rounded-md border border-[#d7cfc5] bg-white px-3 py-2 text-left transition-all duration-300 sm:px-4 lg:flex-1 lg:rounded-none lg:border-x-0 lg:border-t-0 lg:bg-transparent lg:px-0 lg:py-0 ${
-                  activeProgramId === program.id
-                    ? "border-[#401905] text-[#401905] shadow-sm lg:border-[#d7cfc5] lg:shadow-none"
-                    : "text-[#7b7068] hover:text-[#401905]"
-                }`}
-              >&nbsp;
-                <span
-                  className={`block whitespace-nowrap leading-tight ${
-                    activeProgramId === program.id
-                      ? "text-[14px] font-bold sm:text-base md:text-xl lg:text-3xl"
-                      : "text-[14px] font-light sm:text-base md:text-lg lg:text-3xl"
-                  }`}
-                >
-                  {program.title}
-                </span>
-              </button>
-            ))}
+<section className="bg-[#F8F1E6] border-t border-[#E6DACB] w-full" style={{ paddingTop: '86px' }}>
+      <div className="site-container mb-20 text-left">
+
+        {/* Hero */}
+     
+        <div className="pt-16 pb-10 justify-start">
+          <div className="h-10"></div>
+          <p className="text-[#D46C32] uppercase tracking-[0.35em] text-sm font-semibold">
+            About Us
+          </p>
+          <br/>
+
+          <h1 className="mt-6 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
+            Environment and Sustainability
+          </h1>
+<br/>
+          <p className="mt-10 max-w-3xl text-[#5E5045] text-xl leading-10">
+            <span className="font-bold">Tree Plantation</span><br/>
+Planting native tree species to restore ecosystems, improve air quality, and combat climate change in rural and urban areas.         </p>
+      </div>
+      </div>
+<div className="h-10"></div>
+      
+
+      <div className="site-container pb-20 md:pb-28">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="overflow-hidden rounded-[20px] bg-[#E8DCCE] shadow-sm">
+            <img
+              src="/img/environment-1.png"
+              alt="Children engaged in educational activities"
+              className="h-[320px] w-full object-cover md:h-[370px]"
+            />
           </div>
 
-          {/* RIGHT CONTENT */}
-          <div className="education-program-card overflow-hidden rounded-[32px] bg-white shadow-xl lg:order-2 order-2">
+          <div className="text-[#5E5045]">
+            <p className="text-lg leading-8 md:text-xl md:leading-9">
+             <span className="font-bold">Waste Management</span><br/>
+Implementing sustainable waste management practices including recycling, composting, and awareness campaigns for cleaner communities.            </p>
 
-            <div className="grid lg:grid-cols-[1fr_280px] md:grid-cols-1">
-
-              {/* IMAGE with CONTENT overlay */}
-              <div className="relative h-[300px] md:h-[500px] lg:h-[650px] w-full md:col-span-1 lg:col-span-1">
-                <img
-                  src={activeProgram.image}
-                  alt={activeProgram.title}
-                  className="h-full w-full object-cover transition-all duration-500"
-                />
-
-                {/* CONTENT - Overlay on top of image */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#401905]/70 via-[#401905]/40 to-transparent p-6 md:p-8 lg:p-12 flex flex-col justify-center">
-                  <span className="text-xs md:text-sm uppercase tracking-[3px] text-white/90 font-semibold">
-                    Our Program
-                  </span>
-
-                  <h2 className="mt-4 text-2xl md:text-3xl lg:text-5xl font-bold leading-tight text-white">
-                    {activeProgram.title}
-                  </h2>
-
-                  <p className="mt-6 md:mt-8 text-base md:text-lg leading-relaxed text-white/90">
-                    {activeProgram.description}
-                  </p>
-
-                 
-                </div>
-              </div>
-
-              {/* STATS - Right side column */}
-              <div className="bg-[#faf8f5] p-4 md:p-5 pt-2 md:pt-4 mt-4 lg:mt-0 flex flex-row md:flex-col lg:flex-col gap-3 md:gap-5 lg:gap-5 md:col-span-1 lg:col-span-1 items-center justify-center">
-                <div className=" p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
-                  <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
-                    Impact
-                  </p>
-
-                  <h3 className="mt-2 md:mt-4 text-3xl md:text-4xl lg:text-6xl font-bold text-[#401905]">
-                    {activeProgram.stat1}
-                  </h3>
-
-                  <p className="mt-2 md:mt-3 text-sm md:text-base text-[#5b4b42]">
-                    {activeProgram.stat1Label}
-                  </p>
-                </div>
-
-                <div className=" p-4 md:p-6 lg:p-8 flex-1 flex flex-col items-center justify-center text-center">
-                  <p className="text-xs md:text-sm uppercase tracking-wide text-[#5a3a2a] font-semibold">
-                    Reach
-                  </p>
-
-                  <h3 className="mt-2 md:mt-4 text-3xl md:text-4xl lg:text-6xl font-bold text-[#401905]">
-                    {activeProgram.stat2}
-                  </h3>
-
-                  <p className="mt-2 md:mt-3 text-sm md:text-base text-[#5b4b42]">
-                    {activeProgram.stat2Label}
-                  </p>
-                </div>
-              </div>
-
-            </div>
+            <p className="mt-8 text-lg leading-8 md:text-xl md:leading-9">
+              <span className="font-bold">Awareness Programs</span><br/>
+Educating communities about environmental protection, sustainable living, and climate action through workshops and campaigns.<br/>
+             
+            </p>
           </div>
-
         </div>
       </div>
-      </div>
 
-      {/* WHY Environment SECTION */}
+      </section>
+
+
+
+
+      {/* WHY EDUCATION SECTION */}
       <section className="education-info-section h-full px-8 sm:px-10 md:px-12 lg:px-20 bg-[#f6efe6] overflow-hidden">
         <div className="flex flex-col items-center justify-center h-full">
           <div className="max-w-7xl mx-auto w-full">
 
           <div className="mb-16 md:mb-24">
             <br/><br/>
-            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light font-serif leading-tight">
+            <h2 className="text-[#4b200c] text-3xl sm:text-5xl md:text-6xl font-light font-serif leading-tight">
               WHY Environment
             </h2>
 <br/>
             <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
-              Protecting the environment is essential for building healthy, sustainable, and resilient communities. Rapid urbanization, deforestation, pollution, and climate change continue to threaten natural ecosystems and the well-being of future generations. By encouraging environmental awareness and responsible practices, we can preserve biodiversity, improve public health, and create greener spaces for everyone.
+           Protecting the environment is essential for building healthy, sustainable, and resilient communities. Rapid urbanization, deforestation, pollution, and climate change continue to threaten natural ecosystems and the well-being of future generations. By encouraging environmental awareness and responsible practices, we can preserve biodiversity, improve public health, and create greener spaces for everyone.
             </p>
 <br/>
             <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
-              Education empowers children with knowledge, confidence, and the
-              opportunity to build a brighter future while becoming responsible
-              citizens of society.
+              Education empowers children with knowledge, confidence, and the opportunity to build a brighter future while becoming responsible citizens of society.
             </p>
           </div>
 <br/><br/>
           <div>
-            <h2 className="text-[#4b200c] text-4xl sm:text-5xl md:text-7xl font-light font-serif leading-tight">
+            <h2 className="text-[#4b200c] text-3xl sm:text-5xl md:text-6xl font-light font-serif leading-tight">
               WHAT WE DO
             </h2>
 <br/>
             <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
-             At Aakritii NGO, we work to inspire environmental responsibility through community-driven initiatives that promote conservation, sustainability, and climate awareness. Our programmes focus on tree plantation drives, waste management awareness, water conservation, clean-up campaigns, and environmental education that encourage individuals to become active stewards of nature.
+              At Aakritii NGO, we work to inspire environmental responsibility through community-driven initiatives that promote conservation, sustainability, and climate awareness. Our programmes focus on tree plantation drives, waste management awareness, water conservation, clean-up campaigns, and environmental education that encourage individuals to become active stewards of nature.
             </p>
 <br/>
             <p className="mt-8 text-[#4b200c] text-lg sm:text-xl md:text-2xl leading-relaxed">
-              We work with children from vulnerable communities including remote
-              villages, tribal regions, and underserved urban areas, ensuring
-              every child gets an opportunity to learn and succeed.
+         We work with children from vulnerable communities including remote villages, tribal regions, and underserved urban areas, ensuring every child gets an opportunity to learn and succeed.
             </p>
           </div>
 <br/><br/>
         </div>
         </div>
       </section>
-
     </section>
   );
 }
-
-
-
-
-
-

@@ -40,6 +40,13 @@ export default function PolioDrivePage() {
           </div>
           <br />
 
+          {/* Text below - hidden on mobile by default, shown when expanded */}
+          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
+            <p className="max-w-full text-[#5E5045] text-xl leading-10">
+              That's the quiet, unglamorous work behind polio eradication. Not one big campaign, but small ones, ward by ward, making sure every child under five gets covered. Kodigehalli was our ward this time. More are planned across Bangalore. From 30th June to 4th July 2026, our team set out to vaccinate every child between 0 and 5.5 years in the area. 20 volunteers and 5 interns went street by street, house by house, keeping track of every child, every dose, every family that needed convincing or just a reminder. By the end of five days, we had vaccinated 5,400 children.
+            </p>
+          </div>
+
           {/* Mobile-only read more button */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -47,13 +54,6 @@ export default function PolioDrivePage() {
           >
             {isExpanded ? 'Read Less' : 'Read More'}
           </button>
-
-          {/* Text below - hidden on mobile by default, shown when expanded */}
-          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
-            <p className="max-w-full text-[#5E5045] text-xl leading-10">
-              That's the quiet, unglamorous work behind polio eradication. Not one big campaign, but small ones, ward by ward, making sure every child under five gets covered. Kodigehalli was our ward this time. More are planned across Bangalore. From 30th June to 4th July 2026, our team set out to vaccinate every child between 0 and 5.5 years in the area. 20 volunteers and 5 interns went street by street, house by house, keeping track of every child, every dose, every family that needed convincing or just a reminder. By the end of five days, we had vaccinated 5,400 children.
-            </p>
-          </div>
         </div>
         <br /><br /><br /><br /><br /><br />
       </section>

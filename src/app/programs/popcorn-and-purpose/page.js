@@ -39,6 +39,13 @@ Some of the kids we work with rarely get a day that's just for fun. Between scho
           </div>
           <br />
 
+          {/* Text below - hidden on mobile by default, shown when expanded */}
+          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
+            <p className="max-w-full text-[#5E5045] text-xl leading-10">
+              Popcorn & Purpose was exactly what it sounds like. Together with Priyadarshini School and Friendship Foundation in Hebbal, we took a group of kids out for a movie day at Bhartiya City Mall. 15 of us, students and working professionals, spent the day making sure it actually felt like a day out, not another errand with extra steps. There was popcorn, obviously. There was a movie. And there were about 600 kids getting a few hours that had nothing to do with responsibility or routine, just a screen, some snacks, and their friends sitting next to them. We picked Valavaara for the outing, a Kannada family drama about two young brothers and the bond between them, set against the hills of Sakleshpur. It's a gentle, slow-paced story about family, sibling rivalry, and growing up. Reviewers have called it a heart-warming, tender film that resists the usual over-the-top drama. It felt like the right kind of story to put in front of a room full of children, one about family and small joys of life.
+            </p>
+          </div>
+
           {/* Mobile-only read more button */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -46,13 +53,6 @@ Some of the kids we work with rarely get a day that's just for fun. Between scho
           >
             {isExpanded ? 'Read Less' : 'Read More'}
           </button>
-
-          {/* Text below - hidden on mobile by default, shown when expanded */}
-          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
-            <p className="max-w-full text-[#5E5045] text-xl leading-10">
-              Popcorn & Purpose was exactly what it sounds like. Together with Priyadarshini School and Friendship Foundation in Hebbal, we took a group of kids out for a movie day at Bhartiya City Mall. 15 of us, students and working professionals, spent the day making sure it actually felt like a day out, not another errand with extra steps. There was popcorn, obviously. There was a movie. And there were about 600 kids getting a few hours that had nothing to do with responsibility or routine, just a screen, some snacks, and their friends sitting next to them. We picked Valavaara for the outing, a Kannada family drama about two young brothers and the bond between them, set against the hills of Sakleshpur. It's a gentle, slow-paced story about family, sibling rivalry, and growing up. Reviewers have called it a heart-warming, tender film that resists the usual over-the-top drama. It felt like the right kind of story to put in front of a room full of children, one about family and small joys of life.
-            </p>
-          </div>
         </div>
         <br /><br /><br /><br /><br /><br />
       </section>

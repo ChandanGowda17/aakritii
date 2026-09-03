@@ -14,7 +14,7 @@ const carouselItems = [
   },
   {
     id: 2,
-    image: "/img/community-1.png",
+    image: "/img/home-landing-2.jpg",
     title: "Community Development",
     description: "Creating opportunities for social engagement and skill development across underserved areas.",
     link: "pages/community"

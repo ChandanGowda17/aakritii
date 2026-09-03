@@ -3,11 +3,10 @@ export default function ContactPage() {
     <main className="bg-[#F8F1E6] text-[#4b200c] pt-[86px] max-lg:pt-[72px] min-h-screen">
       <section className="px-8 sm:px-10 md:px-12 lg:px-20 bg-[#f6efe6] py-14 md:py-16" style={{ paddingTop: '92px' }}>
         <div className="site-container max-w-4xl">
+          
           {/* Header */}
           <div className="text-center mb-8">
-            <p className="text-[#D46C32] uppercase tracking-[0.35em] text-sm font-semibold">
-              Get in Touch
-            </p>
+           <br/>
            
             <h1 className="mt-5 text-[#7A4A2B] text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.05]">
               Contact Us
@@ -20,40 +19,43 @@ export default function ContactPage() {
 <br/>
           {/* Contact Details and Image */}
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center justify-items-center max-w-5xl mx-auto lg:translate-x-20">            <div className="space-y-2">
-              <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start">
-                <div className="flex-shrink-0">
+              <div className="flex flex-col items-center gap-2 lg:flex-row lg:items-start lg:gap-4">
+                <div className="flex-shrink-0 flex flex-col items-center">
                   <svg className="h-8 w-8 text-[#D46C32]" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74A1 1 0 0118 14.847V17a1 1 0 01-1 1h-1C7.82 18 2 12.18 2 5V3z" />
                   </svg>
+                  <h3 className="text-[#7A4A2B] font-semibold text-lg mb-1 font-serif lg:hidden">Phone</h3>
                 </div>
-                <div>
-                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2 font-serif">Phone</h3>
+                <div className="text-center lg:text-left">
+                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2 font-serif hidden lg:block">Phone</h3>
                   <p className="text-[#5E5045] text-lg">+91 90195-42024</p>
                 </div>
               </div>
 <br/>
-              <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start">
-                <div className="flex-shrink-0">
+              <div className="flex flex-col items-center gap-2 lg:flex-row lg:items-start lg:gap-4">
+                <div className="flex-shrink-0 flex flex-col items-center">
                   <svg className="h-8 w-8 text-[#D46C32]" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
+                  <h3 className="text-[#7A4A2B] font-semibold text-lg mb-1 font-serif lg:hidden">Email</h3>
                 </div>
-                <div>
-                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2 font-serif">Email</h3>
+                <div className="text-center lg:text-left">
+                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2 font-serif hidden lg:block">Email</h3>
                   <p className="text-[#5E5045] text-lg">contact@aakritii.org</p>
                   <p className="text-[#5E5045] text-lg">manasa@aakritii.org</p>
                 </div>
               </div>
 <br/>
-              <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start">
-                <div className="flex-shrink-0">
+              <div className="flex flex-col items-center gap-2 lg:flex-row lg:items-start lg:gap-4">
+                <div className="flex-shrink-0 flex flex-col items-center">
                   <svg className="h-8 w-8 text-[#D46C32]" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                   </svg>
+                  <h3 className="text-[#7A4A2B] font-semibold text-lg mb-1 font-serif lg:hidden">Location</h3>
                 </div>
-                <div>
-                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2 font-serif">Location</h3>
+                <div className="text-center lg:text-left">
+                  <h3 className="text-[#7A4A2B] font-semibold text-xl mb-2 font-serif hidden lg:block">Location</h3>
                   <p className="text-[#5E5045] text-lg"> 31, 2nd Main Rd, Venkategowda Layout, <br /> Venkatagowda Layout, Hebbal Kempapura,<br /> Bengaluru, Karnataka 560024
 </p>
                 </div>

@@ -40,6 +40,13 @@ export default function EyeCampsPage() {
           </div>
           <br />
 
+          {/* Text below - hidden on mobile by default, shown when expanded */}
+          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
+            <p className="max-w-full text-[#5E5045] text-xl leading-10">
+              So we ran a free eye checkup camp for elderly residents at the Government Primary School in Mangala village, Mandya taluk. Doctors and volunteers went through eye tests one by one, checking vision, noting who needed glasses, talking them through simple eye care habits. By the end of the day, over 200 elderly people had gotten a free eye checkup. More than 150 walked away with a pair of glasses at no cost. Our founder, Manasa M.K., spoke about how protecting eyesight is something every person has a role in, not just doctors.
+            </p>
+          </div>
+
           {/* Mobile-only read more button */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -47,13 +54,6 @@ export default function EyeCampsPage() {
           >
             {isExpanded ? 'Read Less' : 'Read More'}
           </button>
-
-          {/* Text below - hidden on mobile by default, shown when expanded */}
-          <div className={`${isExpanded ? 'block' : 'hidden'} lg:block mt-10`}>
-            <p className="max-w-full text-[#5E5045] text-xl leading-10">
-              So we ran a free eye checkup camp for elderly residents at the Government Primary School in Mangala village, Mandya taluk. Doctors and volunteers went through eye tests one by one, checking vision, noting who needed glasses, talking them through simple eye care habits. By the end of the day, over 200 elderly people had gotten a free eye checkup. More than 150 walked away with a pair of glasses at no cost. Our founder, Manasa M.K., spoke about how protecting eyesight is something every person has a role in, not just doctors.
-            </p>
-          </div>
         </div>
         <br /><br /><br /><br /><br /><br />
       </section>
